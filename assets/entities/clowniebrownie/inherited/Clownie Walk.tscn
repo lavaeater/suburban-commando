@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/entities/clowniebrownie/base/mixamo_com.anim" type="Animation" id=1]
+[ext_resource path="res://assets/entities/clowniebrownie/base/Zombie Walk.fbx" type="PackedScene" id=2]
+
+[node name="Clownie Walk" instance=ExtResource( 2 )]
+
+[node name="AnimationPlayer" parent="RootNode" index="3"]
+"anims/Zombie Walk" = ExtResource( 1 )
