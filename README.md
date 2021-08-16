@@ -1,5 +1,9 @@
 # suburban-commando
 
+## Never  fear to pivot!
+
+Make the entities super fudging simple!
+
 ## There are no dates in the suburb
 The title above references the fact that I did indeed have a date in it, earlier. But not today.
 
@@ -183,10 +187,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xND
-kyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2MTQz
-NzAxLC0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NTM5NS
-wxMjIxNzkwMTUxLC01MjUzMDQ1ODYsNjkwNDQyNTIzLC05MDQ4
-Mzg2NTEsLTEyNDU4MjM1LDY5OTg4NTkxMiwxNjUxNTc1Mzg0LD
-cyNTk5MDU4MCwtMTg2NTc4NDY0NywxMzkwOTc4OF19
+eyJoaXN0b3J5IjpbMTc1MzczMzA4MywtMTI0MjU4NzEzLC05Nz
+EyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4
+NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMzYsMTAxNzEzNjQ0Mi
+wtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUyNTMwNDU4Niw2OTA0
+NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMzUsNjk5ODg1OTEyLD
+E2NTE1NzUzODQsNzI1OTkwNTgwLC0xODY1Nzg0NjQ3LDEzOTA5
+Nzg4XX0=
 -->
