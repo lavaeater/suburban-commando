@@ -4,11 +4,7 @@
 
 I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
-## There are no dates in the suburb
-The title above references the fact that I did indeed have a date in it, earlier. But not today.
-
-Focus-thing while working in Godot, from the Backlog of All Backlogs:
-
+### Things that need to be done
 - [ ] *Player Entity 1*
 - [ ] *Enemy Entity 1*
 - [ ] Level 2
@@ -187,11 +183,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzMxOTM0NjMsMTc1MzczMzA4MywtMT
-I0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcy
-MDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMz
-YsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUy
-NTMwNDU4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMz
-UsNjk5ODg1OTEyLDE2NTE1NzUzODQsNzI1OTkwNTgwLC0xODY1
-Nzg0NjQ3XX0=
+eyJoaXN0b3J5IjpbMjE0MDE1MDYxMSwxNzUzNzMzMDgzLC0xMj
+QyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIw
+NTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNi
+wxMDE3MTM2NDQyLC0yNDUxNzUzOTUsMTIyMTc5MDE1MSwtNTI1
+MzA0NTg2LDY5MDQ0MjUyMywtOTA0ODM4NjUxLC0xMjQ1ODIzNS
+w2OTk4ODU5MTIsMTY1MTU3NTM4NCw3MjU5OTA1ODAsLTE4NjU3
+ODQ2NDddfQ==
 -->
