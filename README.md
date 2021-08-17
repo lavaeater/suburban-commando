@@ -9,7 +9,7 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 The thing in cursive is what I am working on right now.
 
 - [ ] Level 1
-- [ ] Player 0
+- [ ] *Player 0*
 - [ ] Enemy Entity 1
 - [ ] Level 2
 - [ ] Visual Stylings
@@ -184,7 +184,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTk4NjQ3NCwyMTQ1NTMzMTQ2LDE3NT
+eyJoaXN0b3J5IjpbMTU2NDUwNDU5NiwyMTQ1NTMzMTQ2LDE3NT
 M3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMz
 NjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC
 0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIx
