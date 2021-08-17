@@ -17,6 +17,8 @@ The thing in cursive is what I am working on right now.
 
 ## Enemy Entity 1 <- doing now
 ### Mechanics
+Update: I will not use Mixamo for the enemy character, as of now.
+
 What is the mechanics for this first implementation of enemies in the game? Well, they should be simple, not complicated at all. I would like the enemy to be able to idle, walk, and do some kind of simple attack. I decided to use Mixamo again, but I would like to find some kind of "simpler" character somewhere on the Interwebs to make the next task, having a cool visual style of the game, work. I notice that my work here, compared to the work I did on the other game, is less straight-forward. This is most likely due to me not being comfortable with what I am doing, not really having a *feel* for how the engine actually works. This is fine. So, anyways, I want to have behavior trees as well, so we should look into the absolutely simplest way to get that done in the game.
 
 The enemy should basically only want to do the simplest possible things right now: walk around, searching for player to attack. So, the next step is to import the downloaded asset into Godot and make stuff happen from there. 
@@ -186,11 +188,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDM3NDY1MCwxNzUzNzMzMDgzLC0xMj
-QyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIw
-NTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNi
-wxMDE3MTM2NDQyLC0yNDUxNzUzOTUsMTIyMTc5MDE1MSwtNTI1
-MzA0NTg2LDY5MDQ0MjUyMywtOTA0ODM4NjUxLC0xMjQ1ODIzNS
-w2OTk4ODU5MTIsMTY1MTU3NTM4NCw3MjU5OTA1ODAsLTE4NjU3
-ODQ2NDddfQ==
+eyJoaXN0b3J5IjpbLTE5MTU0NDg4NDUsMTc1MzczMzA4MywtMT
+I0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcy
+MDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMz
+YsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUy
+NTMwNDU4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMz
+UsNjk5ODg1OTEyLDE2NTE1NzUzODQsNzI1OTkwNTgwLC0xODY1
+Nzg0NjQ3XX0=
 -->
