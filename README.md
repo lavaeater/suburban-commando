@@ -16,6 +16,9 @@ The thing in cursive is what I am working on right now.
 - [ ] Shooting
 - [x] Player Entity 1
 
+## Player 0 <- doing now
+##
+
 ## Enemy Entity 1 <- doing now
 ### Mechanics
 Update: I will not use Mixamo for the enemy character, as of now.
@@ -184,7 +187,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDUwNDU5NiwyMTQ1NTMzMTQ2LDE3NT
+eyJoaXN0b3J5IjpbLTgyMzk2ODE0MywyMTQ1NTMzMTQ2LDE3NT
 M3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMz
 NjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC
 0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIx
