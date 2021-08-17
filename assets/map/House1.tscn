@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/map/suburban/house_type01.mesh" type="ArrayMesh" id=1]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+points = PoolVector3Array( -0.0101014, 0.361154, -0.926317, -0.0101014, 0.361154, 0.00225401, 0.017875, 0.401017, -0.906643, 0.0345335, 0.727294, -0.471608, 0.0405053, 0.419001, -0.0333346, 0.0481994, 0.719393, -0.433857, 0.05, 0.00131718, -0.852066, 0.0587904, 0.00673805, -0.058, 0.135907, 0.49511, -0.109813, 0.13591, 0.66648, -0.338307, 1.16407, 0.66648, -0.338307, 1.16407, 0.49511, -0.109813, 1.2413, 0.00673805, -0.058, 1.25, 0.00137311, -0.852007, 1.25202, 0.719393, -0.433857, 1.25971, 0.419001, -0.0333346, 1.26568, 0.727294, -0.471608, 1.28234, 0.401017, -0.906643, 1.31032, 0.361154, -0.926317, 1.31032, 0.361154, 0.00225401 )
+
+[node name="House1" type="StaticBody"]
+
+[node name="house_type01" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )

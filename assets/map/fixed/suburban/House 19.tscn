@@ -57,22 +57,22 @@ surfaces/3 = {
 "vertex_count": 581
 }
 
-[sub_resource type="ConvexPolygonShape" id=7]
+[sub_resource type="ConvexPolygonShape" id=2]
 points = PoolVector3Array( 0.533333, -0.00952381, 0.328333, 0.533333, -0.00952381, 0.385476, 0.533333, 0.314286, 0.328333, 0.533333, 0.314286, 0.385476, 0.590476, -0.00952381, 0.328333, 0.590476, -0.00952381, 0.385476, 0.590476, 0.314286, 0.328333, 0.590476, 0.314286, 0.385476 )
 
-[sub_resource type="ConvexPolygonShape" id=2]
+[sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( 0.533333, -0.00952381, -0.395476, 0.533333, -0.00952381, -0.338333, 0.533333, 0.314286, -0.395476, 0.533333, 0.314286, -0.338333, 0.590476, -0.00952381, -0.395476, 0.590476, -0.00952381, -0.338333, 0.590476, 0.314286, -0.395476, 0.590476, 0.314286, -0.338333 )
 
-[sub_resource type="ConvexPolygonShape" id=3]
+[sub_resource type="ConvexPolygonShape" id=4]
 points = PoolVector3Array( -0.6, 0.475795, 0.0136894, -0.599625, 0.476153, 0.395, -0.592101, 0.85, 0.0212263, -0.592101, 0.85, 0.387821, -0.207899, 0.85, 0.0212263, -0.207899, 0.85, 0.387821, -0.200375, 0.476153, 0.395, -0.2, 0.475795, 0.0136894 )
 
-[sub_resource type="ConvexPolygonShape" id=4]
+[sub_resource type="ConvexPolygonShape" id=5]
 points = PoolVector3Array( -0.6, 0.471356, -0.000348863, -0.590909, 0.475795, -0.405, -0.57547, 0.85, -0.397101, -0.57547, 0.85, -0.0128989, 0.17547, 0.85, -0.397101, 0.17547, 0.85, -0.0128989, 0.190909, 0.475795, -0.405, 0.190909, 0.475795, -0.005 )
 
-[sub_resource type="ConvexPolygonShape" id=5]
+[sub_resource type="ConvexPolygonShape" id=6]
 points = PoolVector3Array( 0.228609, 0.333333, -0.395443, 0.228609, 0.333333, 0.385443, 0.228609, 0.466667, -0.414524, 0.228609, 0.466667, 0.404524, 0.533281, 0.314286, -0.395443, 0.533281, 0.314286, 0.385443, 0.58, 0.318924, -0.371673, 0.58, 0.318924, 0.361673, 0.609449, 0.390476, -0.414524, 0.609449, 0.390476, 0.404524, 0.609449, 0.466667, -0.414524, 0.609449, 0.466667, 0.404524 )
 
-[sub_resource type="ConvexPolygonShape" id=6]
+[sub_resource type="ConvexPolygonShape" id=7]
 points = PoolVector3Array( -0.6, 0.461255, -0.405, -0.599615, 0.461037, 0.395, -0.592762, -2.77556e-17, -0.397762, -0.592762, -2.77556e-17, 0.388459, 0.093437, 0.308403, 0.395, 0.1, 0.00158135, 0.404026, 0.193459, 0, -0.397762, 0.193459, 0, 0.388459, 0.199238, 0.45, 0.376461, 0.2, 0.326168, -0.368141, 0.2, 0.326168, 0.359453, 0.2, 0.450433, -0.385952 )
 
 [node name="House 19" instance=ExtResource( 1 )]
@@ -87,24 +87,24 @@ material/3 = null
 
 [node name="CollisionShape6" type="CollisionShape" parent="." index="2"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.12563, -0.0157053 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape5" type="CollisionShape" parent="." index="3"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.12563, -0.0157053 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="." index="4"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.12563, -0.0157053 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="." index="5"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.12563, -0.0157053 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="." index="6"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.12563, -0.0157053 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape" type="CollisionShape" parent="." index="7"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, -2.12563, -0.0157053 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
