@@ -17,7 +17,8 @@ The thing in cursive is what I am working on right now.
 - [x] Player Entity 1
 
 ## Player 0 <- doing now
-##
+### Mechanics
+The player should be able to walk around - and how do I want to do that? Do I want it to be nsew-oriented, or more like propulsion, rotation, direction, what? I think cognitively it is easier to do it nsew-oriented, it is the way both south park and helldivers work witht ht
 
 ## Enemy Entity 1 <- doing now
 ### Mechanics
@@ -187,11 +188,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMzk2ODE0MywyMTQ1NTMzMTQ2LDE3NT
-M3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMz
-NjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC
-0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIx
-NzkwMTUxLC01MjUzMDQ1ODYsNjkwNDQyNTIzLC05MDQ4Mzg2NT
-EsLTEyNDU4MjM1LDY5OTg4NTkxMiwxNjUxNTc1Mzg0LDcyNTk5
-MDU4MF19
+eyJoaXN0b3J5IjpbLTE1NTM5MjcwNDMsMjE0NTUzMzE0NiwxNz
+UzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEz
+MzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMS
+wtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0yNDUxNzUzOTUsMTIy
+MTc5MDE1MSwtNTI1MzA0NTg2LDY5MDQ0MjUyMywtOTA0ODM4Nj
+UxLC0xMjQ1ODIzNSw2OTk4ODU5MTIsMTY1MTU3NTM4NCw3MjU5
+OTA1ODBdfQ==
 -->
