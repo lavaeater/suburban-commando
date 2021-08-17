@@ -8,7 +8,7 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 The thing in cursive is what I am working on right now.
 
-- [ ] *Player Entity 1*
+- [x] Player Entity 1
 - [ ] Level 1
 - [ ] Enemy Entity 1
 - [ ] Level 2
@@ -183,11 +183,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMj
-QyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIw
-NTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNi
-wxMDE3MTM2NDQyLC0yNDUxNzUzOTUsMTIyMTc5MDE1MSwtNTI1
-MzA0NTg2LDY5MDQ0MjUyMywtOTA0ODM4NjUxLC0xMjQ1ODIzNS
-w2OTk4ODU5MTIsMTY1MTU3NTM4NCw3MjU5OTA1ODAsLTE4NjU3
-ODQ2NDddfQ==
+eyJoaXN0b3J5IjpbLTU3NzIyNDk3MiwyMTQ1NTMzMTQ2LDE3NT
+M3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMz
+NjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC
+0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIx
+NzkwMTUxLC01MjUzMDQ1ODYsNjkwNDQyNTIzLC05MDQ4Mzg2NT
+EsLTEyNDU4MjM1LDY5OTg4NTkxMiwxNjUxNTc1Mzg0LDcyNTk5
+MDU4MF19
 -->
