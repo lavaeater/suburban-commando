@@ -2,7 +2,7 @@
 
 ## Back 2 Basics
 
-I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and tn
+I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
 ## There are no dates in the suburb
 The title above references the fact that I did indeed have a date in it, earlier. But not today.
@@ -187,11 +187,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA2OTg0MDQxLDE3NTM3MzMwODMsLTEyND
-I1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1
-OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LD
-EwMTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUz
-MDQ1ODYsNjkwNDQyNTIzLC05MDQ4Mzg2NTEsLTEyNDU4MjM1LD
-Y5OTg4NTkxMiwxNjUxNTc1Mzg0LDcyNTk5MDU4MCwtMTg2NTc4
-NDY0N119
+eyJoaXN0b3J5IjpbLTE2NzMxOTM0NjMsMTc1MzczMzA4MywtMT
+I0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcy
+MDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMz
+YsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUy
+NTMwNDU4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMz
+UsNjk5ODg1OTEyLDE2NTE1NzUzODQsNzI1OTkwNTgwLC0xODY1
+Nzg0NjQ3XX0=
 -->
