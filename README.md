@@ -5,6 +5,9 @@
 I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
 ### Things that need to be done
+
+The thing in cursive is what I am working on right now.
+
 - [ ] *Player Entity 1*
 - [ ] *Enemy Entity 1*
 - [ ] Level 2
@@ -183,7 +186,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0MDE1MDYxMSwxNzUzNzMzMDgzLC0xMj
+eyJoaXN0b3J5IjpbLTg1Mjc0NzMyOSwxNzUzNzMzMDgzLC0xMj
 QyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIw
 NTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNi
 wxMDE3MTM2NDQyLC0yNDUxNzUzOTUsMTIyMTc5MDE1MSwtNTI1
