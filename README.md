@@ -21,8 +21,7 @@ What is the mechanics for this first implementation of enemies in the game? Well
 
 The enemy should basically only want to do the simplest possible things right now: walk around, searching for player to attack. So, the next step is to import the downloaded asset into Godot and make stuff happen from there. 
 
-- [x] Download asset
-- [ ] Import Asset
+- [ ] Create Model
 - [ ] Put in map
 - [ ] Attach a behavior tree to it
 
@@ -186,11 +185,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQzMzk5MTksMTc1MzczMzA4MywtMTI0Mj
-U4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4
-LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMzYsMT
-AxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUyNTMw
-NDU4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMzUsNj
-k5ODg1OTEyLDE2NTE1NzUzODQsNzI1OTkwNTgwLC0xODY1Nzg0
-NjQ3XX0=
+eyJoaXN0b3J5IjpbLTIwOTA0NDIyNzYsMTc1MzczMzA4MywtMT
+I0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcy
+MDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMz
+YsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUy
+NTMwNDU4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMz
+UsNjk5ODg1OTEyLDE2NTE1NzUzODQsNzI1OTkwNTgwLC0xODY1
+Nzg0NjQ3XX0=
 -->
