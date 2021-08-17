@@ -85,9 +85,6 @@ GamePad control support.
  
 Can I make special characters by saying star? Horror flicks.
 
-
-
-
 ## Should we go 3D?
 
 Creating sprites is a goddamned hassle. Buying them as well. But I can't really say that I have what it takes to do a 3d game either? Aaargh.
@@ -188,7 +185,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTU0NDg4NDUsMTc1MzczMzA4MywtMT
+eyJoaXN0b3J5IjpbLTE5MzgzMzM5NzUsMTc1MzczMzA4MywtMT
 I0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcy
 MDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMz
 YsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUy
