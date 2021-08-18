@@ -19,7 +19,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-fun _physics_process(delta):
+func _physics_process(delta):
 	velocity += gravity * delta
 	get_input()
 	velocity = move_and_slide(velocity, Vector3.UP)
@@ -31,7 +31,7 @@ func get_input():
 		velocity.z -= speed
 	if Input.is_action_pressed("move_back"):
 		velocity.z += speed
-	if Input.is_action_pressed("strafe_left"):
-		velocity.x -= speed
 	if Input.is_action_pressed("strafe_right"):
 		velocity.x += speed
+	if Input.is_action_pressed("strafe_left"):
+		velocity.x -= speed
