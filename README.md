@@ -20,6 +20,8 @@ The thing in cursive is what I am working on right now.
 ### Mechanics
 The player should be able to walk around - and how do I want to do that? Do I want it to be nsew-oriented, or more like propulsion, rotation, direction, what? I think cognitively it is easier to do it nsew-oriented, it is the way both south park and helldivers work with their controls. 
 
+So, what we have now is an ugly model doing ugly model things - but that is friggin' great. So great! 
+
 ## Enemy Entity 1 <- doing now
 ### Mechanics
 Update: I will not use Mixamo for the enemy character, as of now.
@@ -188,11 +190,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDUxMjg2NDksMjE0NTUzMzE0NiwxNz
-UzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEz
-MzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMS
-wtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0yNDUxNzUzOTUsMTIy
-MTc5MDE1MSwtNTI1MzA0NTg2LDY5MDQ0MjUyMywtOTA0ODM4Nj
-UxLC0xMjQ1ODIzNSw2OTk4ODU5MTIsMTY1MTU3NTM4NCw3MjU5
-OTA1ODBdfQ==
+eyJoaXN0b3J5IjpbMTkzOTU2NTU0OSwtMTM0NTEyODY0OSwyMT
+Q1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2
+NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNi
+wtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0
+NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMDQ1ODYsNjkwNDQyNT
+IzLC05MDQ4Mzg2NTEsLTEyNDU4MjM1LDY5OTg4NTkxMiwxNjUx
+NTc1Mzg0XX0=
 -->
