@@ -8,11 +8,11 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 The thing in cursive is what I am working on right now.
 
-- [ ] Level 1
 - [ ] Shooting
 - [ ] Enemy Entity 1
 - [ ] Level 2
 - [ ] Visual Stylings
+- [x] Level 1
 - [x] *Player 0*
 - [x] Player Entity 1
 
@@ -194,11 +194,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMj
-E0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4
-NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2Mj
-YsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0y
-NDUxNzUzOTUsMTIyMTc5MDE1MSwtNTI1MzA0NTg2LDY5MDQ0Mj
-UyMywtOTA0ODM4NjUxLC0xMjQ1ODIzNSw2OTk4ODU5MTIsMTY1
-MTU3NTM4NF19
+eyJoaXN0b3J5IjpbMjA0OTM3NzU3MywtMTY5OTA3MjY3NSwtMT
+M0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1
+ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OC
+wtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEw
+MTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMD
+Q1ODYsNjkwNDQyNTIzLC05MDQ4Mzg2NTEsLTEyNDU4MjM1LDY5
+OTg4NTkxMl19
 -->
