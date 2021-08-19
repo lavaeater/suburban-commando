@@ -1,16 +1,11 @@
 extends KinematicBody
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var gravity = Vector3.DOWN * 12
 var speed = 4
 var jump_speed = 6
 var velocity = Vector3()
 var spin = .1
 var jump = false
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,12 +33,8 @@ func get_input():
 	if Input.is_action_pressed("strafe_right"):
 		velocity += transform.basis.x * speed
 	if Input.is_action_pressed("strafe_left"):
-		velocity -= -transform.basis.x * speed
+		velocity += -transform.basis.x * speed
 	velocity.y = vy
 	jump = false
 	if Input.is_action_just_pressed("jump"):
 		jump = true
-
-func _unhandled_input(event):
-	if event is InputEventMouseMotion:
-		rotate_y(-lerp(0, spin, event.relative.x/10))
