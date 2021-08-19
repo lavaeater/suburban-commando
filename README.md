@@ -16,7 +16,9 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
-##
+## Level 1
+### Mechanics
+After many trials and tribulations, I stand here again, ready to make a level of some sorts. I will try to accomplish this in the simplest way possible.
 
 ## Player 0
 ### Mechanics
@@ -192,7 +194,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyOTYzNDA5NSwtMTM0NTEyODY0OSwyMT
+eyJoaXN0b3J5IjpbLTg2OTEzNjY1NCwtMTM0NTEyODY0OSwyMT
 Q1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2
 NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNi
 wtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0
