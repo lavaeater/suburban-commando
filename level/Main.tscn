@@ -23,6 +23,9 @@ albedo_color = Color( 1, 0, 0, 1 )
 
 [node name="Spatial" type="Spatial"]
 
+[node name="house_type02" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 55.25, 0, 0 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10.25 )
 collision_layer = 2
@@ -108,5 +111,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96909 )
 
 [node name="path_tilesLong2" parent="path_tilesLong/path_tilesLong2" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.75, 0, 1.21909 )
+
+[node name="house_type03" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 33, 0, 0 )
+
+[node name="house_type04" parent="." instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 24.75, 0.5, 23.5 )
+
+[node name="house_type05" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5, 197, -2513 )
 
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
