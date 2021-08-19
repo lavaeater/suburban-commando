@@ -1,21 +1,16 @@
 extends KinematicBody
 
 var gravity = Vector3.DOWN * 12
-var speed = 4
+var speed = 10
 var jump_speed = 6
 var velocity = Vector3()
+var direction = Vector3()
 var spin = .1
 var jump = false
 var look_at_target = Vector3()
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _physics_process(delta):
 	velocity += gravity * delta
@@ -26,22 +21,25 @@ func _physics_process(delta):
 	look_at(look_at_target, Vector3.UP)
 
 func get_input():
-	var vy = velocity.y
-	velocity = Vector3()
+	velocity.x = 0
+	velocity.z = 0
+	direction.x = 0
+	direction.z = 0
+	
 	if Input.is_action_pressed("move_forward"):
-		velocity += -transform.basis.z * speed 
+		direction.z -= speed 
 	if Input.is_action_pressed("move_back"):
-		velocity += transform.basis.z * speed
+		direction.z += speed
 	if Input.is_action_pressed("strafe_right"):
-		velocity += transform.basis.x * speed
+		direction.x += speed
 	if Input.is_action_pressed("strafe_left"):
-		velocity += -transform.basis.x * speed
-	velocity.y = vy
+		direction.x -= speed
+	direction = direction.rotated(Vector3.UP, PI / 4)
+	velocity.x = direction.x
+	velocity.z = direction.z
 	jump = false
 	if Input.is_action_just_pressed("jump"):
 		jump = true
 
-
 func _on_CameraPivot_look_at_target(position):
 	look_at_target = position
-
