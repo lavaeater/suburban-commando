@@ -16,6 +16,10 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
+## Mechanics
+### Now we are taaalking!
+
+
 ## Level 1
 ### Mechanics
 After many trials and tribulations, I stand here again, ready to make a level of some sorts. I will try to accomplish this in the simplest way possible. It will most likely be combined with shooting and enemies, because that is how I roll.
@@ -194,11 +198,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE5NDY3MTk5LC0xNjk5MDcyNjc1LC0xMz
-Q1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4
-NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC
-0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMzYsMTAx
-NzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUyNTMwND
-U4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMzUsNjk5
-ODg1OTEyXX0=
+eyJoaXN0b3J5IjpbMTQ1OTkxOTQ5NiwtMTY5OTA3MjY3NSwtMT
+M0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1
+ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OC
+wtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEw
+MTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMD
+Q1ODYsNjkwNDQyNTIzLC05MDQ4Mzg2NTEsLTEyNDU4MjM1LDY5
+OTg4NTkxMl19
 -->
