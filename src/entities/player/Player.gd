@@ -8,6 +8,7 @@ var gravity = Vector3.DOWN * 12
 var speed = 4
 var jump_speed = 6
 var velocity = Vector3()
+var spin = .1
 
 
 # Called when the node enters the scene tree for the first time.
@@ -35,3 +36,7 @@ func get_input():
 		velocity.x += speed
 	if Input.is_action_pressed("strafe_left"):
 		velocity.x -= speed
+
+func _unhandled_input(event):
+	if event is InputEventMouseMotion:
+		rotate_y(-lerp(0, spin, event.relative.x/10))

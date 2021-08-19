@@ -4,6 +4,9 @@
 
 [node name="CameraGimbal" type="Spatial"]
 script = ExtResource( 1 )
+max_zoom = 200.0
+min_zoom = 1.0
+zoom_speed = 5.0
 
 [node name="InnerGimbal" type="Spatial" parent="."]
 
