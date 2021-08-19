@@ -18,7 +18,7 @@ The thing in cursive is what I am working on right now.
 
 ## Level 1
 ### Mechanics
-After many trials and tribulations, I stand here again, ready to make a level of some sorts. I will try to accomplish this in the simplest way possible.
+After many trials and tribulations, I stand here again, ready to make a level of some sorts. I will try to accomplish this in the simplest way possible. It will most likely be combined with shooting and enemies, because that is how I roll.
 
 ## Player 0
 ### Mechanics
@@ -194,11 +194,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2OTEzNjY1NCwtMTM0NTEyODY0OSwyMT
-Q1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2
-NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNi
-wtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0
-NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMDQ1ODYsNjkwNDQyNT
-IzLC05MDQ4Mzg2NTEsLTEyNDU4MjM1LDY5OTg4NTkxMiwxNjUx
-NTc1Mzg0XX0=
+eyJoaXN0b3J5IjpbLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMj
+E0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4
+NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2Mj
+YsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0y
+NDUxNzUzOTUsMTIyMTc5MDE1MSwtNTI1MzA0NTg2LDY5MDQ0Mj
+UyMywtOTA0ODM4NjUxLC0xMjQ1ODIzNSw2OTk4ODU5MTIsMTY1
+MTU3NTM4NF19
 -->
