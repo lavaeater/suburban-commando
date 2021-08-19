@@ -18,6 +18,7 @@ The thing in cursive is what I am working on right now.
 
 ## Shooting
 ### Mechanics
+I think we should have a weapons-point 
 
 
 ## Level 1
@@ -198,11 +199,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMT
-M0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1
-ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OC
-wtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEw
-MTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMD
-Q1ODYsNjkwNDQyNTIzLC05MDQ4Mzg2NTEsLTEyNDU4MjM1LDY5
-OTg4NTkxMl19
+eyJoaXN0b3J5IjpbMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNj
+k5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1Mzcz
+MzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MD
+MsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5
+MjA3ODIxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OT
+AxNTEsLTUyNTMwNDU4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwt
+MTI0NTgyMzVdfQ==
 -->
