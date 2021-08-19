@@ -16,8 +16,8 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
-## Mechanics
-### Now we are taaalking!
+## Shooting
+### Mechanics
 
 
 ## Level 1
@@ -198,7 +198,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1OTkxOTQ5NiwtMTY5OTA3MjY3NSwtMT
+eyJoaXN0b3J5IjpbMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMT
 M0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1
 ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OC
 wtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEw
