@@ -9,11 +9,11 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 The thing in cursive is what I am working on right now.
 
 - [ ] Level 1
-- [ ] *Player 0*
 - [ ] Enemy Entity 1
 - [ ] Level 2
 - [ ] Visual Stylings
 - [ ] Shooting
+- [x] *Player 0*
 - [x] Player Entity 1
 
 ## Player 0 <- doing now
@@ -190,7 +190,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzOTU2NTU0OSwtMTM0NTEyODY0OSwyMT
+eyJoaXN0b3J5IjpbMTE2MTAzOTQyOSwtMTM0NTEyODY0OSwyMT
 Q1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2
 NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNi
 wtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0
