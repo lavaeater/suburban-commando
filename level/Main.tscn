@@ -48,5 +48,6 @@ material/0 = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="CameraPivot" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 target = NodePath("../Player")
+
+[connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
