@@ -46,9 +46,3 @@ material/0 = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 6 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.8506, 0.525813, 0, -0.525813, 0.8506, 0, 20.5763, 21.2529 )
-fov = 42.8
-near = 0.3
-far = 1222.1
