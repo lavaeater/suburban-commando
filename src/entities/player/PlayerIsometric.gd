@@ -8,8 +8,17 @@ var direction = Vector3()
 var spin = .1
 var jump = false
 var look_at_target = Vector3()
+onready var muzzle_flash = $blasterA.get_node("MuzzleFlash")
 onready var rayBlaster = $blasterA.get_node("RayCast")
 var fire = false
+var can_fire = true
+var has_fired = false
+
+var rof = 200.0 # per minute
+var rof_cool_down = 1.0 / (rof / 60.0)
+var cool_down = rof_cool_down
+var flash_cool_down = rof_cool_down / 3.0
+var muzzle_cool = flash_cool_down
 
 func _ready():
 	pass # Replace with function body.
@@ -21,14 +30,32 @@ func _physics_process(delta):
 	if jump and is_on_floor():
 		velocity.y = jump_speed
 	look_at(look_at_target, Vector3.UP)
-	handle_shots()
+	handle_shots(delta)
 
-func handle_shots():
-	if fire and rayBlaster.is_colliding():
-		var collided_with = rayBlaster.get_collider()
-		collided_with.queue_free()
-		#Do something!
-		var tyypeasfas = ""
+func handle_shots(delta):
+	if fire and can_fire:
+		has_fired = true
+		muzzle_flash.visible = true
+		if rayBlaster.is_colliding():
+			var collided_with = rayBlaster.get_collider()
+#			collided_with.queue_free()
+
+	if has_fired:
+		can_fire = false
+		cool_down -= delta
+		
+	if has_fired and muzzle_cool > 0:
+		muzzle_cool -= delta
+
+	if muzzle_cool <= 0:
+		muzzle_cool = flash_cool_down
+		muzzle_flash.visible = false
+
+	
+	if cool_down <= 0:
+		cool_down = rof_cool_down
+		can_fire = true
+		has_fired = false
 
 func get_input():
 	velocity.x = 0
