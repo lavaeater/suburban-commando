@@ -19,6 +19,9 @@ var rof_cool_down = 1.0 / (rof / 60.0)
 var cool_down = rof_cool_down
 var flash_cool_down = rof_cool_down / 3.0
 var muzzle_cool = flash_cool_down
+var impact_thingie = preload("res://src/fx/anime_explosion.tscn")
+var last_impact_point = Vector3()
+var last_explosion_position = Vector3()
 
 func _ready():
 	pass # Replace with function body.
@@ -37,8 +40,7 @@ func handle_shots(delta):
 		has_fired = true
 		muzzle_flash.visible = true
 		if rayBlaster.is_colliding():
-			var collided_with = rayBlaster.get_collider()
-#			collided_with.queue_free()
+			put_an_impact_on_it()
 
 	if has_fired:
 		can_fire = false
@@ -56,6 +58,15 @@ func handle_shots(delta):
 		cool_down = rof_cool_down
 		can_fire = true
 		has_fired = false
+
+func put_an_impact_on_it():
+	var impact_point = rayBlaster.get_collision_point()
+	var anime_explosion = impact_thingie.instance()
+	add_child(anime_explosion)
+	anime_explosion.transform.origin = impact_point
+	last_impact_point = impact_point
+	last_explosion_position = anime_explosion.transform.origin
+	
 
 func get_input():
 	velocity.x = 0

@@ -15,8 +15,20 @@ func _ready():
 	overlay.add_stat_var("Firing", $Player, "fire")
 	overlay.add_stat_var("Can Fire", $Player, "can_fire")
 	overlay.add_stat_var("Has Fired", $Player, "has_fired")
+	overlay.add_stat_method("Collsion point", self, "get_collision_point")
+	overlay.add_stat_method("Last Impact", self, "get_last_impact")
+	overlay.add_stat_method("Last Explosion", self, "get_last_explosion")
 	
 	add_child(overlay)
+
+func get_last_explosion():
+	return $Player.last_explosion_position
+
+func get_last_impact():
+	return $Player.last_impact_point
+
+func get_collision_point():
+	return $Player.rayBlaster.get_collision_point()
 
 func get_player_position():
 	return $Player.transform.origin
