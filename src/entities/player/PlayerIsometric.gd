@@ -40,7 +40,13 @@ func handle_shots(delta):
 		has_fired = true
 		muzzle_flash.visible = true
 		if rayBlaster.is_colliding():
-			put_an_impact_on_it()
+			last_impact_point = rayBlaster.get_collision_point()
+			var anime_explosion = impact_thingie.instance()
+			get_parent().add_child(anime_explosion)
+			anime_explosion.start(last_impact_point)
+			anime_explosion.global_transform.origin = last_impact_point
+			last_explosion_position = anime_explosion.global_transform.origin
+		
 
 	if has_fired:
 		can_fire = false
@@ -58,15 +64,6 @@ func handle_shots(delta):
 		cool_down = rof_cool_down
 		can_fire = true
 		has_fired = false
-
-func put_an_impact_on_it():
-	var impact_point = rayBlaster.get_collision_point()
-	var anime_explosion = impact_thingie.instance()
-	add_child(anime_explosion)
-	anime_explosion.transform.origin = impact_point
-	last_impact_point = impact_point
-	last_explosion_position = anime_explosion.transform.origin
-	
 
 func get_input():
 	velocity.x = 0

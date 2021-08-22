@@ -7,14 +7,11 @@ extends Spatial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pass
+		
+func start(position):
+	global_transform.origin = position
 	$AnimationPlayer.play("explode")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	queue_free()

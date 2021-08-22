@@ -18,8 +18,11 @@ func _ready():
 	overlay.add_stat_method("Collsion point", self, "get_collision_point")
 	overlay.add_stat_method("Last Impact", self, "get_last_impact")
 	overlay.add_stat_method("Last Explosion", self, "get_last_explosion")
-	
+	overlay.add_stat_method("Is Colliding", self, "get_is_colliding")
 	add_child(overlay)
+
+func get_is_colliding():
+	return $Player.get_node("blasterA/RayCast").is_colliding()
 
 func get_last_explosion():
 	return $Player.last_explosion_position
