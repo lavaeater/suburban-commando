@@ -40,6 +40,11 @@ func handle_shots(delta):
 		has_fired = true
 		muzzle_flash.visible = true
 		if rayBlaster.is_colliding():
+			var collider = rayBlaster.get_collider()
+			var entity = collider.get_node("BaseEntity")
+			if entity != null:
+				entity.take_damage(30)
+				
 			last_impact_point = rayBlaster.get_collision_point()
 			var anime_explosion = impact_thingie.instance()
 			get_parent().add_child(anime_explosion)

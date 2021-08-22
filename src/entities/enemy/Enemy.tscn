@@ -10,7 +10,7 @@ height = 1.0
 
 [sub_resource type="SpatialMaterial" id=2]
 params_specular_mode = 1
-albedo_color = Color( 0.454902, 0.678431, 0.980392, 1 )
+albedo_color = Color( 0.388235, 0.101961, 0.0392157, 1 )
 metallic_specular = 0.11
 roughness = 0.07
 

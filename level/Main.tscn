@@ -194,6 +194,6 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 47.25, 0, 47 )
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 95, 0, 27.25 )
 
 [node name="Enemy" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.25, 1.5, 35.5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 5.75 )
 
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
