@@ -16,7 +16,8 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
-## Enemy Entity 1 <- 
+## Enemy Entity 1 <- Doing now
+###
 
 ## Shooting
 ### Mechanics
@@ -201,11 +202,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODc1Njk1NzEsMTY5NDczNDA2OSwxOT
-IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
-MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MT
-MsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05
-MzYxNDM3MDEsLTE5MjA3ODIxMzYsMTAxNzEzNjQ0MiwtMjQ1MT
-c1Mzk1LDEyMjE3OTAxNTEsLTUyNTMwNDU4Niw2OTA0NDI1MjMs
-LTkwNDgzODY1MV19
+eyJoaXN0b3J5IjpbNDAzODg1NjksMTY5NDczNDA2OSwxOTIzND
+gyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMx
+NDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLT
+E0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYx
+NDM3MDEsLTE5MjA3ODIxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mz
+k1LDEyMjE3OTAxNTEsLTUyNTMwNDU4Niw2OTA0NDI1MjMsLTkw
+NDgzODY1MV19
 -->
