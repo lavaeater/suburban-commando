@@ -3,8 +3,8 @@
 [ext_resource path="res://src/fx/anime_explosion.gd" type="Script" id=1]
 
 [sub_resource type="SphereMesh" id=1]
-radius = 0.1
-height = 0.2
+radius = 0.01
+height = 0.02
 
 [sub_resource type="SpatialMaterial" id=2]
 flags_transparent = true
