@@ -8,13 +8,18 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 The thing in cursive is what I am working on right now.
 
-- [ ] Level 1
-- [ ] Shooting
+- [ ] *Shooting*
 - [ ] Enemy Entity 1
 - [ ] Level 2
 - [ ] Visual Stylings
+- [x] Level 1
 - [x] *Player 0*
 - [x] Player Entity 1
+
+## Shooting
+### Mechanics
+I think we should have a weapons-point 
+
 
 ## Level 1
 ### Mechanics
@@ -194,11 +199,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMj
-E0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4
-NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2Mj
-YsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0y
-NDUxNzUzOTUsMTIyMTc5MDE1MSwtNTI1MzA0NTg2LDY5MDQ0Mj
-UyMywtOTA0ODM4NjUxLC0xMjQ1ODIzNSw2OTk4ODU5MTIsMTY1
-MTU3NTM4NF19
+eyJoaXN0b3J5IjpbMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNj
+k5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1Mzcz
+MzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MD
+MsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5
+MjA3ODIxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OT
+AxNTEsLTUyNTMwNDU4Niw2OTA0NDI1MjMsLTkwNDgzODY1MSwt
+MTI0NTgyMzVdfQ==
 -->
