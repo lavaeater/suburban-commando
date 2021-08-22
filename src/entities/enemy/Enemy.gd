@@ -101,9 +101,9 @@ func _on_CameraPivot_look_at_target(position):
 	look_at_target = position
 
 
-func _on_BaseEntity_took_damange():
-	pass # Player took damage
-
-
 func _on_BaseEntity_death_occurred():
-	pass # Player died
+	queue_free()
+
+
+func _on_BaseEntity_took_damange():
+	pass # What happens when taking damage?

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/cameras/IsometricCamera/IsoMetric.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/map/House_01.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/map/path_tilesLong.tscn" type="PackedScene" id=4]
 [ext_resource path="res://level/Main.gd" type="Script" id=5]
+[ext_resource path="res://src/entities/enemy/Enemy.tscn" type="PackedScene" id=6]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 200, 200 )
@@ -15,19 +16,8 @@ albedo_color = Color( 0.145098, 0.407843, 0.235294, 1 )
 [sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( 100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, -100 )
 
-[sub_resource type="SphereMesh" id=4]
-
-[sub_resource type="SpatialMaterial" id=5]
-albedo_color = Color( 1, 0, 0, 1 )
-
-[sub_resource type="SphereShape" id=6]
-
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 5 )
-
-[node name="house_type02" parent="." instance=ExtResource( 3 )]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 55.25, 0, 0 )
-collision_mask = 7
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10.25 )
@@ -52,92 +42,158 @@ shape = SubResource( 3 )
 [node name="CameraPivot" parent="." instance=ExtResource( 1 )]
 target = NodePath("../Player")
 
-[node name="Balls" type="Spatial" parent="."]
+[node name="Houses" type="Spatial" parent="."]
 
-[node name="Ball5" type="RigidBody" parent="Balls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03528, 1.00703, -6.42406 )
-collision_layer = 4
-collision_mask = 15
-
-[node name="MeshInstance" type="MeshInstance" parent="Balls/Ball5"]
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Balls/Ball5"]
-shape = SubResource( 6 )
-
-[node name="Ball" type="RigidBody" parent="Balls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 1 )
-collision_layer = 4
-collision_mask = 15
-
-[node name="MeshInstance" type="MeshInstance" parent="Balls/Ball"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 0 )
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Balls/Ball"]
-shape = SubResource( 6 )
-
-[node name="Ball2" type="RigidBody" parent="Balls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.93536, 4, 2 )
-collision_layer = 4
-collision_mask = 15
-
-[node name="MeshInstance" type="MeshInstance" parent="Balls/Ball2"]
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Balls/Ball2"]
-shape = SubResource( 6 )
-
-[node name="Ball3" type="RigidBody" parent="Balls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2087, 1.26687, 3 )
-collision_layer = 4
-collision_mask = 15
-
-[node name="MeshInstance" type="MeshInstance" parent="Balls/Ball3"]
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Balls/Ball3"]
-shape = SubResource( 6 )
-
-[node name="Ball4" type="RigidBody" parent="Balls"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2087, 0.900299, -7.42406 )
-collision_layer = 4
-collision_mask = 15
-
-[node name="MeshInstance" type="MeshInstance" parent="Balls/Ball4"]
-mesh = SubResource( 4 )
-material/0 = SubResource( 5 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Balls/Ball4"]
-shape = SubResource( 6 )
-
-[node name="house_type01" parent="." instance=ExtResource( 3 )]
+[node name="house_type01" parent="Houses" instance=ExtResource( 3 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.000372171, -0.00570893, 0.00483608 )
 collision_mask = 14
 
-[node name="path_tilesLong" parent="." instance=ExtResource( 4 )]
+[node name="path_tilesLong" parent="Houses" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.71909 )
 
-[node name="path_tilesLong2" parent="path_tilesLong" instance=ExtResource( 4 )]
+[node name="path_tilesLong2" parent="Houses/path_tilesLong" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96909 )
 
-[node name="path_tilesLong2" parent="path_tilesLong/path_tilesLong2" instance=ExtResource( 4 )]
+[node name="path_tilesLong2" parent="Houses/path_tilesLong/path_tilesLong2" instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.75, 0, 1.21909 )
 
-[node name="house_type03" parent="." instance=ExtResource( 3 )]
+[node name="house_type03" parent="Houses" instance=ExtResource( 3 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 33, 0, 0 )
 collision_mask = 14
 
-[node name="house_type04" parent="." instance=ExtResource( 3 )]
+[node name="house_type04" parent="Houses" instance=ExtResource( 3 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 24.75, 0.5, 23.5 )
 collision_mask = 14
 
-[node name="house_type05" parent="." instance=ExtResource( 3 )]
+[node name="house_type05" parent="Houses" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5, 197, -2513 )
 collision_mask = 14
+
+[node name="house_type02" parent="Houses" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 55.25, 0, 0 )
+collision_mask = 7
+
+[node name="house_type06" parent="Houses" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 47.25, 0, 47 )
+
+[node name="house_type07" parent="Houses" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 95, 0, 27.25 )
+
+[node name="Houses2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -76.25, 0, 21 )
+
+[node name="house_type01" parent="Houses2" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.000372171, -0.00570893, 0.00483608 )
+collision_mask = 14
+
+[node name="path_tilesLong" parent="Houses2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.71909 )
+
+[node name="path_tilesLong2" parent="Houses2/path_tilesLong" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96909 )
+
+[node name="path_tilesLong2" parent="Houses2/path_tilesLong/path_tilesLong2" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.75, 0, 1.21909 )
+
+[node name="house_type03" parent="Houses2" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 33, 0, 0 )
+collision_mask = 14
+
+[node name="house_type04" parent="Houses2" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 24.75, 0.5, 23.5 )
+collision_mask = 14
+
+[node name="house_type05" parent="Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5, 197, -2513 )
+collision_mask = 14
+
+[node name="house_type02" parent="Houses2" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 55.25, 0, 0 )
+collision_mask = 7
+
+[node name="house_type06" parent="Houses2" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 47.25, 0, 47 )
+
+[node name="house_type07" parent="Houses2" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 95, 0, 27.25 )
+
+[node name="Houses3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.25, 0, -85.5 )
+
+[node name="house_type01" parent="Houses3" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.000372171, -0.00570893, 0.00483608 )
+collision_mask = 14
+
+[node name="path_tilesLong" parent="Houses3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.71909 )
+
+[node name="path_tilesLong2" parent="Houses3/path_tilesLong" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96909 )
+
+[node name="path_tilesLong2" parent="Houses3/path_tilesLong/path_tilesLong2" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.75, 0, 1.21909 )
+
+[node name="house_type03" parent="Houses3" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 33, 0, 0 )
+collision_mask = 14
+
+[node name="house_type04" parent="Houses3" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 24.75, 0.5, 23.5 )
+collision_mask = 14
+
+[node name="house_type05" parent="Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5, 197, -2513 )
+collision_mask = 14
+
+[node name="house_type02" parent="Houses3" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 55.25, 0, 0 )
+collision_mask = 7
+
+[node name="house_type06" parent="Houses3" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 47.25, 0, 47 )
+
+[node name="house_type07" parent="Houses3" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 95, 0, 27.25 )
+
+[node name="Houses4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.75, 0, -71.25 )
+
+[node name="house_type01" parent="Houses4" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.000372171, -0.00570893, 0.00483608 )
+collision_mask = 14
+
+[node name="path_tilesLong" parent="Houses4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.71909 )
+
+[node name="path_tilesLong2" parent="Houses4/path_tilesLong" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.96909 )
+
+[node name="path_tilesLong2" parent="Houses4/path_tilesLong/path_tilesLong2" instance=ExtResource( 4 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.75, 0, 1.21909 )
+
+[node name="house_type03" parent="Houses4" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 33, 0, 0 )
+collision_mask = 14
+
+[node name="house_type04" parent="Houses4" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 24.75, 0.5, 23.5 )
+collision_mask = 14
+
+[node name="house_type05" parent="Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5, 197, -2513 )
+collision_mask = 14
+
+[node name="house_type02" parent="Houses4" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 55.25, 0, 0 )
+collision_mask = 7
+
+[node name="house_type06" parent="Houses4" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 47.25, 0, 47 )
+
+[node name="house_type07" parent="Houses4" instance=ExtResource( 3 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 95, 0, 27.25 )
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.25, 1.5, 35.5 )
 
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
