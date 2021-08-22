@@ -18,7 +18,7 @@ The thing in cursive is what I am working on right now.
 
 ## Shooting
 ### Mechanics
-So, for now the weapon is quite tightly coupled to the player, but it is there. There is a poor effect when hitting something, but it is there. The enemy that I so happened to create is also there and can not only take damage, but also die. 
+So, for now the weapon is quite tightly coupled to the player, but it is there. There is a poor effect when hitting something, but it is there. The enemy that I so happened to create is also there and can not only take damage, but also die. There is a signal for death and taking damage, meaning that the enemy could in fact blink or something when taking a hit. Very cool.
 
 
 ## Level 1
@@ -199,11 +199,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIxNTEwMzQxLDE2OTQ3MzQwNjksMTkyMz
-Q4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMz
-MTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC
-0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2
-MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NT
-M5NSwxMjIxNzkwMTUxLC01MjUzMDQ1ODYsNjkwNDQyNTIzLC05
-MDQ4Mzg2NTFdfQ==
+eyJoaXN0b3J5IjpbLTQ5MzgyNzE4MiwxNjk0NzM0MDY5LDE5Mj
+M0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUz
+MzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMy
+wtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYsLTkz
+NjE0MzcwMSwtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0yNDUxNz
+UzOTUsMTIyMTc5MDE1MSwtNTI1MzA0NTg2LDY5MDQ0MjUyMywt
+OTA0ODM4NjUxXX0=
 -->
