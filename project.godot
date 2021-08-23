@@ -8,6 +8,94 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Task",
+"class": "AlwaysFail",
+"language": "GDScript",
+"path": "res://BehaviorTree/Decorators/AlwaysFail.gd"
+}, {
+"base": "Task",
+"class": "AlwaysSucceed",
+"language": "GDScript",
+"path": "res://BehaviorTree/Decorators/AlwaysSucceed.gd"
+}, {
+"base": "Task",
+"class": "Invert",
+"language": "GDScript",
+"path": "res://BehaviorTree/Decorators/Invert.gd"
+}, {
+"base": "Task",
+"class": "Leaf",
+"language": "GDScript",
+"path": "res://BehaviorTree/Leaf.gd"
+}, {
+"base": "Task",
+"class": "Limit",
+"language": "GDScript",
+"path": "res://BehaviorTree/Decorators/Limit.gd"
+}, {
+"base": "Task",
+"class": "Parallel",
+"language": "GDScript",
+"path": "res://BehaviorTree/Composites/Parallel.gd"
+}, {
+"base": "Task",
+"class": "RandomSelector",
+"language": "GDScript",
+"path": "res://BehaviorTree/Composites/RandomSelector.gd"
+}, {
+"base": "Task",
+"class": "RandomSequence",
+"language": "GDScript",
+"path": "res://BehaviorTree/Composites/RandomSequence.gd"
+}, {
+"base": "Task",
+"class": "Repeat",
+"language": "GDScript",
+"path": "res://BehaviorTree/Decorators/Repeat.gd"
+}, {
+"base": "Task",
+"class": "Selector",
+"language": "GDScript",
+"path": "res://BehaviorTree/Composites/Selector.gd"
+}, {
+"base": "Task",
+"class": "Sequence",
+"language": "GDScript",
+"path": "res://BehaviorTree/Composites/Sequence.gd"
+}, {
+"base": "Node",
+"class": "Task",
+"language": "GDScript",
+"path": "res://BehaviorTree/Task.gd"
+}, {
+"base": "Task",
+"class": "UntilFail",
+"language": "GDScript",
+"path": "res://BehaviorTree/Decorators/UntilFail.gd"
+}, {
+"base": "Task",
+"class": "UntilSuccess",
+"language": "GDScript",
+"path": "res://BehaviorTree/Decorators/UntilSuccess.gd"
+} ]
+_global_script_class_icons={
+"AlwaysFail": "",
+"AlwaysSucceed": "",
+"Invert": "",
+"Leaf": "",
+"Limit": "",
+"Parallel": "",
+"RandomSelector": "",
+"RandomSequence": "",
+"Repeat": "",
+"Selector": "",
+"Sequence": "",
+"Task": "",
+"UntilFail": "",
+"UntilSuccess": ""
+}
+
 [application]
 
 config/name="suburban-commando"
