@@ -233,8 +233,10 @@ fire_primary={
 
 3d_physics/layer_1="Environment"
 3d_physics/layer_2="Player"
-3d_physics/layer_3="Other"
+3d_physics/layer_3="Items"
 3d_physics/layer_4="Floor"
+3d_physics/layer_5="Sensors"
+3d_physics/layer_6="Enemies"
 
 [physics]
 

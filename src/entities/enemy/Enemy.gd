@@ -10,6 +10,7 @@ var jump = false
 var look_at_target = Vector3()
 onready var muzzle_flash = $blasterA.get_node("MuzzleFlash")
 onready var rayBlaster = $blasterA.get_node("RayCast")
+onready var action_timer = $ActionTimer
 var fire = false
 var can_fire = true
 var has_fired = false
@@ -24,7 +25,9 @@ var last_impact_point = Vector3()
 var last_explosion_position = Vector3()
 
 var target_vector = Vector3() # if this is zero, we don't move, ok?
-var found_player = false
+
+var looking_for_player_status = Task.FRESH
+var move_towards_status = Task.FRESH
 
 
 func _ready():
@@ -32,10 +35,17 @@ func _ready():
 
 func _physics_process(delta):
 	velocity += gravity * delta
+	
+	if move_towards_status == Task.RUNNING:
+		global_transform.origin = global_transform.origin.move_toward(target_vector, speed * delta)
+	
 	velocity = move_and_slide(velocity, Vector3.UP)
+	
+	
 	if jump and is_on_floor():
 		velocity.y = jump_speed
-	look_at(look_at_target, Vector3.UP)
+		
+	look_at(target_vector, Vector3.UP)
 	handle_shots(delta)
 
 func handle_shots(delta):
@@ -114,10 +124,42 @@ func _on_BaseEntity_took_damange():
 # I know, let's make it super complicated!
 # We'll have a timer that starts, and an area that activates, then we wait for a signal, of course.
 func look_for_player():
-	return Task.SUCCEEDED
+	stop_moving()
+	action_timer.start(5)
+	if looking_for_player_status == Task.FRESH:
+		get_node("LongRangeSensor").monitoring = true
+		looking_for_player_status = Task.RUNNING
+	if looking_for_player_status == Task.SUCCEEDED:		
+		looking_for_player_status = Task.FRESH
+		get_node("LongRangeSensor").monitoring = false
+		return Task.SUCCEEDED
+	if looking_for_player_status == Task.FAILED:		
+		looking_for_player_status = Task.FRESH
+		get_node("LongRangeSensor").monitoring = false
+		return Task.FAILED
+			
+func stop_moving():
+	pass
 
 func move_towards_player():
-	return Task.FAILED
-
+	if move_towards_status == Task.FRESH:
+		move_towards_status = Task.RUNNING
+		return Task.RUNNING
+	
+	if move_towards_status == Task.RUNNING and global_transform.origin == target_vector:
+		move_towards_status = Task.FRESH
+		return Task.SUCCEEDED
+	elif move_towards_status == Task.RUNNING:
+		return Task.RUNNING
+	
 func move_in_random_direction():
 	return Task.RUNNING
+
+func _on_LongRangeSensor_body_entered(body):
+	target_vector = body.global_transform.origin
+	looking_for_player_status = Task.SUCCEEDED
+
+
+func _on_ActionTimer_timeout():
+	if looking_for_player_status == Task.RUNNING:
+		looking_for_player_status = Task.FAILED

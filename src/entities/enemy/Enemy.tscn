@@ -22,10 +22,12 @@ radius = 0.5
 size = Vector3( 0.1, 0.2, 0.2 )
 
 [sub_resource type="CylinderShape" id=5]
-radius = 5.0
+radius = 25.0
 height = 0.1
 
 [node name="Enemy" type="KinematicBody"]
+collision_layer = 32
+collision_mask = 47
 script = ExtResource( 1 )
 
 [node name="Body" type="MeshInstance" parent="."]
@@ -45,6 +47,8 @@ transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, 0, 0, -
 
 [node name="blasterA" parent="." instance=ExtResource( 2 )]
 transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, -0.000107216, 0, -0.55819 )
+collision_layer = 4
+collision_mask = 1
 
 [node name="BaseEntity" parent="." instance=ExtResource( 3 )]
 
@@ -58,5 +62,16 @@ collision_mask = 2
 [node name="CollisionShape" type="CollisionShape" parent="Sensor"]
 shape = SubResource( 5 )
 
+[node name="LongRangeSensor" type="Area" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="LongRangeSensor"]
+shape = SubResource( 5 )
+
+[node name="ActionTimer" type="Timer" parent="."]
+
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
+[connection signal="body_entered" from="LongRangeSensor" to="." method="_on_LongRangeSensor_body_entered"]
+[connection signal="timeout" from="ActionTimer" to="." method="_on_ActionTimer_timeout"]
