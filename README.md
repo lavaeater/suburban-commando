@@ -19,6 +19,8 @@ The thing in cursive is what I am working on right now.
 ## Enemy Entity 1 <- Doing now
 ### Mechanics
 Here we go with the AI again, don't we? The enemy has to be able to walk around, look for stuff, react to things - and make decisions.
+So, some more notes on this... there are Behavior Tree implementations out there and they're a bit annoying, to say the very least. Thing is, it kinda makes sense to 
+
 
 ## Shooting
 ### Mechanics
@@ -203,11 +205,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
-IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
-MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MT
-MsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05
-MzYxNDM3MDEsLTE5MjA3ODIxMzYsMTAxNzEzNjQ0MiwtMjQ1MT
-c1Mzk1LDEyMjE3OTAxNTEsLTUyNTMwNDU4Niw2OTA0NDI1MjMs
-LTkwNDgzODY1MV19
+eyJoaXN0b3J5IjpbOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OT
+Q3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEy
+ODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMy
+wtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1
+MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMz
+Y0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMDQ1ODYs
+NjkwNDQyNTIzXX0=
 -->
