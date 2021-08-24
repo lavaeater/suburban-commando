@@ -20,6 +20,31 @@ _global_script_classes=[ {
 "path": "res://BehaviorTree/Decorators/AlwaysSucceed.gd"
 }, {
 "base": "Task",
+"class": "Call",
+"language": "GDScript",
+"path": "res://Tests/Leaves/Call.gd"
+}, {
+"base": "Leaf",
+"class": "CallMyAgent",
+"language": "GDScript",
+"path": "res://BehaviorTree/Leaves/CallMyAgent.gd"
+}, {
+"base": "Task",
+"class": "DynamicGuardSelector",
+"language": "GDScript",
+"path": "res://BehaviorTree/Composites/DynamicGuardSelector.gd"
+}, {
+"base": "Task",
+"class": "Fail",
+"language": "GDScript",
+"path": "res://Tests/Leaves/Fail.gd"
+}, {
+"base": "StatusSequence",
+"class": "FtoS",
+"language": "GDScript",
+"path": "res://Tests/Leaves/f-s.gd"
+}, {
+"base": "Task",
 "class": "Invert",
 "language": "GDScript",
 "path": "res://BehaviorTree/Decorators/Invert.gd"
@@ -33,6 +58,11 @@ _global_script_classes=[ {
 "class": "Limit",
 "language": "GDScript",
 "path": "res://BehaviorTree/Decorators/Limit.gd"
+}, {
+"base": "Task",
+"class": "LimitCheck",
+"language": "GDScript",
+"path": "res://Tests/Leaves/LimitCheck.gd"
 }, {
 "base": "Task",
 "class": "Parallel",
@@ -55,6 +85,11 @@ _global_script_classes=[ {
 "path": "res://BehaviorTree/Decorators/Repeat.gd"
 }, {
 "base": "Task",
+"class": "RepeatChild",
+"language": "GDScript",
+"path": "res://Tests/Leaves/RepeatChild.gd"
+}, {
+"base": "Task",
 "class": "Selector",
 "language": "GDScript",
 "path": "res://BehaviorTree/Composites/Selector.gd"
@@ -63,6 +98,21 @@ _global_script_classes=[ {
 "class": "Sequence",
 "language": "GDScript",
 "path": "res://BehaviorTree/Composites/Sequence.gd"
+}, {
+"base": "Task",
+"class": "StatusSequence",
+"language": "GDScript",
+"path": "res://Tests/Leaves/StatusSequence.gd"
+}, {
+"base": "StatusSequence",
+"class": "StoF",
+"language": "GDScript",
+"path": "res://Tests/Leaves/s-f.gd"
+}, {
+"base": "Task",
+"class": "Succeed",
+"language": "GDScript",
+"path": "res://Tests/Leaves/Succeed.gd"
 }, {
 "base": "Node",
 "class": "Task",
@@ -82,15 +132,25 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "AlwaysFail": "",
 "AlwaysSucceed": "",
+"Call": "",
+"CallMyAgent": "",
+"DynamicGuardSelector": "res://icons/selector.png",
+"Fail": "",
+"FtoS": "",
 "Invert": "",
 "Leaf": "",
 "Limit": "",
+"LimitCheck": "",
 "Parallel": "",
 "RandomSelector": "",
 "RandomSequence": "",
 "Repeat": "",
+"RepeatChild": "",
 "Selector": "",
-"Sequence": "",
+"Sequence": "res://icons/sequence.png",
+"StatusSequence": "",
+"StoF": "",
+"Succeed": "",
 "Task": "",
 "UntilFail": "",
 "UntilSuccess": ""
@@ -101,6 +161,10 @@ _global_script_class_icons={
 config/name="suburban-commando"
 run/main_scene="res://level/Main.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
 
 [input]
 

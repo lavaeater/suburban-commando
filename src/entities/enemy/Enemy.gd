@@ -23,6 +23,10 @@ var impact_thingie = preload("res://src/fx/anime_explosion.tscn")
 var last_impact_point = Vector3()
 var last_explosion_position = Vector3()
 
+var target_vector = Vector3() # if this is zero, we don't move, ok?
+var found_player = false
+
+
 func _ready():
 	pass # Replace with function body.
 
@@ -106,3 +110,14 @@ func _on_BaseEntity_death_occurred():
 
 func _on_BaseEntity_took_damange():
 	pass # What happens when taking damage?
+	
+# I know, let's make it super complicated!
+# We'll have a timer that starts, and an area that activates, then we wait for a signal, of course.
+func look_for_player():
+	return Task.SUCCEEDED
+
+func move_towards_player():
+	return Task.FAILED
+
+func move_in_random_direction():
+	return Task.RUNNING

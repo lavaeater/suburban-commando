@@ -13,7 +13,7 @@ enum {
 
 var control = null
 var tree = null
-# var guard = null
+# var guard = null - look into implementing guards, maan.
 var status = FRESH
 
 # Final methods

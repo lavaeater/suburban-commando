@@ -18,7 +18,7 @@ func child_success():
 
 func child_fail():
 	current_child = 0
-	fail()
+	fail() # What does dot call mean? Confusing
 
 func cancel():
 	current_child = 0

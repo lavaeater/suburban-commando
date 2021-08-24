@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/entities/enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/things/blasterA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/base_entity/BaseEntity.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/ai/EnemyBehavior.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SphereMesh" id=1]
 radius = 0.5
@@ -19,6 +20,10 @@ radius = 0.5
 
 [sub_resource type="PrismMesh" id=4]
 size = Vector3( 0.1, 0.2, 0.2 )
+
+[sub_resource type="CylinderShape" id=5]
+radius = 5.0
+height = 0.1
 
 [node name="Enemy" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -42,6 +47,16 @@ transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, 0, 0, -
 transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, -0.000107216, 0, -0.55819 )
 
 [node name="BaseEntity" parent="." instance=ExtResource( 3 )]
+
+[node name="EnemyBehavior" parent="." instance=ExtResource( 4 )]
+agent_path = NodePath("..")
+
+[node name="Sensor" type="Area" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape" type="CollisionShape" parent="Sensor"]
+shape = SubResource( 5 )
 
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
