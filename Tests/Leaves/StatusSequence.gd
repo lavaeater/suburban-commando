@@ -10,6 +10,7 @@ var sequence = [SUCCEEDED, FAILED]
 var idx = 0
 
 func run():
+	.run()
 	match status:
 		SUCCEEDED:
 			success()

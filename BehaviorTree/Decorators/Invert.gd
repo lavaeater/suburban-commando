@@ -5,6 +5,7 @@ extends Task
 class_name Invert, "res://icons/invert.png"
 
 func run():
+	.run()
 	get_child(0).run()
 	running()
 

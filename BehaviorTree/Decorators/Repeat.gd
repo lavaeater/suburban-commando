@@ -4,6 +4,7 @@ extends Task
 
 class_name Repeat, "res://icons/repeat.png"
 
+
 # Number of times to run or zero for infinite
 export(int) var LIMIT = 5
 
@@ -11,9 +12,10 @@ var count = 0
 var repeating = false
 
 func run():
+	.run()
 	if not repeating:
 		repeating = true
-		get_child(0).run()
+	get_child(0).run()
 	running()
 
 func child_success():

@@ -3,6 +3,7 @@ extends Task
 class_name AlwaysSucceed, "res://icons/always-succeed.png"
 
 func run():
+	.run()
 	if get_child_count() > 0:
 		get_child(0).run()
 	success()

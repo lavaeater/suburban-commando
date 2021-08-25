@@ -5,5 +5,6 @@ extends Task
 class_name RepeatChild
 
 func run():
+	.run()
 	get_child(0).run()
 	running()

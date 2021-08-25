@@ -5,6 +5,7 @@ class_name CallMyAgent
 export (String) var MethodToCall 
 
 func run():
+	.run()
 	if tree.agent_path:
 		var agent = tree.get_node(tree.agent_path)
 		var result = agent.call(MethodToCall)

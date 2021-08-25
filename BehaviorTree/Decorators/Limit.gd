@@ -10,6 +10,7 @@ export(int) var LIMIT = 4
 var count = 0
 
 func run():
+	.run()
 	get_child(0).run()
 	running()
 

@@ -10,6 +10,7 @@ var count = 0
 var repeating = false
 
 func run():
+	.run()
 	if not repeating:
 		repeating = true
 		get_child(0).run()

@@ -7,6 +7,7 @@ class_name Selector, "res://icons/selector.png"
 var current_child = 0
 
 func run():
+	.run()
 	get_child(current_child).run()
 	running()
 

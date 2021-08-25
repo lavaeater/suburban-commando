@@ -16,6 +16,8 @@ var tree = null
 # var guard = null - look into implementing guards, maan.
 var status = FRESH
 
+export (NodePath) var agent_path # Blackboard, agent, whatever. Used for leaf tasks.
+
 # Final methods
 func running():
 	status = RUNNING
@@ -41,8 +43,7 @@ func cancel():
 
 # Abstract methods
 func run():
-	# Process the task and call running(), success(), or fail()
-	pass
+	tree.current_task_running = self.get_name()
 
 func child_success():
 	success()

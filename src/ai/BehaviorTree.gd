@@ -1,25 +1,33 @@
 extends Task
 
-# All children must run successfully
+class_name BehaviorTree
 
-class_name Sequence, "res://icons/sequence.png"
+var current_task_running = ""
 
+func _ready():
+	tree = self
+	.start()
+	status = RUNNING
+	
+func _process(_delta):
+	run()
+	
 var current_child = 0
 
 func run():
-	.run()
 	get_child(current_child).run()
 	running()
 
-func child_success():
+func move_to_next_child():
 	current_child += 1
 	if current_child >= get_child_count():
 		current_child = 0
-		success()
+
+func child_success():
+	move_to_next_child()
 
 func child_fail():
-	current_child = 0
-	fail()
+	move_to_next_child()
 
 func cancel():
 	current_child = 0
@@ -28,3 +36,4 @@ func cancel():
 func start():
 	current_child = 0
 	.start()
+
