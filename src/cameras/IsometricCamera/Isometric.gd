@@ -8,7 +8,6 @@ signal look_at_target
 func _ready():
 	pass # Replace with function body.
 
-
 func _process(delta):
 	if target:
 		global_transform.origin = get_node(target).global_transform.origin
