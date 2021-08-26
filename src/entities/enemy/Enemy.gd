@@ -28,6 +28,8 @@ var target_vector = Vector3() # if this is zero, we don't move, ok?
 
 var looking_for_player_status = Task.FRESH
 var move_towards_status = Task.FRESH
+var player_is_in = false
+var body_that_is_currently_in = null
 
 
 func _ready():
@@ -129,13 +131,18 @@ func look_for_player():
 		action_timer.start(5)
 		looking_for_player_status = Task.RUNNING
 
-	if looking_for_player_status == Task.RUNNING and target_vector != Vector3.ZERO:		
+	if looking_for_player_status == Task.RUNNING and player_is_in:
 		looking_for_player_status = Task.FRESH
+		target_vector = Vector3(
+			body_that_is_currently_in.global_transform.origin.x, 
+			0, 
+			body_that_is_currently_in.global_transform.origin.z)
 		action_timer.stop()
 		return Task.SUCCEEDED
 		
 	if looking_for_player_status == Task.FAILED:		
 		looking_for_player_status = Task.FRESH
+		target_vector = Vector3.ZERO
 		action_timer.stop()
 		return Task.FAILED
 				
@@ -161,6 +168,7 @@ func move_in_random_direction():
 	
 	if move_towards_status == Task.RUNNING and global_transform.origin == target_vector:
 		move_towards_status = Task.FRESH
+		target_vector = Vector3.ZERO
 		return Task.SUCCEEDED
 
 	return Task.RUNNING
@@ -168,11 +176,12 @@ func move_in_random_direction():
 
 
 func _on_LongRangeSensor_body_entered(body):
-	target_vector = Vector3(body.global_transform.origin.x, 0, body.global_transform.origin.z)
+	player_is_in = true
+	body_that_is_currently_in = body
 
 func _on_LongRangeSensor_body_exited(body):
-	target_vector = Vector3.ZERO
-
+	player_is_in = false
+	body_that_is_currently_in = null
 
 func _on_ActionTimer_timeout():
 	if looking_for_player_status == Task.RUNNING:
