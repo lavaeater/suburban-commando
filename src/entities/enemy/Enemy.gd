@@ -186,5 +186,9 @@ func _on_LongRangeSensor_body_exited(body):
 func _on_ActionTimer_timeout():
 	if looking_for_player_status == Task.RUNNING:
 		looking_for_player_status = Task.FAILED
+		
+func run_ai_method(method_name):
+	return call(method_name)
+	
 
 

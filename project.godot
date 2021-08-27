@@ -147,9 +147,9 @@ _global_script_class_icons={
 "Leaf": "",
 "Limit": "res://icons/limit.png",
 "LimitCheck": "",
-"Parallel": "",
-"RandomSelector": "",
-"RandomSequence": "",
+"Parallel": "res://icons/parallel.png",
+"RandomSelector": "res://icons/random-selector.png",
+"RandomSequence": "res://icons/random-sequence.png",
 "Repeat": "res://icons/repeat.png",
 "RepeatChild": "",
 "Selector": "res://icons/selector.png",
@@ -158,8 +158,8 @@ _global_script_class_icons={
 "StoF": "",
 "Succeed": "",
 "Task": "",
-"UntilFail": "",
-"UntilSuccess": ""
+"UntilFail": "res://icons/until-fail.png",
+"UntilSuccess": "res://icons/until-success.png"
 }
 
 [application]
@@ -238,11 +238,12 @@ fire_primary={
 [layer_names]
 
 3d_physics/layer_1="Environment"
-3d_physics/layer_2="Player"
+3d_physics/layer_2="Entities"
 3d_physics/layer_3="Items"
 3d_physics/layer_4="Floor"
 3d_physics/layer_5="Sensors"
 3d_physics/layer_6="Enemies"
+3d_physics/layer_7="Players"
 
 [physics]
 

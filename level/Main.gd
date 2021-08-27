@@ -4,7 +4,7 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+onready var enemy = $Enemy
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,16 +19,16 @@ func get_player_position():
 	return $Player.global_transform.origin
 
 func get_enemy_position():
-	return $Enemy.global_transform.origin
+	return enemy.global_transform.origin
 
 func get_target_vector():
-	return $Enemy.target_vector
+	return enemy.target_vector
 	
 func get_current_enemy_action():
-	var node = $Enemy.get_node("EnemyBehavior")
-	var control = node.control
-	var name = "No Control, Man!"
-	if node.tree != null:
-		name = "Tree: " + node.tree.current_task_running
+	name = "Enemy Action Pending"
+	if enemy != null
+		var node = enemy.get_node("EnemyBehavior")
+		if node.tree != null:
+			name = "Enemy Action: " + node.tree.current_task_running
 	return name
 	
