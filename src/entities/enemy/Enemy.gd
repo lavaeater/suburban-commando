@@ -133,10 +133,7 @@ func look_for_player():
 
 	if looking_for_player_status == Task.RUNNING and player_is_in:
 		looking_for_player_status = Task.FRESH
-		target_vector = Vector3(
-			body_that_is_currently_in.global_transform.origin.x, 
-			0, 
-			body_that_is_currently_in.global_transform.origin.z)
+		target_vector = body_that_is_currently_in.global_transform.origin
 		action_timer.stop()
 		return Task.SUCCEEDED
 		

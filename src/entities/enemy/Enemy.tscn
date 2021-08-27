@@ -32,7 +32,7 @@ height = 0.1
 
 [sub_resource type="SpatialMaterial" id=7]
 flags_transparent = true
-albedo_color = Color( 0.894118, 0.937255, 0.0980392, 1 )
+albedo_color = Color( 0.847059, 0.309804, 0.0980392, 0.0470588 )
 
 [node name="Enemy" type="KinematicBody"]
 collision_layer = 34
@@ -79,7 +79,6 @@ shape = SubResource( 5 )
 [node name="ActionTimer" type="Timer" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-visible = false
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 

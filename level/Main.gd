@@ -26,7 +26,7 @@ func get_target_vector():
 	
 func get_current_enemy_action():
 	name = "Enemy Action Pending"
-	if enemy != null
+	if enemy != null:
 		var node = enemy.get_node("EnemyBehavior")
 		if node.tree != null:
 			name = "Enemy Action: " + node.tree.current_task_running
