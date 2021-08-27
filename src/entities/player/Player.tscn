@@ -21,6 +21,7 @@ radius = 0.5
 size = Vector3( 0.1, 0.2, 0.2 )
 
 [node name="Player" type="KinematicBody"]
+collision_mask = 11
 script = ExtResource( 1 )
 
 [node name="Body" type="MeshInstance" parent="."]

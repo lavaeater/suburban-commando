@@ -28,7 +28,7 @@ func _ready():
 
 func _physics_process(delta):
 	velocity += gravity * delta
-	get_input()
+	get_input(delta)
 	velocity = move_and_slide(velocity, Vector3.UP)
 	if jump and is_on_floor():
 		velocity.y = jump_speed
@@ -70,12 +70,12 @@ func handle_shots(delta):
 		can_fire = true
 		has_fired = false
 
-func get_input():
+func get_input(delta):
 	velocity.x = 0
 	velocity.z = 0
 	direction.x = 0
 	direction.z = 0
-	handle_movement()
+	handle_movement(delta)
 	handle_jumping()
 	handle_shooting()
 	
@@ -84,7 +84,7 @@ func handle_shooting():
 	if Input.is_action_pressed("fire_primary"):
 		fire = true
 
-func handle_movement():
+func handle_movement(delta):
 	if Input.is_action_pressed("move_forward"):
 		direction.z -= speed 
 	if Input.is_action_pressed("move_back"):

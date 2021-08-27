@@ -11,6 +11,7 @@ var look_at_target = Vector3()
 onready var muzzle_flash = $blasterA.get_node("MuzzleFlash")
 onready var rayBlaster = $blasterA.get_node("RayCast")
 onready var action_timer = $ActionTimer
+onready var root = get_parent()
 var fire = false
 var can_fire = true
 var has_fired = false
@@ -31,9 +32,12 @@ var move_towards_status = Task.FRESH
 var player_is_in = false
 var body_that_is_currently_in = null
 
+var random = RandomNumberGenerator.new()
+
+
 
 func _ready():
-	pass # Replace with function body.
+	random.randomize()
 
 func _physics_process(delta):
 	velocity += gravity * delta
@@ -158,9 +162,15 @@ func move_towards_player():
 	
 	return Task.RUNNING
 	
+	
 func move_in_random_direction():
 	if move_towards_status == Task.FRESH:
-		target_vector = Vector3(50,0,75)
+		var min_x = root.floor_center.x - root.floor_width / 2
+		var min_z = root.floor_center.y - root.floor_depth / 2
+		var max_x = root.floor_center.x + root.floor_width / 2
+		var max_z = root.floor_center.y + root.floor_depth / 2
+
+		target_vector = Vector3(random.randi_range(min_x, max_x),global_transform.origin.y,random.randi_range(min_z, max_z))
 		move_towards_status = Task.RUNNING
 	
 	if move_towards_status == Task.RUNNING and global_transform.origin == target_vector:

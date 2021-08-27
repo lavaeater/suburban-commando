@@ -79,6 +79,7 @@ shape = SubResource( 5 )
 [node name="ActionTimer" type="Timer" parent="."]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+visible = false
 mesh = SubResource( 6 )
 material/0 = SubResource( 7 )
 
