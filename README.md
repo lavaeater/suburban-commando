@@ -14,7 +14,8 @@ Simply an overlay or something like that, displaying ammo, health, score, object
 ### Splash screen
 Player select, character select.
 
-
+### Objectives
+Someth
 
 ### Things that need to be done
 
@@ -239,7 +240,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjQwMzM5NywtMjEzMzcwOTY1OCw2MD
+eyJoaXN0b3J5IjpbLTkxODE0OTYyMCwtMjEzMzcwOTY1OCw2MD
 YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
 OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
 kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
