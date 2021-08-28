@@ -21,7 +21,7 @@ Something on the map that the player needs to move to in order for the game to c
 This is part of the "visual stylings" concept - when shooting, we need FX for the hits and such.
 
 ### Enemy attacks
-The en
+The enemies should attack, perhaps using melee attacks for now. 
 
 ### Things that need to be done
 
@@ -246,11 +246,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MDEzMjE2LC0yMTMzNzA5NjU4LDYwNj
-I1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5
-Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
-IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
-MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MT
-MsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05
-MzYxNDM3MDFdfQ==
+eyJoaXN0b3J5IjpbLTU4MDE0NTU0NywtMjEzMzcwOTY1OCw2MD
+YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
+OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
+kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
+NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NT
+EzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwt
+OTM2MTQzNzAxXX0=
 -->
