@@ -12,6 +12,7 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
+- [ ] Towers <
 - [ ] HUD
 - [ ] Splash Screen
 - [ ] Objectives
@@ -19,7 +20,6 @@ The thing in cursive is what I am working on right now.
 - [ ] Enemy Attacks
 - [ ] PLayer Health and Death
 - [ ] Enemies detecting players
-- [ ] Towers
 - [ ] Visual Stylings
 - [x] Level 2
 - [x] Player Movement
@@ -263,7 +263,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0ODU5Nzc2MiwxMDI2OTUxMTgsODAyOD
+eyJoaXN0b3J5IjpbMTM2MTAwMjc5MiwxMDI2OTUxMTgsODAyOD
 IyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5
 LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNz
 UwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcy
