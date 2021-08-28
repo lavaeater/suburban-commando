@@ -8,7 +8,7 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 The thing in cursive is what I am working on right now.
 
-- [ ] *Player Movement*
+- [x] *Player Movement*
 - [ ] Level 2
 - [ ] Visual Stylings
 - [x] Enemy Entity 1
@@ -20,6 +20,9 @@ The thing in cursive is what I am working on right now.
 ## Player movement
 So what is really up with the player movement thing? Well, here's the deal: it's not working. It feels like it *did work* and for some reason has *stopped working*. This is the bane of software development and why you need good git discipline. Everything line of code you write or test must be in isolation of any previous working code you have written. Otherwise you end up with large changesets that yes, introduce new working features (like the AI stuff) but break something else (like player movement) and you no longer have any clue what does what.
 In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. Or two, I have two strategies, plus an idea.
+
+### Solution found
+So, using the strategies below I 
 
 ### Rollback to working state
 Here's why you need Git discipline. If there existed a commit in my Git history that said "Player Movement DONE" I could simply checkout that commit and compare it to the state the code is in now and find important clues to why it used to work but doesn't anymore. However, I fear that this committ doesn't exist. We'll see.
@@ -219,11 +222,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNz
-UwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcy
-Njc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4My
-wtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4
-ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3OD
-IxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEs
-LTUyNTMwNDU4Nl19
+eyJoaXN0b3J5IjpbLTE1NDMwODY0NDAsLTU5OTY2NjM5Miw5Mj
+k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
+MjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxND
+YsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0
+OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYxND
+M3MDEsLTE5MjA3ODIxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1
+LDEyMjE3OTAxNTFdfQ==
 -->
