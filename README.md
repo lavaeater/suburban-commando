@@ -20,7 +20,8 @@ Something on the map that the player needs to move to in order for the game to c
 ### Blood splatter? 
 This is part of the "visual stylings" concept - when shooting, we need FX for the hits and such.
 
-##
+### Enemy attacks
+The en
 
 ### Things that need to be done
 
@@ -245,11 +246,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDE0ODUxMTIsLTIxMzM3MDk2NTgsNj
-A2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2
-MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LD
-E5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0
-NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4Nj
-UxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYs
-LTkzNjE0MzcwMV19
+eyJoaXN0b3J5IjpbMTg2MDEzMjE2LC0yMTMzNzA5NjU4LDYwNj
+I1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5
+Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
+IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
+MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MT
+MsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05
+MzYxNDM3MDFdfQ==
 -->
