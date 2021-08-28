@@ -27,12 +27,15 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	velocity += gravity * delta
-	get_input(delta)
-	velocity = move_and_slide(velocity, Vector3.UP)
+	velocity += gravity
+	get_input()
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		velocity = velocity.slide(collision.normal)
+	
 	if jump and is_on_floor():
 		velocity.y = jump_speed
-	look_at(look_at_target, Vector3.UP)
+	#look_at(look_at_target, Vector3.UP)
 	handle_shots(delta)
 
 func handle_shots(delta):
@@ -70,12 +73,23 @@ func handle_shots(delta):
 		can_fire = true
 		has_fired = false
 
-func get_input(delta):
-	velocity.x = 0
-	velocity.z = 0
+func get_input():
 	direction.x = 0
 	direction.z = 0
-	handle_movement(delta)
+
+	if Input.is_action_pressed("move_forward"):
+		direction.z = - 1
+	if Input.is_action_pressed("move_back"):
+		direction.z = 1
+	if Input.is_action_pressed("strafe_right"):
+		direction.x = 1
+	if Input.is_action_pressed("strafe_left"):
+		direction.x = - 1
+		
+	direction = direction * speed #.rotated(Vector3.UP, PI / 4)
+	direction = direction.rotated(Vector3.UP, PI / 4)
+	velocity.x = direction.x
+	velocity.z = direction.z
 	handle_jumping()
 	handle_shooting()
 	
@@ -83,19 +97,6 @@ func handle_shooting():
 	fire = false
 	if Input.is_action_pressed("fire_primary"):
 		fire = true
-
-func handle_movement(delta):
-	if Input.is_action_pressed("move_forward"):
-		direction.z -= speed 
-	if Input.is_action_pressed("move_back"):
-		direction.z += speed
-	if Input.is_action_pressed("strafe_right"):
-		direction.x += speed
-	if Input.is_action_pressed("strafe_left"):
-		direction.x -= speed
-	direction = direction.rotated(Vector3.UP, PI / 4)
-	velocity.x = direction.x
-	velocity.z = direction.z
 
 func handle_jumping():
 	jump = false
