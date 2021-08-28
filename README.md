@@ -28,7 +28,7 @@ Here's why you need Git discipline. If there existed a commit in my Git history 
 If the above strategy doesn't get us anywhere, I will simply create a new Scene to troubleshoot all of this. It will simply contain the player, the camera and some ground. What I do need, however, is some kind of structure on the floor to see if the player is actually moving around a bit. 
 
 ### Rotate Schmotate
-I just realized I rotate the direction of the player, then do move and slide, perhaps we could work that into things, somehow? I ta
+I just realized I rotate the direction of the player, then do move and slide, perhaps we could work that into things, somehow? It appears, now, that the rotation interferes with the movement and stuff, which I was pretty certain was working. But we need to look into this. W
 
 ## Enemy Entity 1
 ### Mechanics
@@ -219,11 +219,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODk0NDQxMzksOTI5OTMxODAyLC0xMj
-c1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3
-MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwOD
-MsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0
-ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNz
-gyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUx
-LC01MjUzMDQ1ODZdfQ==
+eyJoaXN0b3J5IjpbLTk0ODIxMTk1Myw5Mjk5MzE4MDIsLTEyNz
+UwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcy
+Njc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4My
+wtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4
+ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3OD
+IxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEs
+LTUyNTMwNDU4Nl19
 -->
