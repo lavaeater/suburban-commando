@@ -17,7 +17,7 @@ Player select, character select.
 ### Objectives
 Something on the map that the player needs to move to in order for the game to continue to the next level.
 
-###
+### 
 
 ### Things that need to be done
 
@@ -242,7 +242,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNTU0NjMzOCwtMjEzMzcwOTY1OCw2MD
+eyJoaXN0b3J5IjpbLTcwNDA5Njc1OCwtMjEzMzcwOTY1OCw2MD
 YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
 OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
 kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
