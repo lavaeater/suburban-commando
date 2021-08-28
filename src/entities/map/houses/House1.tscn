@@ -75,6 +75,7 @@ points = PoolVector3Array( -0.0101014, 0.361154, -0.926317, -0.0101014, 0.361154
 [node name="house_type01" type="StaticBody"]
 
 [node name="house_type01" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 0, 0.46 )
 mesh = SubResource( 1 )
 material/0 = null
 material/1 = null
@@ -83,4 +84,5 @@ material/3 = null
 material/4 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 0, 0.46 )
 shape = SubResource( 2 )
