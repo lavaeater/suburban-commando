@@ -12,6 +12,8 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
+- [ ] HUD
+- [ ] 
 - [ ] Visual Stylings
 - [x] Level 2
 - [x] Player Movement
@@ -255,11 +257,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzY1ODY1NjUsODAyODIyOTIxLC0yMT
-MzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4
-NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMT
-Y5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1
-MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4Nz
-EzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0x
-MTUyNjU4NjI2XX0=
+eyJoaXN0b3J5IjpbMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMz
+cwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcx
+LC01OTk2NjYzOTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OT
+Q3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEy
+ODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMy
+wtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1
+MjY1ODYyNl19
 -->
