@@ -31,6 +31,96 @@ material/0 = SubResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="Ball"]
 shape = SubResource( 3 )
 
+[node name="Ball2" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball2"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball2"]
+shape = SubResource( 3 )
+
+[node name="Ball3" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 2, 17.75 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball3"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball3"]
+shape = SubResource( 3 )
+
+[node name="Ball4" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.75, 2, 17.75 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball4"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball4"]
+shape = SubResource( 3 )
+
+[node name="Ball5" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.75, 2, -16.25 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball5"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball5"]
+shape = SubResource( 3 )
+
+[node name="Ball6" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75, 2, -16.25 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball6"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball6"]
+shape = SubResource( 3 )
+
+[node name="Ball7" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75, 2, 2.75 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball7"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball7"]
+shape = SubResource( 3 )
+
+[node name="Ball8" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, 2, 2.75 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball8"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball8"]
+shape = SubResource( 3 )
+
+[node name="Ball9" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, 2, -33.75 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball9"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball9"]
+shape = SubResource( 3 )
+
+[node name="Ball10" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 2, -33.75 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ball10"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ball10"]
+shape = SubResource( 3 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
