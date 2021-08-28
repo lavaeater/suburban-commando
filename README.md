@@ -26,6 +26,7 @@ The enemies should attack, perhaps using melee attacks for now.
 ### Player health and death
 So, we have health for enemies, when enemies can attack, we shall have damage, health and death here. This also means an implementation for "lives" for the players as well, of course. Or perhaps a resurrection mechanic?
 
+### Enemies hearing players shooting
 
 
 ### Things that need to be done
@@ -251,11 +252,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI2NDQ4NzQsLTIxMzM3MDk2NTgsNjA2Mj
-U2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2Mzky
-LDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5Mj
-M0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUz
-MzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMy
-wtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYsLTkz
-NjE0MzcwMV19
+eyJoaXN0b3J5IjpbMTM4NTkzODQ4MCwtMjEzMzcwOTY1OCw2MD
+YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
+OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
+kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
+NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NT
+EzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwt
+OTM2MTQzNzAxXX0=
 -->
