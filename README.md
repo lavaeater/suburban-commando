@@ -22,7 +22,7 @@ So what is really up with the player movement thing? Well, here's the deal: it's
 In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. Or two, I have two strategies, plus an idea.
 
 ### Solution found
-So, using the strategies below I managed to fix it proper, I think. So there were several problems related to all of this, like the rotation of the character movement being off (and I realize I might have to fix it later, to make speeds correct depending on direction, more on that later) and so on. Who cares. No it should be OK. Anyway, the problem was probably related to collisions and collision layers in the code. 
+So, using the strategies below I managed to fix it proper, I think. So there were several problems related to all of this, like the rotation of the character movement being off (and I realize I might have to fix it later, to make speeds correct depending on direction, more on that later) and so on. Who cares. No it should be OK. Anyway, the problem was probably related to collisions and collision layers in the code. Now we can move on, perhaps.
 
 ### Rollback to working state
 Here's why you need Git discipline. If there existed a commit in my Git history that said "Player Movement DONE" I could simply checkout that commit and compare it to the state the code is in now and find important clues to why it used to work but doesn't anymore. However, I fear that this committ doesn't exist. We'll see.
@@ -222,11 +222,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNzgxODM5NCwtNTk5NjY2MzkyLDkyOT
-kzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIy
-MjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUzMzE0Ni
-wxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMywtMTQ5
-MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYsLTkzNjE0Mz
-cwMSwtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0yNDUxNzUzOTUs
-MTIyMTc5MDE1MV19
+eyJoaXN0b3J5IjpbLTEzNzkwODA3MDksLTU5OTY2NjM5Miw5Mj
+k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
+MjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxND
+YsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0
+OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYxND
+M3MDEsLTE5MjA3ODIxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1
+LDEyMjE3OTAxNTFdfQ==
 -->
