@@ -11,6 +11,9 @@ So, we should list these features and write a small note regarding what they mea
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
 
+### Splash screen
+Player select, character select.
+
 
 
 ### Things that need to be done
@@ -236,7 +239,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNzIzNDc3NSwtMjEzMzcwOTY1OCw2MD
+eyJoaXN0b3J5IjpbLTUzNjQwMzM5NywtMjEzMzcwOTY1OCw2MD
 YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
 OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
 kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
