@@ -1,10 +1,8 @@
 extends Spatial
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-onready var enemy = $Enemy
+onready var enemy = get_node("Enemy")
+onready var behavior_tree = get_node("Enemy/EnemyBehavior")
 
 onready var floor_width = $Floor.get_node("MeshInstance").mesh.size.x
 onready var floor_depth = $Floor.get_node("MeshInstance").mesh.size.y
@@ -16,9 +14,9 @@ func _ready():
 	overlay.add_stat_method("Player position", self, "get_player_position")
 	overlay.add_stat_method("Player velocity", self, "get_player_velocity")
 	overlay.add_stat_method("Player direction", self, "get_player_direction")
-#	overlay.add_stat_method("Current Enemy Action", self, "get_current_enemy_action")
-#	overlay.add_stat_method("Enemy position", self, "get_enemy_position")
-#	overlay.add_stat_method("Enemy Target Position", self, "get_target_vector")
+	overlay.add_stat_method("Current Enemy Action", self, "get_current_enemy_action")
+	overlay.add_stat_method("Enemy position", self, "get_enemy_position")
+	overlay.add_stat_method("Enemy Target Position", self, "get_target_vector")
 	add_child(overlay)
 
 func get_player_velocity():
@@ -38,9 +36,7 @@ func get_target_vector():
 	
 func get_current_enemy_action():
 	name = "Enemy Action Pending"
-	if enemy != null:
-		var node = enemy.get_node("EnemyBehavior")
-		if node.tree != null:
-			name = "Enemy Action: " + node.tree.current_task_running
+	if behavior_tree != null and behavior_tree.tree != null:
+		name = "Enemy Action: " + behavior_tree.tree.current_task_running
 	return name
-	
+

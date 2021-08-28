@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/cameras/IsometricCamera/IsoMetric.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/map/House_01.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/map/path_tilesLong.tscn" type="PackedScene" id=4]
 [ext_resource path="res://level/Main.gd" type="Script" id=5]
+[ext_resource path="res://src/entities/enemy/Enemy.tscn" type="PackedScene" id=6]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 200, 200 )
@@ -19,7 +20,7 @@ points = PoolVector3Array( 100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, -10
 script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 10.25 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10.25 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.00784069, -0.720665, 0.693239, -0.144847, 0.686767, 0.712299, -0.989423, -0.0948289, -0.109771, -62.1896, 27.8325, -180.998 )
@@ -195,5 +196,8 @@ collision_mask = 1
 
 [node name="CameraPivot" parent="." instance=ExtResource( 1 )]
 target = NodePath("../Player")
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 1, 0 )
 
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
