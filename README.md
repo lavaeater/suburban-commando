@@ -13,7 +13,7 @@ So, we should list these features and write a small note regarding what they mea
 The thing in cursive is what I am working on right now.
 
 - [ ] HUD
-- [ ] 
+- [ ] Splash Scre
 - [ ] Visual Stylings
 - [x] Level 2
 - [x] Player Movement
@@ -257,11 +257,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMz
-cwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcx
-LC01OTk2NjYzOTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OT
-Q3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEy
-ODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMy
-wtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1
-MjY1ODYyNl19
+eyJoaXN0b3J5IjpbMTM4OTk2NDI0NiwxMDI2OTUxMTgsODAyOD
+IyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5
+LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNz
+UwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcy
+Njc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4My
+wtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4
+ODcyMDU4XX0=
 -->
