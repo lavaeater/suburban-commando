@@ -30,7 +30,7 @@ So, we have health for enemies, when enemies can attack, we shall have damage, h
 This means handling "interrupts" from sensors and such, much like what we had. 
 
 ### Fucking TOWERS, man
-What do I even mean? I mean t
+What do I even mean? I mean that we can build and place towers, somewhere on the playing field.
 
 ### Things that need to be done
 
@@ -255,11 +255,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4ODAxMjgzOSwtMjEzMzcwOTY1OCw2MD
-YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
-OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
-kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
-NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NT
-EzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwt
-OTM2MTQzNzAxXX0=
+eyJoaXN0b3J5IjpbLTIwMjM3MjA2NTMsLTIxMzM3MDk2NTgsNj
+A2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2
+MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LD
+E5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0
+NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4Nj
+UxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYs
+LTkzNjE0MzcwMV19
 -->
