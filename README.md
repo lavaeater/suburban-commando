@@ -20,8 +20,12 @@ The thing in cursive is what I am working on right now.
 ## Player movement
 So what is really up with the player movement thing? Well, here's the deal: it's not working. It feels like it *did work* and for some reason has *stopped working*. This is the bane of software development and why you need good git discipline. Everything line of code you write or test must be in isolation of any previous working code you have written. Otherwise you end up with large changesets that yes, introduce new working features (like the AI stuff) but break something else (like player movement) and you no longer have any clue what does what.
 In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. Or two, I have two strategies, plus an idea.
-###
 
+### Rollback to working state
+Here's why you need Git discipline. If there existed a commit in my Git history that said "Player Movement DONE" I could simply checkout that commit and compare it to the state the code is in now and find important clues to why it used to work but doesn't anymore. However, I fear that this committ doesn't exist. We'll see.
+
+### Isolate feature
+If the above strategy doesn't get us anywhere
 
 ## Enemy Entity 1
 ### Mechanics
@@ -212,7 +216,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDI0MTQ4MjQsOTI5OTMxODAyLC0xMj
+eyJoaXN0b3J5IjpbLTEwNzUzMDEwMjksOTI5OTMxODAyLC0xMj
 c1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3
 MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwOD
 MsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0
