@@ -10,7 +10,7 @@ The thing in cursive is what I am working on right now.
 
 - [ ] Level 2
 - [ ] Visual Stylings
-- [x] *Player Movement*
+- [x] Player Movement
 - [x] Enemy Entity 1
 - [x] Shooting
 - [x] Level 1
@@ -227,7 +227,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMTE5NzY4NywtNjE5NjI5NjM5LDE5Mz
+eyJoaXN0b3J5IjpbLTM2Njk2NTg0MSwtNjE5NjI5NjM5LDE5Mz
 U4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNzUwMTIz
 OTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcyNjc1LC
 0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4MywtMTI0
