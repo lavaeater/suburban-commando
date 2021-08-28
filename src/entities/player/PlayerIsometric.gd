@@ -23,6 +23,8 @@ var impact_thingie = preload("res://src/fx/anime_explosion.tscn")
 var last_impact_point = Vector3()
 var last_explosion_position = Vector3()
 
+var rotatedBasis = Vector3.FORWARD.rotated(Vector3.UP, PI/4)
+
 func _ready():
 	pass # Replace with function body.
 
@@ -74,22 +76,20 @@ func handle_shots(delta):
 		has_fired = false
 
 func get_input():
-	direction.x = 0
-	direction.z = 0
-
+	var vy = velocity.y
+	velocity = Vector3()
+	
+	
 	if Input.is_action_pressed("move_forward"):
-		direction.z = - 1
+		velocity.z += rotatedBasis.z * speed 
 	if Input.is_action_pressed("move_back"):
-		direction.z = 1
+		velocity.z -= rotatedBasis.z * speed
 	if Input.is_action_pressed("strafe_right"):
-		direction.x = 1
+		velocity.x -= rotatedBasis.x * speed
 	if Input.is_action_pressed("strafe_left"):
-		direction.x = - 1
-		
-	direction = direction * speed #.rotated(Vector3.UP, PI / 4)
-	direction = direction.rotated(Vector3.UP, PI / 4)
-	velocity.x = direction.x
-	velocity.z = direction.z
+		velocity.x += rotatedBasis.x * speed
+	velocity.y = vy
+	
 	handle_jumping()
 	handle_shooting()
 	
