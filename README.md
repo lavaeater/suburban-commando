@@ -4,6 +4,10 @@
 
 I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
+## Devlog Saturday 29th of August
+
+SO,
+
 ### Things that need to be done
 
 The thing in cursive is what I am working on right now.
@@ -227,11 +231,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MT
-k2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgw
-MiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLT
-E2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUzMzE0NiwxNzUz
-NzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMz
-YwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwt
-MTkyMDc4MjEzNl19
+eyJoaXN0b3J5IjpbLTExMTExOTU5NzUsLTIxMzM3MDk2NTgsNj
+A2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2
+MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LD
+E5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0
+NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4Nj
+UxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYs
+LTkzNjE0MzcwMV19
 -->
