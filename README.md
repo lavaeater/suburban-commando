@@ -17,7 +17,8 @@ Player select, character select.
 ### Objectives
 Something on the map that the player needs to move to in order for the game to continue to the next level.
 
-### 
+### Blood splatter? 
+This is part of the "visual stylings" concept - 
 
 ### Things that need to be done
 
@@ -242,11 +243,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNDA5Njc1OCwtMjEzMzcwOTY1OCw2MD
-YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
-OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
-kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
-NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NT
-EzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwt
-OTM2MTQzNzAxXX0=
+eyJoaXN0b3J5IjpbLTE1MDY2NjQ5MjEsLTIxMzM3MDk2NTgsNj
+A2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2
+MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LD
+E5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0
+NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4Nj
+UxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYs
+LTkzNjE0MzcwMV19
 -->
