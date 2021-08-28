@@ -1,30 +1,78 @@
 extends KinematicBody
 
 var gravity = Vector3.DOWN * 12
-var speed = 15
+var speed = 60
 var jump_speed = 6
 var velocity = Vector3()
+var direction = Vector3()
 var spin = .1
 var jump = false
 var look_at_target = Vector3()
+onready var muzzle_flash = $blasterA.get_node("MuzzleFlash")
+onready var rayBlaster = $blasterA.get_node("RayCast")
+var fire = false
+var can_fire = true
+var has_fired = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var rof = 200.0 # per minute
+var rof_cool_down = 1.0 / (rof / 60.0)
+var cool_down = rof_cool_down
+var flash_cool_down = rof_cool_down / 3.0
+var muzzle_cool = flash_cool_down
+var impact_thingie = preload("res://src/fx/anime_explosion.tscn")
+var last_impact_point = Vector3()
+var last_explosion_position = Vector3()
 
 func _physics_process(delta):
-	velocity += gravity * delta
+	velocity += gravity
 	get_input()
-	velocity = move_and_slide(velocity, Vector3.UP)
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		velocity = velocity.slide(collision.normal)
+	
 	if jump and is_on_floor():
 		velocity.y = jump_speed
 	look_at(look_at_target, Vector3.UP)
+	handle_shots(delta)
+
+func handle_shots(delta):
+	if fire and can_fire:
+		has_fired = true
+		muzzle_flash.visible = true
+		if rayBlaster.is_colliding():
+			var collider = rayBlaster.get_collider()
+			var entity = collider.get_node("BaseEntity")
+			if entity != null:
+				entity.take_damage(30)
+				
+			last_impact_point = rayBlaster.get_collision_point()
+			var anime_explosion = impact_thingie.instance()
+			get_parent().add_child(anime_explosion)
+			anime_explosion.start(last_impact_point)
+			anime_explosion.global_transform.origin = last_impact_point
+			last_explosion_position = anime_explosion.global_transform.origin
+		
+
+	if has_fired:
+		can_fire = false
+		cool_down -= delta
+		
+	if has_fired and muzzle_cool > 0:
+		muzzle_cool -= delta
+
+	if muzzle_cool <= 0:
+		muzzle_cool = flash_cool_down
+		muzzle_flash.visible = false
+
+	
+	if cool_down <= 0:
+		cool_down = rof_cool_down
+		can_fire = true
+		has_fired = false
 
 func get_input():
 	var vy = velocity.y
-	velocity = Vector3()
-	
-	
+	velocity = Vector3()	
 	if Input.is_action_pressed("move_forward"):
 		velocity.z = -speed# rotatedBasis.z * speed 
 	if Input.is_action_pressed("move_back"):
@@ -36,13 +84,27 @@ func get_input():
 		
 	velocity.y = vy
 	
-	velocity = velocity.rotated(Vector3.UP, deg2rad(30))
+	velocity = velocity.rotated(Vector3.UP, deg2rad(30))	
+	handle_jumping()
+	handle_shooting()
+	
+func handle_shooting():
+	fire = false
+	if Input.is_action_pressed("fire_primary"):
+		fire = true
+
+func handle_jumping():
 	jump = false
 	if Input.is_action_just_pressed("jump"):
 		jump = true
 
-
 func _on_CameraPivot_look_at_target(position):
-	pass
-	#look_at_target = position
+	look_at_target = position
 
+
+func _on_BaseEntity_took_damange():
+	pass # Player took damage
+
+
+func _on_BaseEntity_death_occurred():
+	pass # Player died

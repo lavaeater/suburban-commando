@@ -1,29 +1,52 @@
 # suburban-commando
 
-## Never  fear to pivot!
+## Back 2 Basics
 
-Make the entities super fudging simple!
+I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
-## There are no dates in the suburb
-The title above references the fact that I did indeed have a date in it, earlier. But not today.
+### Things that need to be done
 
-Focus-thing while working in Godot, from the Backlog of All Backlogs:
+The thing in cursive is what I am working on right now.
 
-- [ ] *Player Entity 1*
-- [ ] *Enemy Entity 1*
+- [ ] Enemy Entity 1
 - [ ] Level 2
 - [ ] Visual Stylings
-- [ ] Shooting
+- [x] Shooting
 - [x] Level 1
+- [x] *Player 0*
+- [x] Player Entity 1
+
+## Enemy Entity 1 <- Doing now
+### Mechanics
+Here we go with the AI again, don't we? The enemy has to be able to walk around, look for stuff, react to things - and make decisions.
+So, some more notes on this... there are Behavior Tree implementations out there and they're a bit annoying, to say the very least. Thing is, it kinda makes sense to 
+
+
+## Shooting
+### Mechanics
+So, for now the weapon is quite tightly coupled to the player, but it is there. There is a poor effect when hitting something, but it is there. The enemy that I so happened to create is also there and can not only take damage, but also die. There is a signal for death and taking damage, meaning that the enemy could in fact blink or something when taking a hit. Very cool.
+
+
+## Level 1
+### Mechanics
+After many trials and tribulations, I stand here again, ready to make a level of some sorts. I will try to accomplish this in the simplest way possible. It will most likely be combined with shooting and enemies, because that is how I roll.
+
+## Player 0
+### Mechanics
+The player should be able to walk around - and how do I want to do that? Do I want it to be nsew-oriented, or more like propulsion, rotation, direction, what? I think cognitively it is easier to do it nsew-oriented, it is the way both south park and helldivers work with their controls. 
+
+So, what we have now is an ugly model doing ugly model things - but that is friggin' great. So great! 
 
 ## Enemy Entity 1 <- doing now
 ### Mechanics
+Update: I will not use Mixamo for the enemy character, as of now.
+
 What is the mechanics for this first implementation of enemies in the game? Well, they should be simple, not complicated at all. I would like the enemy to be able to idle, walk, and do some kind of simple attack. I decided to use Mixamo again, but I would like to find some kind of "simpler" character somewhere on the Interwebs to make the next task, having a cool visual style of the game, work. I notice that my work here, compared to the work I did on the other game, is less straight-forward. This is most likely due to me not being comfortable with what I am doing, not really having a *feel* for how the engine actually works. This is fine. So, anyways, I want to have behavior trees as well, so we should look into the absolutely simplest way to get that done in the game.
 
 The enemy should basically only want to do the simplest possible things right now: walk around, searching for player to attack. So, the next step is to import the downloaded asset into Godot and make stuff happen from there. 
 
-- [x] Download asset
-- [ ] Import Asset
+- [ ] Create Model
+- [ ] Create ontrols
 - [ ] Put in map
 - [ ] Attach a behavior tree to it
 
@@ -80,11 +103,6 @@ Enemy spawn points.
 Shooting mechanics. 
 Damage to both player and enemy.
 GamePad control support.
-
- 
-Can I make special characters by saying star? Horror flicks.
-
-
 
 
 ## Should we go 3D?
@@ -187,11 +205,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MzczMzA4MywtMTI0MjU4NzEzLC05Nz
-EyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4
-NjI2LC05MzYxNDM3MDEsLTE5MjA3ODIxMzYsMTAxNzEzNjQ0Mi
-wtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEsLTUyNTMwNDU4Niw2OTA0
-NDI1MjMsLTkwNDgzODY1MSwtMTI0NTgyMzUsNjk5ODg1OTEyLD
-E2NTE1NzUzODQsNzI1OTkwNTgwLC0xODY1Nzg0NjQ3LDEzOTA5
-Nzg4XX0=
+eyJoaXN0b3J5IjpbOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OT
+Q3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEy
+ODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMy
+wtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1
+MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMz
+Y0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMDQ1ODYs
+NjkwNDQyNTIzXX0=
 -->
