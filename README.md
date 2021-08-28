@@ -19,7 +19,7 @@ The thing in cursive is what I am working on right now.
 - [ ] Enemy Attacks
 - [ ] PLayer Health and Death
 - [ ] Enemies detecting players
-- [ ] 
+- [ ] Towers
 - [ ] Visual Stylings
 - [x] Level 2
 - [x] Player Movement
@@ -263,11 +263,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzkyNDk2ODgsMTAyNjk1MTE4LDgwMj
-gyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYz
-OSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOTI5OTMxODAyLC0xMj
-c1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3
-MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwOD
-MsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0
-ODg3MjA1OF19
+eyJoaXN0b3J5IjpbLTk0ODU5Nzc2MiwxMDI2OTUxMTgsODAyOD
+IyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5
+LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNz
+UwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcy
+Njc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4My
+wtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4
+ODcyMDU4XX0=
 -->
