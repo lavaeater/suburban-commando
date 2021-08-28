@@ -32,19 +32,6 @@ This means handling "interrupts" from sensors and such, much like what we had.
 ### Fucking TOWERS, man
 What do I even mean? I mean that we can build and place towers, somewhere on the playing field. The towers.
 
-### Things that need to be done
-
-The thing in cursive is what I am working on right now.
-
-- [ ] Visual Stylings
-- [x] Level 2
-- [x] Player Movement
-- [x] Enemy Entity 1
-- [x] Shooting
-- [x] Level 1
-- [x] *Player 0*
-- [x] Player Entity 1
-
 ## Level 2
 But what should be the point of level 2?
 
@@ -255,11 +242,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4OTE5NDg5NSw4MDI4MjI5MjEsLTIxMz
-M3MDk2NTgsNjA2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3
-MSwtNTk5NjY2MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNj
-k0NzM0MDY5LDE5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUx
-Mjg2NDksMjE0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MT
-MsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTEx
-NTI2NTg2MjZdfQ==
+eyJoaXN0b3J5IjpbLTE5MzUxOTgyNDMsODAyODIyOTIxLC0yMT
+MzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4
+NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMT
+Y5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1
+MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4Nz
+EzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0x
+MTUyNjU4NjI2XX0=
 -->
