@@ -8,6 +8,7 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 The thing in cursive is what I am working on right now.
 
+- [ ] *Player Movement*
 - [ ] Level 2
 - [ ] Visual Stylings
 - [x] Enemy Entity 1
@@ -205,7 +206,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjgyNjAzMzYsOTI5OTMxODAyLC0xMj
+eyJoaXN0b3J5IjpbLTEwNTkzNjUxNzksOTI5OTMxODAyLC0xMj
 c1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3
 MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwOD
 MsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0
