@@ -25,7 +25,10 @@ In my case it has to do with a lot of stuff with collisions and movement I made 
 Here's why you need Git discipline. If there existed a commit in my Git history that said "Player Movement DONE" I could simply checkout that commit and compare it to the state the code is in now and find important clues to why it used to work but doesn't anymore. However, I fear that this committ doesn't exist. We'll see.
 
 ### Isolate feature
-If the above strategy doesn't get us anywhere
+If the above strategy doesn't get us anywhere, I will simply create a new Scene to troubleshoot all of this. It will simply contain the player, the camera and some ground. What I do need, however, is some kind of structure on the floor to see if the player is actually moving around a bit. 
+
+### Rotate Schmotate
+I just realized I rotate the direction of the player, then do move and slide, perhaps we could work that into things, somehow? I ta
 
 ## Enemy Entity 1
 ### Mechanics
@@ -216,7 +219,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzUzMDEwMjksOTI5OTMxODAyLC0xMj
+eyJoaXN0b3J5IjpbLTE4ODk0NDQxMzksOTI5OTMxODAyLC0xMj
 c1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3
 MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwOD
 MsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0
