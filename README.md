@@ -4,7 +4,7 @@
 
 I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
-## Devlog Saturday 29th of August
+## Devlog Saturday 28th of August
 So, we are almost back where we started - or rather, where we left off, when we switched to Godot. Or rather, that's not actually true. We have a bunch of features that are not yet implemented, for this one.
 So, we should list these features and write a small note regarding what they mean.
 
@@ -255,7 +255,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMzMjg3NDY0LC0yMTMzNzA5NjU4LDYwNj
+eyJoaXN0b3J5IjpbODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNj
 I1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5
 Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
 IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
