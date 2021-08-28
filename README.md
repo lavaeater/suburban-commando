@@ -19,7 +19,8 @@ The thing in cursive is what I am working on right now.
 
 ## Player movement
 So what is really up with the player movement thing? Well, here's the deal: it's not working. It feels like it *did work* and for some reason has *stopped working*. This is the bane of software development and why you need good git discipline. Everything line of code you write or test must be in isolation of any previous working code you have written. Otherwise you end up with large changesets that yes, introduce new working features (like the AI stuff) but break something else (like player movement) and you no longer have any clue what does what.
-In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. 
+In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. Or two, I have two strategies, plus an idea.
+###
 
 
 ## Enemy Entity 1
@@ -211,11 +212,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MzUyMzc2LDkyOTkzMTgwMiwtMTI3NT
-AxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLTE2OTkwNzI2
-NzUsLTEzNDUxMjg2NDksMjE0NTUzMzE0NiwxNzUzNzMzMDgzLC
-0xMjQyNTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4
-NzIwNTgsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwtMTkyMDc4Mj
-EzNiwxMDE3MTM2NDQyLC0yNDUxNzUzOTUsMTIyMTc5MDE1MSwt
-NTI1MzA0NTg2XX0=
+eyJoaXN0b3J5IjpbLTExMDI0MTQ4MjQsOTI5OTMxODAyLC0xMj
+c1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3
+MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwOD
+MsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0
+ODg3MjA1OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNz
+gyMTM2LDEwMTcxMzY0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUx
+LC01MjUzMDQ1ODZdfQ==
 -->
