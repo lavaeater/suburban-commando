@@ -20,7 +20,7 @@ The thing in cursive is what I am working on right now.
 ## Level 2 <- doing now
 But what should be the point of level 2?
 
-I know! I will create a pre-fab house with a yard. Perhaps there will be a fence, who knows? The point being that I will import resources and add and combine them into a house with a yard. And, even fucking crazier, I will create yards that can have... *different* houses on them. That's gonna take the cake.
+I know! I will create a pre-fab house with a yard. Perhaps there will be a fence, who knows? The point being that I will import resources and add and combine them into a house with a yard. And, even fucking crazier, I will create yards that can have... *different* houses on them. That's gonna take the cake. This has now been implemented. 
 
 ## Player movement
 So what is really up with the player movement thing? Well, here's the deal: it's not working. It feels like it *did work* and for some reason has *stopped working*. This is the bane of software development and why you need good git discipline. Everything line of code you write or test must be in isolation of any previous working code you have written. Otherwise you end up with large changesets that yes, introduce new working features (like the AI stuff) but break something else (like player movement) and you no longer have any clue what does what.
@@ -227,11 +227,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTYwMTU4NjUsLTYxOTYyOTYzOSwxOT
-M1ODUxODcxLC01OTk2NjYzOTIsOTI5OTMxODAyLC0xMjc1MDEy
-MzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NS
-wtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEy
-NDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3Mj
-A1OCwtMTE1MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2
-LDEwMTcxMzY0NDJdfQ==
+eyJoaXN0b3J5IjpbMTUzNTgwMzEzLC02MTk2Mjk2MzksMTkzNT
+g1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5
+MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLT
+EzNDUxMjg2NDksMjE0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQy
+NTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNT
+gsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNiwx
+MDE3MTM2NDQyXX0=
 -->
