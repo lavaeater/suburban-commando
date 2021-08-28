@@ -8,6 +8,19 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 So, we are almost back where we started - or rather, where we left off, when we switched to Godot. Or rather, that's not actually true. We have a bunch of features that are not yet implemented, for this one.
 So, we should list these features and write a small note regarding what they mean.
 
+### Things that need to be done
+
+The thing in cursive is what I am working on right now.
+
+- [ ] Visual Stylings
+- [x] Level 2
+- [x] Player Movement
+- [x] Enemy Entity 1
+- [x] Shooting
+- [x] Level 1
+- [x] *Player 0*
+- [x] Player Entity 1
+
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
 
@@ -242,7 +255,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzUxOTgyNDMsODAyODIyOTIxLC0yMT
+eyJoaXN0b3J5IjpbLTEyMzY1ODY1NjUsODAyODIyOTIxLC0yMT
 MzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4
 NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMT
 Y5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1
