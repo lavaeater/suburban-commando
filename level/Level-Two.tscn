@@ -1,0 +1,2514 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/cameras/IsometricCamera/IsoMetric.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/entities/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/entities/map/house_with_yard/HouseWithYard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/entities/map/things/path_tilesLong.tscn" type="PackedScene" id=4]
+[ext_resource path="res://level/Main.gd" type="Script" id=5]
+[ext_resource path="res://src/entities/enemy/Enemy.tscn" type="PackedScene" id=6]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 200, 200 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.145098, 0.407843, 0.235294, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, -100 )
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10.25 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.00784069, -0.720665, 0.693239, -0.144847, 0.686767, 0.712299, -0.989423, -0.0948289, -0.109771, -62.1896, 27.8325, -180.998 )
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor"]
+shape = SubResource( 3 )
+
+[node name="CameraPivot" parent="." instance=ExtResource( 1 )]
+target = NodePath("../Player")
+
+[node name="Enemy" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 1, 0 )
+
+[node name="Block1" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.75, 0, 34.5 )
+
+[node name="Houses" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses"]
+
+[node name="path_tilesLong" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses2" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses2"]
+
+[node name="path_tilesLong" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses3" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses3"]
+
+[node name="path_tilesLong" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses4" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses4"]
+
+[node name="path_tilesLong" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses5" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.25, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses5"]
+
+[node name="path_tilesLong" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses6" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses6"]
+
+[node name="path_tilesLong" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses7" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses7"]
+
+[node name="path_tilesLong" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses8" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.75, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses8"]
+
+[node name="path_tilesLong" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses9" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses9"]
+
+[node name="path_tilesLong" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses10" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses10"]
+
+[node name="path_tilesLong" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses11" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses11"]
+
+[node name="path_tilesLong" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses12" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses12"]
+
+[node name="path_tilesLong" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses13" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.25, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses13"]
+
+[node name="path_tilesLong" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses14" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses14"]
+
+[node name="path_tilesLong" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses15" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses15"]
+
+[node name="path_tilesLong" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses16" type="Spatial" parent="Block1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.75, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block1/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block1/Houses16"]
+
+[node name="path_tilesLong" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block1/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Block2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.25, 0, 0 )
+
+[node name="Houses" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses"]
+
+[node name="path_tilesLong" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses2" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses2" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses2"]
+
+[node name="path_tilesLong" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses2/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses3" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses3" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses3"]
+
+[node name="path_tilesLong" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses3/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses4" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses4" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses4"]
+
+[node name="path_tilesLong" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses4/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses5" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.25, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses5" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses5"]
+
+[node name="path_tilesLong" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses5/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses6" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses6" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses6"]
+
+[node name="path_tilesLong" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses6/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses7" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 0, 13.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses7" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses7"]
+
+[node name="path_tilesLong" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses7/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses8" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.75, 0, 51.25 )
+
+[node name="HouseWithYard" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses8" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses8"]
+
+[node name="path_tilesLong" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses8/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses9" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses9" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses9"]
+
+[node name="path_tilesLong" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses9/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses10" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses10" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses10"]
+
+[node name="path_tilesLong" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses10/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses11" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.75, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses11" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses11"]
+
+[node name="path_tilesLong" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses11/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses12" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses12" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses12"]
+
+[node name="path_tilesLong" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses12/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses13" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.25, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses13" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses13"]
+
+[node name="path_tilesLong" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses13/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses14" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses14" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses14"]
+
+[node name="path_tilesLong" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses14/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses15" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 0, -64.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses15" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses15"]
+
+[node name="path_tilesLong" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses15/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Houses16" type="Spatial" parent="Block2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.75, 0, -26.75 )
+
+[node name="HouseWithYard" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
+
+[node name="HouseWithYard4" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
+
+[node name="HouseWithYard2" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
+
+[node name="HouseWithYard3" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
+
+[node name="HouseWithYard5" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
+
+[node name="HouseWithYard6" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
+
+[node name="HouseWithYard7" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
+
+[node name="HouseWithYard8" parent="Block2/Houses16" instance=ExtResource( 3 )]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )
+
+[node name="Paths" type="Spatial" parent="Block2/Houses16"]
+
+[node name="path_tilesLong" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 9.775 )
+
+[node name="path_tilesLong2" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 7.775 )
+
+[node name="path_tilesLong3" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 5.8 )
+
+[node name="path_tilesLong4" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 3.8 )
+
+[node name="path_tilesLong5" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 1.8 )
+
+[node name="path_tilesLong6" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -0.225 )
+
+[node name="path_tilesLong7" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -2.2 )
+
+[node name="path_tilesLong8" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -4.2 )
+
+[node name="path_tilesLong9" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -6.225 )
+
+[node name="path_tilesLong10" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -8.225 )
+
+[node name="path_tilesLong11" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -10.2 )
+
+[node name="path_tilesLong12" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -12.2 )
+
+[node name="path_tilesLong13" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -14.2 )
+
+[node name="path_tilesLong14" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -16.225 )
+
+[node name="path_tilesLong15" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
+
+[node name="path_tilesLong16" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
