@@ -45,7 +45,7 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
-## Level 2 <- doing now
+## Level 2
 But what should be the point of level 2?
 
 I know! I will create a pre-fab house with a yard. Perhaps there will be a fence, who knows? The point being that I will import resources and add and combine them into a house with a yard. And, even fucking crazier, I will create yards that can have... *different* houses on them. That's gonna take the cake. This has now been implemented. Very cool.
@@ -255,11 +255,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNj
-I1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5
-Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
-IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
-MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MT
-MsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05
-MzYxNDM3MDFdfQ==
+eyJoaXN0b3J5IjpbLTI4OTE5NDg5NSw4MDI4MjI5MjEsLTIxMz
+M3MDk2NTgsNjA2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3
+MSwtNTk5NjY2MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNj
+k0NzM0MDY5LDE5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUx
+Mjg2NDksMjE0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQyNTg3MT
+MsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNTgsLTEx
+NTI2NTg2MjZdfQ==
 -->
