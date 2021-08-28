@@ -20,6 +20,8 @@ The thing in cursive is what I am working on right now.
 ## Level 2 <- doing now
 But what should be the point of level 2?
 
+I know! I will create a pre-fab house with a yard. Perhaps there will be a fence, who knows? The point being that I will import resources and add and combine them into a h
+
 ## Player movement
 So what is really up with the player movement thing? Well, here's the deal: it's not working. It feels like it *did work* and for some reason has *stopped working*. This is the bane of software development and why you need good git discipline. Everything line of code you write or test must be in isolation of any previous working code you have written. Otherwise you end up with large changesets that yes, introduce new working features (like the AI stuff) but break something else (like player movement) and you no longer have any clue what does what.
 In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. Or two, I have two strategies, plus an idea.
@@ -225,11 +227,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOT
-kzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIy
-MjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUzMzE0Ni
-wxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMywtMTQ5
-MjEzMzYwMyw0NDg4NzIwNTgsLTExNTI2NTg2MjYsLTkzNjE0Mz
-cwMSwtMTkyMDc4MjEzNiwxMDE3MTM2NDQyLC0yNDUxNzUzOTUs
-MTIyMTc5MDE1MV19
+eyJoaXN0b3J5IjpbLTU2ODg1NjA5MCwxOTM1ODUxODcxLC01OT
+k2NjYzOTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQw
+NjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OS
+wyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcx
+Mjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1OD
+YyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMzY0NDIs
+LTI0NTE3NTM5NV19
 -->
