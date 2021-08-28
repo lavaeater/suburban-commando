@@ -7,16 +7,10 @@ var velocity = Vector3()
 var spin = .1
 var jump = false
 var look_at_target = Vector3()
-var rotatedBasis = Vector3.FORWARD.rotated(Vector3.UP, PI / 4)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _physics_process(delta):
 	velocity += gravity * delta
@@ -32,15 +26,17 @@ func get_input():
 	
 	
 	if Input.is_action_pressed("move_forward"):
-		velocity.z += rotatedBasis.z * speed 
+		velocity.z = -speed# rotatedBasis.z * speed 
 	if Input.is_action_pressed("move_back"):
-		velocity.z -= rotatedBasis.z * speed
+		velocity.z = speed#-rotatedBasis.z * speed
 	if Input.is_action_pressed("strafe_right"):
-		velocity.x -= rotatedBasis.x * speed
+		velocity.x = speed #-rotatedBasis.x * speed
 	if Input.is_action_pressed("strafe_left"):
-		velocity.x += rotatedBasis.x * speed
+		velocity.x = -speed #rotatedBasis.x * speed
 		
 	velocity.y = vy
+	
+	velocity = velocity.rotated(Vector3.UP, deg2rad(30))
 	jump = false
 	if Input.is_action_just_pressed("jump"):
 		jump = true
