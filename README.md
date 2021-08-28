@@ -8,18 +8,32 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 The thing in cursive is what I am working on right now.
 
-- [ ] Enemy Entity 1
+- [ ] *Player Movement*
 - [ ] Level 2
 - [ ] Visual Stylings
+- [x] Enemy Entity 1
 - [x] Shooting
 - [x] Level 1
 - [x] *Player 0*
 - [x] Player Entity 1
 
-## Enemy Entity 1 <- Doing now
+## Player movement
+So what is really up with the player movement thing? Well, here's the deal: it's not working. It feels like it *did work* and for some reason has *stopped working*. This is the bane of software development and why you need good git discipline. Everything line of code you write or test must be in isolation of any previous working code you have written. Otherwise you end up with large changesets that yes, introduce new working features (like the AI stuff) but break something else (like player movement) and you no longer have any clue what does what.
+In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. Or two, I have two strategies, plus an idea.
+
+### Rollback to working state
+Here's why you need Git discipline. If there existed a commit in my Git history that said "Player Movement DONE" I could simply checkout that commit and compare it to the state the code is in now and find important clues to why it used to work but doesn't anymore. However, I fear that this committ doesn't exist. We'll see.
+
+### Isolate feature
+If the above strategy doesn't get us anywhere, I will simply create a new Scene to troubleshoot all of this. It will simply contain the player, the camera and some ground. What I do need, however, is some kind of structure on the floor to see if the player is actually moving around a bit. 
+
+### Rotate Schmotate
+I just realized I rotate the direction of the player, then do move and slide, perhaps we could work that into things, somehow? It appears, now, that the rotation interferes with the movement and stuff, which I was pretty certain was working. But we need to look into this. What I am getting at is rotating movement 45 degrees in the other direction to get into working order...
+
+## Enemy Entity 1
 ### Mechanics
 Here we go with the AI again, don't we? The enemy has to be able to walk around, look for stuff, react to things - and make decisions.
-So, some more notes on this... there are Behavior Tree implementations out there and they're a bit annoying, to say the very least. Thing is, it kinda makes sense to 
+So, some more notes on this... there are Behavior Tree implementations out there and they're a bit annoying, to say the very least.
 
 
 ## Shooting
@@ -205,11 +219,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OT
-Q3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEy
-ODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMy
-wtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1
-MjY1ODYyNiwtOTM2MTQzNzAxLC0xOTIwNzgyMTM2LDEwMTcxMz
-Y0NDIsLTI0NTE3NTM5NSwxMjIxNzkwMTUxLC01MjUzMDQ1ODYs
-NjkwNDQyNTIzXX0=
+eyJoaXN0b3J5IjpbLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNz
+UwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcy
+Njc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4My
+wtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0OTIxMzM2MDMsNDQ4
+ODcyMDU4LC0xMTUyNjU4NjI2LC05MzYxNDM3MDEsLTE5MjA3OD
+IxMzYsMTAxNzEzNjQ0MiwtMjQ1MTc1Mzk1LDEyMjE3OTAxNTEs
+LTUyNTMwNDU4Nl19
 -->
