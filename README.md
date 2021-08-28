@@ -22,7 +22,7 @@ So what is really up with the player movement thing? Well, here's the deal: it's
 In my case it has to do with a lot of stuff with collisions and movement I made at the same time, putting a spanner in my works. But fear not, I have several strategies to fix this. Or two, I have two strategies, plus an idea.
 
 ### Solution found
-So, using the strategies below I 
+So, using the strategies below I managed to fix it proper, I think. So
 
 ### Rollback to working state
 Here's why you need Git discipline. If there existed a commit in my Git history that said "Player Movement DONE" I could simply checkout that commit and compare it to the state the code is in now and find important clues to why it used to work but doesn't anymore. However, I fear that this committ doesn't exist. We'll see.
@@ -222,7 +222,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDMwODY0NDAsLTU5OTY2NjM5Miw5Mj
+eyJoaXN0b3J5IjpbLTEzMTY3MTM2NjcsLTU5OTY2NjM5Miw5Mj
 k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
 MjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxND
 YsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0
