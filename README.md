@@ -8,6 +8,9 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 So, we are almost back where we started - or rather, where we left off, when we switched to Godot. Or rather, that's not actually true. We have a bunch of features that are not yet implemented, for this one.
 So, we should list these features and write a small note regarding what they mean.
 
+### HUD
+Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
+
 
 
 ### Things that need to be done
@@ -233,7 +236,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5ODk3NTU0MywtMjEzMzcwOTY1OCw2MD
+eyJoaXN0b3J5IjpbMTcxNzIzNDc3NSwtMjEzMzcwOTY1OCw2MD
 YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
 OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
 kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
