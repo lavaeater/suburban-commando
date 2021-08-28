@@ -27,7 +27,7 @@ The enemies should attack, perhaps using melee attacks for now.
 So, we have health for enemies, when enemies can attack, we shall have damage, health and death here. This also means an implementation for "lives" for the players as well, of course. Or perhaps a resurrection mechanic?
 
 ### Enemies hearing players shooting
-
+This means handling "interrupts" from sensors and such 
 
 ### Things that need to be done
 
@@ -252,7 +252,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NTkzODQ4MCwtMjEzMzcwOTY1OCw2MD
+eyJoaXN0b3J5IjpbMTc5NTA4MDAwOCwtMjEzMzcwOTY1OCw2MD
 YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
 OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
 kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
