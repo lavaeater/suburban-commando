@@ -6,6 +6,7 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 ## Devlog Saturday 29th of August
 So, we are almost back where we started - or rather, where we left off, when we switched to Godot. Or rather, that's not actually true. We have a bunch of features that are not yet implemented, for this one.
+So, we should list these features and write a small note regarding what they mean.
 
 
 
@@ -232,11 +233,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc1MTI1MTM4LC0yMTMzNzA5NjU4LDYwNj
-I1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5
-Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
-IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
-MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MT
-MsLTE0OTIxMzM2MDMsNDQ4ODcyMDU4LC0xMTUyNjU4NjI2LC05
-MzYxNDM3MDFdfQ==
+eyJoaXN0b3J5IjpbMTk5ODk3NTU0MywtMjEzMzcwOTY1OCw2MD
+YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
+OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
+kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
+NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NT
+EzLC0xNDkyMTMzNjAzLDQ0ODg3MjA1OCwtMTE1MjY1ODYyNiwt
+OTM2MTQzNzAxXX0=
 -->
