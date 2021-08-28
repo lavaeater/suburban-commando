@@ -20,7 +20,7 @@ The thing in cursive is what I am working on right now.
 ## Level 2 <- doing now
 But what should be the point of level 2?
 
-I know! I will create a pre-fab house with a yard. Perhaps there will be a fence, who knows? The point being that I will import resources and add and combine them into a h
+I know! I will create a pre-fab house with a yard. Perhaps there will be a fence, who knows? The point being that I will import resources and add and combine them into a house with a yard.
 
 ## Player movement
 So what is really up with the player movement thing? Well, here's the deal: it's not working. It feels like it *did work* and for some reason has *stopped working*. This is the bane of software development and why you need good git discipline. Everything line of code you write or test must be in isolation of any previous working code you have written. Otherwise you end up with large changesets that yes, introduce new working features (like the AI stuff) but break something else (like player movement) and you no longer have any clue what does what.
@@ -227,7 +227,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2ODg1NjA5MCwxOTM1ODUxODcxLC01OT
+eyJoaXN0b3J5IjpbLTk1MDM4NTk4OSwxOTM1ODUxODcxLC01OT
 k2NjYzOTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQw
 NjksMTkyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OS
 wyMTQ1NTMzMTQ2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcx
