@@ -22,6 +22,7 @@ var muzzle_cool = flash_cool_down
 var impact_thingie = preload("res://src/fx/anime_explosion.tscn")
 var last_impact_point = Vector3()
 var last_explosion_position = Vector3()
+onready var place_point = $PlacePoint
 
 func _physics_process(delta):
 	velocity += gravity
@@ -33,6 +34,13 @@ func _physics_process(delta):
 	if jump and is_on_floor():
 		velocity.y = jump_speed
 	look_at(look_at_target, Vector3.UP)
+	if node_to_build != null:
+		node_to_build.global_transform.origin.x = place_point.global_transform.origin.x
+		node_to_build.global_transform.origin.z = place_point.global_transform.origin.z
+		node_to_build.global_transform.origin.y = 0
+		node_to_build.global_transform.basis.x = Vector3.RIGHT
+		node_to_build.global_transform.basis.y = Vector3.UP
+		node_to_build.global_transform.basis.z = Vector3.BACK
 	handle_shots(delta)
 
 func handle_shots(delta):
@@ -87,6 +95,30 @@ func get_input():
 	velocity = velocity.rotated(Vector3.UP, deg2rad(30))	
 	handle_jumping()
 	handle_shooting()
+	handle_building()
+	
+var build_mode = false
+var node_to_build = null
+func handle_building():
+	var can_release = true
+	if !build_mode and Input.is_action_just_released("build"):
+		build_mode = true
+		can_release = false
+	if build_mode and node_to_build == null:
+		node_to_build = load("res://src/entities/towers/Tower1.tscn").instance()
+		node_to_build.transform.origin = $PlacePoint.transform.origin
+		add_child(node_to_build) #We'll move it to the scene later!
+	if build_mode and can_release and Input.is_action_just_released("build"):
+		reparent(node_to_build, self.get_parent())
+		build_mode = false
+		node_to_build = null
+	
+func reparent(child: Node, new_parent: Node):
+	var global_position = child.global_transform
+	var old_parent = child.get_parent()
+	old_parent.remove_child(child)
+	new_parent.add_child(child)
+	child.global_transform = global_position
 	
 func handle_shooting():
 	fire = false
@@ -100,7 +132,6 @@ func handle_jumping():
 
 func _on_CameraPivot_look_at_target(position):
 	look_at_target = position
-
 
 func _on_BaseEntity_took_damange():
 	pass # Player took damage

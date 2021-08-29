@@ -44,5 +44,8 @@ transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, -0.0001
 
 [node name="BaseEntity" parent="." instance=ExtResource( 3 )]
 
+[node name="PlacePoint" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.51852 )
+
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
