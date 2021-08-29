@@ -4,12 +4,24 @@
 
 I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
-### Things that need to be done
+## Devlog Saturday 28th of August
+So, we are almost back where we started - or rather, where we left off, when we switched to Godot. Or rather, that's not actually true. We have a bunch of features that are not yet implemented, for this one.
+So, we should list these features and write a small note regarding what they mean.
+
+## Things that need to be done
 
 The thing in cursive is what I am working on right now.
 
-- [x] Level 2
+- [ ] *Towers*
+- [ ] HUD
+- [ ] Splash Screen
+- [ ] Objectives
+- [ ] Blood Splatter
+- [ ] Enemy Attacks
+- [ ] PLayer Health and Death
+- [ ] Enemies detecting players
 - [ ] Visual Stylings
+- [x] Level 2
 - [x] Player Movement
 - [x] Enemy Entity 1
 - [x] Shooting
@@ -17,7 +29,39 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
-## Level 2 <- doing now
+### *Towers One <- doing now*
+#### Mechanics
+Towers aren't just towers, it's about *family* as well. No. I mean, it's a whole package, it's building, its types of towers, it's the tower shooting and so on. Well, So far, I have managed to create a tower model, placing it, now it needs some AI and some shooting mechanics. We'll start simple with a kind of not very good tower that shots every now and then. In the end, I would also *love* to have **funny** towers, shooting poop grenades and whatnot.
+
+Tower shooting thingie - the tower should have a raycast built in from the tower weapon head. If an enemy body is inside a sensor, the tower should slowly lerp its tower head rotation towards that enemy. When the angle is within some kind of margin the tower should open fire and the raycasting should be at least slightly random, I think. Or perhaps we should do the weapon firing as an AREA with a change of hitting depending on distance? There are so many options here, all worthy of exploration.
+ 
+- [x] Create a tower model
+- [x] Player should be able to place the tower on the map
+- [ ] Tower should be able to target enemies
+- [ ] Tower should be able to fire at enemies 
+
+### HUD
+Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
+
+### Splash screen
+Player select, character select.
+
+### Objectives
+Something on the map that the player needs to move to in order for the game to continue to the next level.
+
+### Blood splatter? 
+This is part of the "visual stylings" concept - when shooting, we need FX for the hits and such.
+
+### Enemy attacks
+The enemies should attack, perhaps using melee attacks for now. 
+
+### Player health and death
+So, we have health for enemies, when enemies can attack, we shall have damage, health and death here. This also means an implementation for "lives" for the players as well, of course. Or perhaps a resurrection mechanic?
+
+### Enemies hearing players shooting
+This means handling "interrupts" from sensors and such, much like what we had. 
+
+## Level 2
 But what should be the point of level 2?
 
 I know! I will create a pre-fab house with a yard. Perhaps there will be a fence, who knows? The point being that I will import resources and add and combine them into a house with a yard. And, even fucking crazier, I will create yards that can have... *different* houses on them. That's gonna take the cake. This has now been implemented. Very cool.
@@ -227,11 +271,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA2MjU2MDIwLC02MTk2Mjk2MzksMTkzNT
-g1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5
-MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLT
-EzNDUxMjg2NDksMjE0NTUzMzE0NiwxNzUzNzMzMDgzLC0xMjQy
-NTg3MTMsLTk3MTI4NjUxMywtMTQ5MjEzMzYwMyw0NDg4NzIwNT
-gsLTExNTI2NTg2MjYsLTkzNjE0MzcwMSwtMTkyMDc4MjEzNiwx
-MDE3MTM2NDQyXX0=
+eyJoaXN0b3J5IjpbLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMT
+AyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYw
+MjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOT
+I5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4
+MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMT
+Q2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0x
+NDkyMTMzNjAzXX0=
 -->
