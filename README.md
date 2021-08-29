@@ -29,6 +29,10 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
+### Fucking TOWERS, man
+What do I even mean? I mean that we can build and place towers, somewhere on the playing field. The towers.
+
+
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
 
@@ -49,9 +53,6 @@ So, we have health for enemies, when enemies can attack, we shall have damage, h
 
 ### Enemies hearing players shooting
 This means handling "interrupts" from sensors and such, much like what we had. 
-
-### Fucking TOWERS, man
-What do I even mean? I mean that we can build and place towers, somewhere on the playing field. The towers.
 
 ## Level 2
 But what should be the point of level 2?
@@ -263,11 +264,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMj
-gyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYz
-OSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOTI5OTMxODAyLC0xMj
-c1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5OTA3
-MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMTQ2LDE3NTM3MzMwOD
-MsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0xNDkyMTMzNjAzLDQ0
-ODg3MjA1OF19
+eyJoaXN0b3J5IjpbMTU4MjA2NjEyMiwtMTE2NzUyMjc2MCwxMD
+I2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAy
+MCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mj
+k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
+MjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxND
+YsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0
+OTIxMzM2MDNdfQ==
 -->
