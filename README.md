@@ -33,7 +33,7 @@ The thing in cursive is what I am working on right now.
 #### Mechanics
 Towers aren't just towers, it's about *family* as well. No. I mean, it's a whole package, it's building, its types of towers, it's the tower shooting and so on. Well, So far, I have managed to create a tower model, placing it, now it needs some AI and some shooting mechanics. We'll start simple with a kind of not very good tower that shots every now and then. In the end, I would also *love* to have **funny** towers, shooting poop grenades and whatnot.
 
-Tower shooting thingie. 
+Tower shooting thingie - the tower should have a raycast built in from the tower weapon head. If an enemy body is inside a sensor, the tower should slowly lerp its tower head rotation towards that enemy. When the angle is within some kind of margin the tower should open fire and the raycasting should be at least slightly random, I think. Or perhaps we should do the weapon firing as an AREA with a change of hitting depending on distance? There are so
 
  
 - [x] Create a tower model
@@ -272,11 +272,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzIxNDMwNSwtMTE2NzUyMjc2MCwxMD
-I2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAy
-MCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mj
-k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
-MjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxND
-YsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0
-OTIxMzM2MDNdfQ==
+eyJoaXN0b3J5IjpbNDA4MDA5MTQ3LC0xMTY3NTIyNzYwLDEwMj
+Y5NTExOCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNjA2MjU2MDIw
+LC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOT
+kzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIy
+MjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUzMzE0Ni
+wxNzUzNzMzMDgzLC0xMjQyNTg3MTMsLTk3MTI4NjUxMywtMTQ5
+MjEzMzYwM119
 -->
