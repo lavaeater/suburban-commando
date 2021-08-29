@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/entities/towers/Tower1.gd" type="Script" id=1]
+[ext_resource path="res://src/ai/BehaviorTree.gd" type="Script" id=2]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 0, 3.75, 0.1, 0, 3.75, -0.1, 0, 3.75, 0.1, 0, 3.75, -0.1, -1.5, -3.75, 0.1, 1.5, -3.75, -0.1, 1.5, -3.75, 0.1, -1.5, -3.75, -0.1, 0, 3.75, 0.1, 0, 3.75, -0.1, 0, 3.75, -0.1, 0, 3.75, 0.1, 1.5, -3.75, 0.1, -1.5, -3.75, -0.1, 1.5, -3.75, -0.1, -1.5, -3.75, 0.1, -1.5, -3.75, 0.1, 1.5, -3.75, 0.1, -1.5, -3.75, -0.1, 1.5, -3.75, -0.1 )
@@ -65,6 +66,9 @@ shape = SubResource( 2 )
 [node name="MeshInstance" type="MeshInstance" parent="Area"]
 mesh = SubResource( 4 )
 material/0 = null
+
+[node name="BehaviorTree" type="Node" parent="."]
+script = ExtResource( 2 )
 
 [connection signal="body_entered" from="WeaponMount/Area" to="." method="_on_Area_body_entered" binds= [ "aim" ]]
 [connection signal="body_exited" from="WeaponMount/Area" to="." method="_on_Area_body_exited" binds= [ "aim" ]]
