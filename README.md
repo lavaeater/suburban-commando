@@ -8,7 +8,7 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 So, we are almost back where we started - or rather, where we left off, when we switched to Godot. Or rather, that's not actually true. We have a bunch of features that are not yet implemented, for this one.
 So, we should list these features and write a small note regarding what they mean.
 
-### Things that need to be done
+## Things that need to be done
 
 The thing in cursive is what I am working on right now.
 
@@ -263,7 +263,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MjM5Nzg5NiwtMTE2NzUyMjc2MCwxMD
+eyJoaXN0b3J5IjpbMTMxMjkzMDEzMSwtMTE2NzUyMjc2MCwxMD
 I2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAy
 MCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mj
 k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
