@@ -30,7 +30,7 @@ The thing in cursive is what I am working on right now.
 - [x] Player Entity 1
 
 ### Fucking TOWERS, man
-What do I even mean? I mean that we can build and place towers, somewhere on the playing field. The towers.
+
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -263,7 +263,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjkzMDEzMSwtMTE2NzUyMjc2MCwxMD
+eyJoaXN0b3J5IjpbMTU0OTYwOTkxNiwtMTE2NzUyMjc2MCwxMD
 I2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAy
 MCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mj
 k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
