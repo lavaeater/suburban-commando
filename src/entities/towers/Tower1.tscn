@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/entities/towers/Tower1.gd" type="Script" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 10.0
+height = 0.1
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+albedo_color = Color( 0.929412, 0.0666667, 0.0666667, 0.294118 )
+
+[sub_resource type="CylinderMesh" id=3]
+material = SubResource( 2 )
+top_radius = 10.0
+bottom_radius = 10.0
+height = 0.1
 
 [node name="Tower" type="CSGCombiner"]
 use_collision = true
@@ -31,3 +45,13 @@ radius = 0.1
 [node name="CSGCylinder2" type="CSGCylinder" parent="WeaponMount"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.25, 0, -1.11283 )
 radius = 0.1
+
+[node name="Area" type="Area" parent="."]
+collision_mask = 32
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Area"]
+mesh = SubResource( 3 )
+material/0 = null
