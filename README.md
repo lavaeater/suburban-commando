@@ -31,7 +31,11 @@ The thing in cursive is what I am working on right now.
 
 ### *Towers One <- doing now*
 #### Mechanics
-Towers aren't just towers, it's about *family* as well. No. I mean, it's a whole package, it's building, its types of towers, it's the tower shooting and so on. Well, So far, I have managed to create a tower model, placing it, now it needs some AI and some shooting mechanics. We'll start simple with a kind of not very good tower that shots every now and then. In the end, I would also *love* to have **funny** towers, shooting poop grenades and whatnot. 
+Towers aren't just towers, it's about *family* as well. No. I mean, it's a whole package, it's building, its types of towers, it's the tower shooting and so on. Well, So far, I have managed to create a tower model, placing it, now it needs some AI and some shooting mechanics. We'll start simple with a kind of not very good tower that shots every now and then. In the end, I would also *love* to have **funny** towers, shooting poop grenades and whatnot.
+
+Tower shooting thingie. 
+
+ 
 - [x] Create a tower model
 - [ ] Player should be able to place the tower on the map
 - [ ] Tower should be able to target enemies
@@ -268,11 +272,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDA0OTk0NTUsLTExNjc1MjI3NjAsMT
-AyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYw
-MjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOT
-I5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4
-MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1NTMzMT
-Q2LDE3NTM3MzMwODMsLTEyNDI1ODcxMywtOTcxMjg2NTEzLC0x
-NDkyMTMzNjAzXX0=
+eyJoaXN0b3J5IjpbLTIzNzIxNDMwNSwtMTE2NzUyMjc2MCwxMD
+I2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAy
+MCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mj
+k5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgy
+MjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxND
+YsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05NzEyODY1MTMsLTE0
+OTIxMzM2MDNdfQ==
 -->
