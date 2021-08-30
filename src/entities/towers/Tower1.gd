@@ -29,14 +29,14 @@ func turn_towards_closest_enemy():
 	pass
 
 func is_enemy_close():
-	if close_enemies.size > 0:
+	if close_enemies.size() > 0:
 		return Task.SUCCEEDED
 	else:
 		return Task.FAILED
 		
 
 func shoot_closest_enemy():
-	if close_enemies.size > 0:
+	if close_enemies.size() > 0:
 		# Checks if we have enemies in the close_enemies array. 
 		var closest_body = close_enemies[0]
 		var distance = global_transform.origin.distance_to(closest_body.global_transform.origin)
