@@ -6,8 +6,9 @@ var current_task_running = ""
 
 func _ready():
 	tree = self
-	.start()
+	start()
 	status = RUNNING
+		
 	
 func _process(_delta):
 	run()
