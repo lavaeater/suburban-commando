@@ -110,6 +110,7 @@ func handle_building():
 		add_child(node_to_build) #We'll move it to the scene later!
 	if build_mode and can_release and Input.is_action_just_released("build"):
 		reparent(node_to_build, self.get_parent())
+		node_to_build.activate()
 		build_mode = false
 		node_to_build = null
 	

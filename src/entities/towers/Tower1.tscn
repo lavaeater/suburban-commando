@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/entities/towers/Tower1.gd" type="Script" id=1]
 [ext_resource path="res://src/ai/BehaviorTree.gd" type="Script" id=2]
 [ext_resource path="res://BehaviorTree/Composites/Sequence.gd" type="Script" id=3]
 [ext_resource path="res://BehaviorTree/Leaves/CallMyAgent.gd" type="Script" id=4]
+[ext_resource path="res://BehaviorTree/Composites/Selector.gd" type="Script" id=5]
 
 [sub_resource type="ConvexPolygonShape" id=1]
 points = PoolVector3Array( 0, 3.75, 0.1, 0, 3.75, -0.1, 0, 3.75, 0.1, 0, 3.75, -0.1, -1.5, -3.75, 0.1, 1.5, -3.75, -0.1, 1.5, -3.75, 0.1, -1.5, -3.75, -0.1, 0, 3.75, 0.1, 0, 3.75, -0.1, 0, 3.75, -0.1, 0, 3.75, 0.1, 1.5, -3.75, 0.1, -1.5, -3.75, -0.1, 1.5, -3.75, -0.1, -1.5, -3.75, 0.1, -1.5, -3.75, 0.1, 1.5, -3.75, 0.1, -1.5, -3.75, -0.1, 1.5, -3.75, -0.1 )
@@ -24,6 +25,7 @@ height = 0.1
 
 [node name="Tower" type="CSGCombiner"]
 use_collision = true
+collision_mask = 3
 script = ExtResource( 1 )
 
 [node name="Bottom" type="CSGBox" parent="."]
@@ -53,6 +55,7 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.25, 
 radius = 0.1
 
 [node name="Area" type="Area" parent="WeaponMount"]
+collision_layer = 16
 collision_mask = 32
 
 [node name="CollisionShape" type="CollisionShape" parent="WeaponMount/Area"]
@@ -60,6 +63,7 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -
 shape = SubResource( 1 )
 
 [node name="Area" type="Area" parent="."]
+collision_layer = 16
 collision_mask = 32
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
@@ -73,18 +77,21 @@ material/0 = null
 script = ExtResource( 2 )
 agent_path = NodePath("..")
 
-[node name="Sequence" type="Node" parent="BehaviorTree"]
+[node name="Selector" type="Node" parent="BehaviorTree"]
+script = ExtResource( 5 )
+
+[node name="Sequence" type="Node" parent="BehaviorTree/Selector"]
 script = ExtResource( 3 )
 
-[node name="IsEnemyUpClose" type="Node" parent="BehaviorTree/Sequence"]
+[node name="IsEnemyUpClose" type="Node" parent="BehaviorTree/Selector/Sequence"]
 script = ExtResource( 4 )
 MethodToCall = "is_enemy_close"
 
-[node name="ShootCloseUpEnemy" type="Node" parent="BehaviorTree/Sequence"]
+[node name="ShootCloseUpEnemy" type="Node" parent="BehaviorTree/Selector/Sequence"]
 script = ExtResource( 4 )
 MethodToCall = "shoot_closest_enemy"
 
-[node name="TurnTowardsClosestEnemy" type="Node" parent="BehaviorTree"]
+[node name="TurnTowardsClosestEnemy" type="Node" parent="BehaviorTree/Selector"]
 script = ExtResource( 4 )
 MethodToCall = "turn_towards_closest_enemy"
 
