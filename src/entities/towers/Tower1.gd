@@ -10,12 +10,12 @@ func _ready():
 func _physics_process(delta):
 	var closest_enemy = get_closest_enemy(proximal_enemies)
 	if closest_enemy != null:
-		var global_pos = global_transform.origin
+		var global_pos = $WeaponMount.global_transform.origin
 		var enemy_pos = closest_enemy.global_transform.origin
-		var rotation_speed = 0.01
-		var wtransform = global_transform.looking_at(Vector3(enemy_pos.x,global_pos.y,enemy_pos.z),Vector3.UP)
+		var rotation_speed = 0.1
+		var wtransform = $WeaponMount.global_transform.looking_at(Vector3(enemy_pos.x,global_pos.y,enemy_pos.z),Vector3.UP)
 		var wrotation = Quat($WeaponMount.global_transform.basis).slerp(Quat(wtransform.basis), rotation_speed)
-		$WeaponMount.global_transform = Transform(Basis(wrotation), global_transform.origin)
+		$WeaponMount.global_transform = Transform(Basis(wrotation), $WeaponMount.global_transform.origin)
 		
 	
 func activate():
