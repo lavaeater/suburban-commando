@@ -1,7 +1,6 @@
 extends Spatial
 
 var proximal_enemies = []
-var close_enemies = []
 var active = false
 onready var weapon_mount = get_node("WeaponMount")
 onready var raycast = get_node("WeaponMount/RayCast")
@@ -33,19 +32,13 @@ func activate():
 	active = true
 #	get_node("BehaviorTree")
 
-func _on_Area_body_entered(body, sensor):
+func _on_Area_body_entered(body):
 	if active:
-		if sensor == "proximity":
-			proximal_enemies.append(body)
-		if sensor == "aim":
-			close_enemies.append(body)
+		proximal_enemies.append(body)
 
-func _on_Area_body_exited(body, sensor):
+func _on_Area_body_exited(body):
 	if active:
-		if sensor == "proximity":
-			proximal_enemies.erase(body)
-		if sensor == "aim":
-			close_enemies.erase(body)
+		proximal_enemies.erase(body)
 
 func turn_towards_closest_enemy():
 	# This needs to return RUNNING, my man
@@ -53,6 +46,9 @@ func turn_towards_closest_enemy():
 
 func is_enemy_close():
 	if close_enemies.size() > 0:
+		var close_one = get_closest_enemy(proximal_enemies)
+		var angle_to = weapon_mount.global_transform.looking_at(close_one, Vector3.UP)
+		if transform.
 		return Task.SUCCEEDED
 	else:
 		return Task.FAILED
