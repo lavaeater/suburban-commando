@@ -75,5 +75,5 @@ MethodToCall = "shoot_closest_enemy"
 script = ExtResource( 4 )
 MethodToCall = "turn_towards_closest_enemy"
 
-[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered" binds= [ "proximity" ]]
-[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited" binds= [ "proximity" ]]
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

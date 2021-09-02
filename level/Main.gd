@@ -29,14 +29,20 @@ func get_player_position():
 	return $Player.global_transform.origin
 
 func get_enemy_position():
-	return enemy.global_transform.origin
-
+	var t = Vector3.ZERO
+	if enemy != null:	
+		t = enemy.global_transform.origin
+	return t
+	
 func get_target_vector():
-	return enemy.target_vector
+	var t = Vector3.ZERO
+	if enemy != null:
+		t = enemy.target_vector
+	return t
 	
 func get_current_enemy_action():
 	name = "Enemy Action Pending"
-	if behavior_tree != null and behavior_tree.tree != null:
+	if enemy != null and behavior_tree != null and behavior_tree.tree != null:
 		name = "Enemy Action: " + behavior_tree.tree.current_task_running
 	return name
 

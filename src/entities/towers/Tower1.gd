@@ -45,11 +45,14 @@ func turn_towards_closest_enemy():
 	return Task.SUCCEEDED
 
 func is_enemy_close():
-	if close_enemies.size() > 0:
+	if proximal_enemies.size() > 0:
 		var close_one = get_closest_enemy(proximal_enemies)
-		var angle_to = weapon_mount.global_transform.looking_at(close_one, Vector3.UP)
-		if transform.
-		return Task.SUCCEEDED
+		var dot_product = (weapon_mount.transform.origin - close_one.transform.origin).dot(weapon_mount.transform.basis.z)
+		if dot_product > 0: #and dot_product < 0.5:
+			return Task.SUCCEEDED
+		else:
+			return Task.FAILED	
+		
 	else:
 		return Task.FAILED
 		
@@ -67,7 +70,7 @@ func get_closest_enemy(enemy_list):
 		return null
 
 func shoot_closest_enemy():
-	var closest_enemy = get_closest_enemy(close_enemies)
+	var closest_enemy = get_closest_enemy(proximal_enemies)
 	if closest_enemy != null and can_shoot:
 		can_shoot = false
 		var random_angle = randomizer.randfn() # Should get us -1 to 1
