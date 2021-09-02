@@ -740,26 +740,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
 [node name="Houses10" type="Spatial" parent="Block1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -26.75 )
 
-[node name="HouseWithYard" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
-
 [node name="HouseWithYard4" parent="Block1/Houses10" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
-
-[node name="HouseWithYard2" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
-
-[node name="HouseWithYard3" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
-
-[node name="HouseWithYard5" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
-
-[node name="HouseWithYard6" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
-
-[node name="HouseWithYard7" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
 
 [node name="HouseWithYard8" parent="Block1/Houses10" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )

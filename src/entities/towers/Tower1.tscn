@@ -24,13 +24,12 @@ use_collision = true
 height = 0.25
 
 [node name="Pillar" type="CSGCylinder" parent="Bottom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.862743, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.612743, 0 )
 radius = 0.5
-height = 1.5
 sides = 6
 
 [node name="WeaponMount" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00099, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.50099, 0 )
 use_collision = true
 width = 1.0
 height = 0.5
