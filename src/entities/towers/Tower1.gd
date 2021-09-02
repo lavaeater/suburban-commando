@@ -3,19 +3,30 @@ extends Spatial
 var proximal_enemies = []
 var close_enemies = []
 var active = false
+onready var weapon_mount = get_node("WeaponMount")
+onready var raycast = get_node("WeaponMount/RayCast")
+var randomizer = RandomNumberGenerator.new()
+var cool_down = 0.1
+var can_shoot = true
 
 func _ready():
-	pass # Replace with function body.
+	randomizer.randomize()
 	
 func _physics_process(delta):
+	if !can_shoot:
+		cool_down -= delta
+	if cool_down < 0.0:
+		cool_down = 0.1
+		can_shoot = true
+		
 	var closest_enemy = get_closest_enemy(proximal_enemies)
 	if closest_enemy != null:
-		var global_pos = $WeaponMount.global_transform.origin
+		var global_pos = weapon_mount.global_transform.origin
 		var enemy_pos = closest_enemy.global_transform.origin
 		var rotation_speed = 0.1
-		var wtransform = $WeaponMount.global_transform.looking_at(Vector3(enemy_pos.x,global_pos.y,enemy_pos.z),Vector3.UP)
-		var wrotation = Quat($WeaponMount.global_transform.basis).slerp(Quat(wtransform.basis), rotation_speed)
-		$WeaponMount.global_transform = Transform(Basis(wrotation), $WeaponMount.global_transform.origin)
+		var wtransform = weapon_mount.global_transform.looking_at(Vector3(enemy_pos.x,global_pos.y,enemy_pos.z),Vector3.UP)
+		var wrotation = Quat(weapon_mount.global_transform.basis).slerp(Quat(wtransform.basis), rotation_speed)
+		weapon_mount.global_transform = Transform(Basis(wrotation), weapon_mount.global_transform.origin)
 		
 	
 func activate():
@@ -61,8 +72,18 @@ func get_closest_enemy(enemy_list):
 
 func shoot_closest_enemy():
 	var closest_enemy = get_closest_enemy(close_enemies)
-	if closest_enemy != null:
-		pass
+	if closest_enemy != null and can_shoot:
+		can_shoot = false
+		var random_angle = randomizer.randfn() # Should get us -1 to 1
+		var cast_to = (closest_enemy.global_transform.origin - raycast.global_transform.origin).normalized() * 25
+		cast_to = cast_to.rotated(Vector3.UP, deg2rad(random_angle))
+		raycast.cast_to = cast_to
+		if raycast.is_colliding():
+			var collidee = raycast.get_collider()
+			var bentity = collidee.get_node("BaseEntity")
+			if bentity != null:
+				# this is indeed an enemy
+				bentity.take_damage(randomizer.randi_range(10, 25))
 	return Task.SUCCEEDED 
 		
 		
