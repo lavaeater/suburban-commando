@@ -32,6 +32,9 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
+### HUD
+Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
+
 ### Towers One
 #### Mechanics
 Towers aren't just towers, it's about *family* as well. No. I mean, it's a whole package, it's building, its types of towers, it's the tower shooting and so on. Well, So far, I have managed to create a tower model, placing it, now it needs some AI and some shooting mechanics. We'll start simple with a kind of not very good tower that shots every now and then. In the end, I would also *love* to have **funny** towers, shooting poop grenades and whatnot.
@@ -44,8 +47,7 @@ Tower shooting thingie - the tower should have a raycast built in from the tower
 - [x] Tower should be able to target enemies
 - [x] Tower should be able to fire at enemies 
 
-### HUD
-Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
+
 
 ### Splash screen
 Player select, character select.
@@ -275,11 +277,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDExNDA1MzIsMzcyODEyMDgsMTA3MT
-Y3ODk4MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2MCwxMDI2OTUx
-MTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNj
-E5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4
-MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC
-0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1
-MzczMzA4M119
+eyJoaXN0b3J5IjpbMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNj
+c4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTEx
+OCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MT
+k2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgw
+MiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLT
+E2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUzMzE0NiwxNzUz
+NzMzMDgzXX0=
 -->
