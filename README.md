@@ -38,10 +38,11 @@ Towers aren't just towers, it's about *family* as well. No. I mean, it's a whole
 
 Tower shooting thingie - the tower should have a raycast built in from the tower weapon head. If an enemy body is inside a sensor, the tower should slowly lerp its tower head rotation towards that enemy. When the angle is within some kind of margin the tower should open fire and the raycasting should be at least slightly random, I think. Or perhaps we should do the weapon firing as an AREA with a change of hitting depending on distance? There are so many options here, all worthy of exploration.
  
+- [ ] V
 - [x] Create a tower model
 - [x] Player should be able to place the tower on the map
-- [ ] Tower should be able to target enemies
-- [ ] Tower should be able to fire at enemies 
+- [x] Tower should be able to target enemies
+- [x] Tower should be able to fire at enemies 
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -274,11 +275,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMT
-E2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5
-NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLT
-U5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDcz
-NDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4Nj
-Q5LDIxNDU1MzMxNDYsMTc1MzczMzA4MywtMTI0MjU4NzEzLC05
-NzEyODY1MTNdfQ==
+eyJoaXN0b3J5IjpbLTE0OTA2ODE5MTEsMTA3MTY3ODk4MiwtMj
+E0MzY1MTcyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIy
+OTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LD
+E5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNzUw
+MTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5MDcyNj
+c1LC0xMzQ1MTI4NjQ5LDIxNDU1MzMxNDYsMTc1MzczMzA4Mywt
+MTI0MjU4NzEzXX0=
 -->
