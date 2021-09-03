@@ -20,7 +20,7 @@ points = PoolVector3Array( 100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, -10
 script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 10.25 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 1.5, -6.5 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.00784069, -0.720665, 0.693239, -0.144847, 0.686767, 0.712299, -0.989423, -0.0948289, -0.109771, -62.1896, 27.8325, -180.998 )
@@ -740,26 +740,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
 [node name="Houses10" type="Spatial" parent="Block1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0, -26.75 )
 
-[node name="HouseWithYard" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 0.025 )
-
 [node name="HouseWithYard4" parent="Block1/Houses10" instance=ExtResource( 3 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, 10.025 )
-
-[node name="HouseWithYard2" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -9.975 )
-
-[node name="HouseWithYard3" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.475, -0.025, -19.975 )
-
-[node name="HouseWithYard5" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -10 )
-
-[node name="HouseWithYard6" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, -20 )
-
-[node name="HouseWithYard7" parent="Block1/Houses10" instance=ExtResource( 3 )]
-transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 0 )
 
 [node name="HouseWithYard8" parent="Block1/Houses10" instance=ExtResource( 3 )]
 transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -15.5, 0, 10 )

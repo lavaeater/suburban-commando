@@ -21,5 +21,19 @@ func _physics_process(delta):
 	if not intersection.empty():
 		emit_signal("look_at_target", intersection.position)
 		
-	
+	handle_input()
+		
+func handle_input():
+	if Input.is_action_pressed("cam_near_in"):
+		camera.near -= camera.near / 10
+	if Input.is_action_pressed("cam_near_out"):
+		camera.near += camera.near / 10
+	if Input.is_action_pressed("cam_far_in"):
+		camera.far -= camera.far / 10
+	if Input.is_action_pressed("cam_far_out"):
+		camera.far += camera.far / 10
+	if Input.is_action_pressed("cam_size_in"):
+		camera.size -= camera.size / 10
+	if Input.is_action_pressed("cam_size_out"):
+		camera.size += camera.size / 10		
 		
