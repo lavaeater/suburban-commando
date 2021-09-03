@@ -15,15 +15,15 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
-- [x] Towers
 - [ ] HUD
-- [ ] Splash Screen
+c- [ ] Splash Screen
 - [ ] Objectives
 - [ ] Blood Splatter
 - [ ] Enemy Attacks
 - [ ] PLayer Health and Death
 - [ ] Enemies detecting players
 - [ ] Visual Stylings
+- [x] Towers
 - [x] Level 2
 - [x] Player Movement
 - [x] Enemy Entity 1
@@ -275,7 +275,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNDMyNzU0OCwzNzI4MTIwOCwxMDcxNj
+eyJoaXN0b3J5IjpbLTk4NDc5Mzk2NywzNzI4MTIwOCwxMDcxNj
 c4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTEx
 OCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MT
 k2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgw
