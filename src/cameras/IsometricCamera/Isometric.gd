@@ -32,5 +32,8 @@ func handle_input():
 		camera.far -= camera.far / 10
 	if Input.is_action_pressed("cam_far_out"):
 		camera.far += camera.far / 10
-		
+	if Input.is_action_pressed("cam_size_in"):
+		camera.size -= camera.size / 10
+	if Input.is_action_pressed("cam_size_out"):
+		camera.size += camera.size / 10		
 		
