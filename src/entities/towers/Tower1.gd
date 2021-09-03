@@ -4,9 +4,14 @@ var proximal_enemies = []
 var active = false
 onready var weapon_mount = get_node("WeaponMount")
 onready var raycast = get_node("WeaponMount/RayCast")
+onready var left_muzzle = get_node("WeaponMount/LeftMuzzle")
+onready var right_muzzle = get_node("WeaponMount/RightMuzzle")
 var randomizer = RandomNumberGenerator.new()
 var cool_down = 0.1
 var can_shoot = true
+var flash_down = 0.05
+var left = true
+var flash_on = false
 
 func _ready():
 	randomizer.randomize()
@@ -14,6 +19,25 @@ func _ready():
 func _physics_process(delta):
 	if !can_shoot:
 		cool_down -= delta
+		if left and !flash_on:
+			left_muzzle.visible = true
+			flash_on = true
+		elif !flash_on:
+			right_muzzle.visible = true
+			flash_on = true
+		
+	if flash_on:
+		flash_down -= delta
+		
+	if flash_down < 0:
+		flash_on = false
+		flash_down = 0.05
+		if left:
+			left_muzzle.visible = false
+		else:
+			right_muzzle.visible = false
+		left = !left
+	
 	if cool_down < 0.0:
 		cool_down = 0.1
 		can_shoot = true
@@ -22,7 +46,7 @@ func _physics_process(delta):
 	if closest_enemy != null:
 		var global_pos = weapon_mount.global_transform.origin
 		var enemy_pos = closest_enemy.global_transform.origin
-		var rotation_speed = 0.1
+		var rotation_speed = 0.05
 		var wtransform = weapon_mount.global_transform.looking_at(Vector3(enemy_pos.x,global_pos.y,enemy_pos.z),Vector3.UP)
 		var wrotation = Quat(weapon_mount.global_transform.basis).slerp(Quat(wtransform.basis), rotation_speed)
 		weapon_mount.global_transform = Transform(Basis(wrotation), weapon_mount.global_transform.origin)
