@@ -15,13 +15,14 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
-- [ ] HUD
-- [ ] Splash Screen
 - [ ] Objectives
-- [ ] Blood Splatter
 - [ ] Enemy Attacks
 - [ ] PLayer Health and Death
 - [ ] Enemies detecting players
+- [ ] HUD
+- [ ] Splash Screen
+
+- [ ] Blood Splatter
 - [ ] Visual Stylings
 - [x] Towers
 - [x] Level 2
@@ -277,11 +278,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNj
-c4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTEx
-OCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MT
-k2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgw
-MiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLT
-E2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0NTUzMzE0NiwxNzUz
-NzMzMDgzXX0=
+eyJoaXN0b3J5IjpbLTU3MjUxMTQ0MiwxNDA5Mjk1NDUyLDM3Mj
+gxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3
+NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MD
+YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
+OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
+kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
+NTMzMTQ2XX0=
 -->
