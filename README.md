@@ -47,13 +47,11 @@ Tower shooting thingie - the tower should have a raycast built in from the tower
 - [x] Tower should be able to target enemies
 - [x] Tower should be able to fire at enemies 
 
-
+### Objectives
+Something on the map that the player needs to move to in order for the game to continue to the next level.
 
 ### Splash screen
 Player select, character select.
-
-### Objectives
-Something on the map that the player needs to move to in order for the game to continue to the next level.
 
 ### Blood splatter? 
 This is part of the "visual stylings" concept - when shooting, we need FX for the hits and such.
@@ -277,11 +275,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MjA2MjQzNiwxNDA5Mjk1NDUyLDM3Mj
-gxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3
-NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MD
-YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
-OTIsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMT
-kyMzQ4MjIyNiwtMTY5OTA3MjY3NSwtMTM0NTEyODY0OSwyMTQ1
-NTMzMTQ2XX0=
+eyJoaXN0b3J5IjpbMjkzMjUyNDQ0LDE0MDkyOTU0NTIsMzcyOD
+EyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2
+MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNj
+I1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5
+Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
+IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
+MzMxNDZdfQ==
 -->
