@@ -21,7 +21,6 @@ The thing in cursive is what I am working on right now.
 - [ ] Enemies detecting players
 - [ ] HUD
 - [ ] Splash Screen
-
 - [ ] Blood Splatter
 - [ ] Visual Stylings
 - [x] Towers
@@ -278,7 +277,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MjUxMTQ0MiwxNDA5Mjk1NDUyLDM3Mj
+eyJoaXN0b3J5IjpbLTU4MjA2MjQzNiwxNDA5Mjk1NDUyLDM3Mj
 gxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3
 NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MD
 YyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYz
