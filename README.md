@@ -19,6 +19,8 @@ The thing in cursive is what I am working on right now.
 - [ ] Enemy Attacks
 - [ ] PLayer Health and Death
 - [ ] Enemies detecting players
+- [ ] Multiplayer
+- [ ] Controller Support
 - [ ] HUD
 - [ ] Splash Screen
 - [ ] Blood Splatter
@@ -277,7 +279,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDQ5NDQyMTQsMTQwOTI5NTQ1MiwzNz
+eyJoaXN0b3J5IjpbLTIwMDUwNjM4MzUsMTQwOTI5NTQ1MiwzNz
 I4MTIwOCwxMDcxNjc4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIy
 NzYwLDEwMjY5NTExOCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNj
 A2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2
