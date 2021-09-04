@@ -2493,4 +2493,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
 [node name="path_tilesLong16" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
 
+[node name="HUD" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="Label" type="Label" parent="HUD"]
+margin_top = -2.0
+margin_right = 1034.0
+margin_bottom = 601.0
+size_flags_vertical = 1
+text = "A LABEL"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
