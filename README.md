@@ -49,6 +49,8 @@ Tower shooting thingie - the tower should have a raycast built in from the tower
 
 ### Objectives
 Something on the map that the player needs to move to in order for the game to continue to the next level.
+#### Mechanics
+Objectives can actually be expanded upon to be something more than simple *waypoints* for the player to visit, now that we use a more advanced game engine. These objectives can represent special pickups needed to progress through the game, like key-cards or whatnot. They can be triggers that interactively open some gate in some other part of the map and so forth.
 
 ### Splash screen
 Player select, character select.
@@ -275,11 +277,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkzMjUyNDQ0LDE0MDkyOTU0NTIsMzcyOD
-EyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2
-MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5NjU4LDYwNj
-I1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5
-Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5NDczNDA2OSwxOT
-IzNDgyMjI2LC0xNjk5MDcyNjc1LC0xMzQ1MTI4NjQ5LDIxNDU1
-MzMxNDZdfQ==
+eyJoaXN0b3J5IjpbLTEyMDQ5NDQyMTQsMTQwOTI5NTQ1MiwzNz
+I4MTIwOCwxMDcxNjc4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIy
+NzYwLDEwMjY5NTExOCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNj
+A2MjU2MDIwLC02MTk2Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2
+MzkyLDkyOTkzMTgwMiwtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LD
+E5MjM0ODIyMjYsLTE2OTkwNzI2NzUsLTEzNDUxMjg2NDksMjE0
+NTUzMzE0Nl19
 -->
