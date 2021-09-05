@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/cameras/IsometricCamera/IsoMetric.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/player/Player.tscn" type="PackedScene" id=2]
@@ -6,12 +6,34 @@
 [ext_resource path="res://src/entities/map/things/path_tilesLong.tscn" type="PackedScene" id=4]
 [ext_resource path="res://level/Main.gd" type="Script" id=5]
 [ext_resource path="res://src/entities/enemy/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://textures/ground/Ground037_1K_AmbientOcclusion.png" type="Texture" id=7]
+[ext_resource path="res://textures/ground/Ground037_1K_Color.png" type="Texture" id=8]
+[ext_resource path="res://textures/ground/Ground037_1K_NormalGL.png" type="Texture" id=9]
+[ext_resource path="res://textures/ground/Ground037_1K_Roughness.png" type="Texture" id=10]
+[ext_resource path="res://textures/ground/Ground037_1K_Displacement.png" type="Texture" id=11]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 200, 200 )
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.145098, 0.407843, 0.235294, 1 )
+albedo_texture = ExtResource( 8 )
+roughness_texture = ExtResource( 10 )
+normal_enabled = true
+normal_scale = -2.17
+normal_texture = ExtResource( 9 )
+ao_enabled = true
+ao_light_affect = 0.17
+ao_texture = ExtResource( 7 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+depth_enabled = true
+depth_scale = 0.05
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 11 )
+uv1_scale = Vector3( 10, 10, 10 )
 
 [sub_resource type="ConvexPolygonShape" id=3]
 points = PoolVector3Array( 100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, -100 )
@@ -24,6 +46,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 1.5, -6.5 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.00784069, -0.720665, 0.693239, -0.144847, 0.686767, 0.712299, -0.989423, -0.0948289, -0.109771, -62.1896, 27.8325, -180.998 )
+light_energy = 0.85
+light_specular = 0.38
 shadow_enabled = true
 
 [node name="Floor" type="StaticBody" parent="."]

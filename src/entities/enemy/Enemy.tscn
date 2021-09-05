@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/entities/enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/things/blasterA.tscn" type="PackedScene" id=2]
@@ -24,15 +24,6 @@ size = Vector3( 0.1, 0.2, 0.2 )
 [sub_resource type="CylinderShape" id=5]
 radius = 25.0
 height = 0.1
-
-[sub_resource type="CylinderMesh" id=6]
-top_radius = 25.0
-bottom_radius = 25.0
-height = 0.1
-
-[sub_resource type="SpatialMaterial" id=7]
-flags_transparent = true
-albedo_color = Color( 0.847059, 0.309804, 0.0980392, 0.0470588 )
 
 [node name="Enemy" type="KinematicBody"]
 collision_layer = 35
@@ -77,10 +68,6 @@ collision_mask = 64
 shape = SubResource( 5 )
 
 [node name="ActionTimer" type="Timer" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 6 )
-material/0 = SubResource( 7 )
 
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
