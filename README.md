@@ -53,7 +53,6 @@ We need a better AI. Or rather an AI that seems better. The AI should work by do
 
 
 
-
 ### Objectives
 Something on the map that the player needs to move to in order for the game to continue to the next level.
 #### Mechanics
@@ -281,11 +280,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMj
-AwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5
-ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LD
-gwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYy
-OTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOTI5OTMxODAyLC
-0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5
-OTA3MjY3NV19
+eyJoaXN0b3J5IjpbLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMT
+Y2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3Mjgx
+MjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3Nj
+AsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYy
+NTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOT
+IsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMTky
+MzQ4MjIyNl19
 -->
