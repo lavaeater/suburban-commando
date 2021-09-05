@@ -49,8 +49,7 @@ Tower shooting thingie - the tower should have a raycast built in from the tower
 - [x] Tower should be able to fire at enemies 
 
 ### Enemy AI and Attacks
-We need a better AI. Or rather an AI that seems better. 
-#### 
+We need a better AI. Or rather an AI that seems better. The AI should work by doing very small actions in sequence.
 
 ### Objectives
 Something on the map that the player needs to move to in order for the game to continue to the next level.
@@ -279,7 +278,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMDYxOTExMSwtMTY2NzE5NjQ4OSwtMj
+eyJoaXN0b3J5IjpbLTUzMzU5NzQ4MiwtMTY2NzE5NjQ4OSwtMj
 AwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5
 ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LD
 gwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYy
