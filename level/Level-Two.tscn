@@ -5,7 +5,7 @@
 [ext_resource path="res://src/entities/map/house_with_yard/HouseWithYard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/map/things/path_tilesLong.tscn" type="PackedScene" id=4]
 [ext_resource path="res://level/Main.gd" type="Script" id=5]
-[ext_resource path="res://src/entities/enemy/Enemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/entities/better_enemy/BetterEnemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/ground/Ground037_1K_AmbientOcclusion.png" type="Texture" id=7]
 [ext_resource path="res://textures/ground/Ground037_1K_Color.png" type="Texture" id=8]
 [ext_resource path="res://textures/ground/Ground037_1K_NormalGL.png" type="Texture" id=9]
@@ -61,9 +61,6 @@ shape = SubResource( 3 )
 
 [node name="CameraPivot" parent="." instance=ExtResource( 1 )]
 target = NodePath("../Player")
-
-[node name="Enemy" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 1, 0 )
 
 [node name="Block1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.75, 0, 34.5 )
@@ -2516,5 +2513,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
 
 [node name="path_tilesLong16" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.25, 1, -14.75 )
 
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]

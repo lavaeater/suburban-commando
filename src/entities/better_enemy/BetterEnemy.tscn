@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/entities/better_enemy/BetterEnemy.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/things/blasterA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/base_entity/BaseEntity.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/ai/Detector/Detector.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/ai/BehaviorTree.gd" type="Script" id=5]
+[ext_resource path="res://BehaviorTree/Composites/Selector.gd" type="Script" id=6]
+[ext_resource path="res://BehaviorTree/Leaves/CallMyAgent.gd" type="Script" id=7]
 
 [sub_resource type="SphereMesh" id=1]
 radius = 0.5
@@ -50,11 +52,33 @@ transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, -0.0001
 [node name="ActionTimer" type="Timer" parent="."]
 
 [node name="Detector" parent="." instance=ExtResource( 4 )]
+collision_layer = 0
 collision_mask = 64
 
 [node name="BehaviorTree" type="Node" parent="."]
 script = ExtResource( 5 )
 agent_path = NodePath("..")
+
+[node name="Selector" type="Node" parent="BehaviorTree"]
+script = ExtResource( 6 )
+
+[node name="ScanForPlayers" type="Node" parent="BehaviorTree/Selector"]
+script = ExtResource( 6 )
+
+[node name="HasFoundAPlayer" type="Node" parent="BehaviorTree/Selector/ScanForPlayers"]
+script = ExtResource( 7 )
+
+[node name="ScanForPlayer" type="Node" parent="BehaviorTree/Selector/ScanForPlayers"]
+script = ExtResource( 7 )
+
+[node name="TurnAndShoot" type="Node" parent="BehaviorTree/Selector"]
+script = ExtResource( 6 )
+
+[node name="IsAnyPlayerInFieldOfView" type="Node" parent="BehaviorTree/Selector/TurnAndShoot"]
+script = ExtResource( 7 )
+
+[node name="TurnTowardsClosest" type="Node" parent="BehaviorTree/Selector/TurnAndShoot"]
+script = ExtResource( 7 )
 
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
