@@ -54,7 +54,7 @@ We need a better AI. Or rather an AI that seems better. The AI should work by do
 Or, what is it that we want to do? We want the enemy AI to be a *threat*, a threat that searches for you. So if the player is in the sphere of detection and *moves* - that should indicate to the enemy that there is something to investigate. Like a sneak-thing. If the player shoots, everyone in some circle should be able to hear it and go to examine it. 
 
 #### Mechanics
-The 
+The enemy wants to find players. 
 
 
 ### Objectives
@@ -284,7 +284,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MTgzMjQ1NSwtMTM0NjU3OTEzOSwtNj
+eyJoaXN0b3J5IjpbLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNj
 Q1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDky
 OTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMi
 wtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMz
