@@ -15,7 +15,7 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
-- [ ] Enemy Attacks
+- [ ] *Enemy Attacks*
 - [ ] Objectives
 - [ ] Player Health and Death
 - [ ] More advanced AI
@@ -279,7 +279,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2Nzk2NTY4NywtMTY2NzE5NjQ4OSwtMj
+eyJoaXN0b3J5IjpbMTAxNTQ4OTQwMywtMTY2NzE5NjQ4OSwtMj
 AwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5
 ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LD
 gwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYy
