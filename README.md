@@ -59,9 +59,6 @@ Player select, character select.
 ### Blood splatter? 
 This is part of the "visual stylings" concept - when shooting, we need FX for the hits and such.
 
-### Enemy attacks
-The enemies should attack, perhaps using melee attacks for now. 
-
 ### Player health and death
 So, we have health for enemies, when enemies can attack, we shall have damage, health and death here. This also means an implementation for "lives" for the players as well, of course. Or perhaps a resurrection mechanic?
 
@@ -278,11 +275,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQyNTM3MzIsLTE2NjcxOTY0ODksLT
-IwMDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4
-OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOC
-w4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MTk2
-Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgwMi
-wtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLTE2
-OTkwNzI2NzVdfQ==
+eyJoaXN0b3J5IjpbMTcwODUxOTgxNSwtMTY2NzE5NjQ4OSwtMj
+AwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5
+ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LD
+gwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYy
+OTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOTI5OTMxODAyLC
+0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMTkyMzQ4MjIyNiwtMTY5
+OTA3MjY3NV19
 -->
