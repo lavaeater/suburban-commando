@@ -51,6 +51,7 @@ Tower shooting thingie - the tower should have a raycast built in from the tower
 ### Enemy AI and Attacks
 We need a better AI. Or rather an AI that seems better. The AI should work by doing very small actions in sequence. So, we could have something like, if the player character is in the sphere of detection, the enemy should stop what it is doing and turn towards the player.
 
+Or, what is it that we want to do?
 
 
 ### Objectives
@@ -280,11 +281,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMT
-Y2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3Mjgx
-MjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3Nj
-AsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYy
-NTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOT
-IsOTI5OTMxODAyLC0xMjc1MDEyMzkyLDE2OTQ3MzQwNjksMTky
-MzQ4MjIyNl19
+eyJoaXN0b3J5IjpbLTYwMjQxODY3OSwtMTM0NjU3OTEzOSwtNj
+Q1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDky
+OTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMi
+wtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMz
+NzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4Nz
+EsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEyNzUwMTIzOTIsMTY5
+NDczNDA2OV19
 -->
