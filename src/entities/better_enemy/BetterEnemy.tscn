@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://src/entities/enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://src/entities/better_enemy/BetterEnemy.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/things/blasterA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/base_entity/BaseEntity.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/ai/EnemyBehavior.tscn" type="PackedScene" id=4]
