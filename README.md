@@ -18,7 +18,6 @@ The thing in cursive is what I am working on right now.
 - [ ] *Enemy AI and attacks*
 - [ ] Objectives
 - [ ] Player Health and Death
-- [ ] More advanced AI
 - [ ] Multiplayer
 - [ ] Controller Support
 - [ ] HUD
@@ -279,11 +278,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ4MTg3OTA4LC0xNjY3MTk2NDg5LC0yMD
-A1MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4
-MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgsOD
-AyODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5
-NjM5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLT
-EyNzUwMTIzOTIsMTY5NDczNDA2OSwxOTIzNDgyMjI2LC0xNjk5
-MDcyNjc1XX0=
+eyJoaXN0b3J5IjpbLTE0NjQyNTM3MzIsLTE2NjcxOTY0ODksLT
+IwMDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4
+OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOC
+w4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MTk2
+Mjk2MzksMTkzNTg1MTg3MSwtNTk5NjY2MzkyLDkyOTkzMTgwMi
+wtMTI3NTAxMjM5MiwxNjk0NzM0MDY5LDE5MjM0ODIyMjYsLTE2
+OTkwNzI2NzVdfQ==
 -->
