@@ -3,7 +3,8 @@
 [ext_resource path="res://src/entities/better_enemy/BetterEnemy.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/things/blasterA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/base_entity/BaseEntity.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/ai/EnemyBehavior.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/ai/Detector/Detector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/ai/BehaviorTree.gd" type="Script" id=5]
 
 [sub_resource type="SphereMesh" id=1]
 radius = 0.5
@@ -20,10 +21,6 @@ radius = 0.5
 
 [sub_resource type="PrismMesh" id=4]
 size = Vector3( 0.1, 0.2, 0.2 )
-
-[sub_resource type="CylinderShape" id=5]
-radius = 25.0
-height = 0.1
 
 [node name="Enemy" type="KinematicBody"]
 collision_layer = 35
@@ -50,27 +47,15 @@ transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, -0.0001
 
 [node name="BaseEntity" parent="." instance=ExtResource( 3 )]
 
-[node name="EnemyBehavior" parent="." instance=ExtResource( 4 )]
-agent_path = NodePath("..")
-
-[node name="Sensor" type="Area" parent="."]
-collision_layer = 16
-collision_mask = 64
-
-[node name="CollisionShape" type="CollisionShape" parent="Sensor"]
-shape = SubResource( 5 )
-
-[node name="LongRangeSensor" type="Area" parent="."]
-collision_layer = 16
-collision_mask = 64
-
-[node name="CollisionShape" type="CollisionShape" parent="LongRangeSensor"]
-shape = SubResource( 5 )
-
 [node name="ActionTimer" type="Timer" parent="."]
+
+[node name="Detector" parent="." instance=ExtResource( 4 )]
+collision_mask = 64
+
+[node name="BehaviorTree" type="Node" parent="."]
+script = ExtResource( 5 )
+agent_path = NodePath("..")
 
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
-[connection signal="body_entered" from="LongRangeSensor" to="." method="_on_LongRangeSensor_body_entered"]
-[connection signal="body_exited" from="LongRangeSensor" to="." method="_on_LongRangeSensor_body_exited"]
 [connection signal="timeout" from="ActionTimer" to="." method="_on_ActionTimer_timeout"]

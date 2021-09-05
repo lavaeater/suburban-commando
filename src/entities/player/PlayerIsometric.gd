@@ -43,6 +43,9 @@ func _physics_process(delta):
 		node_to_build.global_transform.basis.z = Vector3.BACK
 	handle_shots(delta)
 
+func is_moving():
+	return velocity != Vector3.ZERO
+
 func handle_shots(delta):
 	if fire and can_fire:
 		has_fired = true
