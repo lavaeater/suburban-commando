@@ -47,7 +47,7 @@ So, the enemy has a *detector* that keeps track of players in the proximity. How
 
 Fudge the mechanics. 
 #### Behavior Tree
-We could surely use a nice syntax for writing behavior trees, my man. So, if we think in very, very general terms, and use groups, we can get a nice 
+We could surely use a nice syntax for writing behavior trees, my man. So, if we think in very, very general terms, and use groups, we can get a nice tree going.
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -291,7 +291,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MTc4MTk2NywxODE0Mzg3NTAsLTEwNT
+eyJoaXN0b3J5IjpbLTc0NTY0ODI3MSwxODE0Mzg3NTAsLTEwNT
 Y0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkw
 MDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NT
 IsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2
