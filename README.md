@@ -53,7 +53,7 @@ This is a really cool question, because I just realized I want them to do stuff 
 
 I want them to naturally **flock**, so that if they are not doing anything top priority (like attacking a player), they will check their surroundings to see if there are any other enemies around. This obviously only goes for our zombie enemies.
 
-If they are in a flock or lonely, they should try to find food. Food is defined as, for now, the door to houses. T
+If they are in a flock or lonely, they should try to find food. Food is defined as, for now, the door to houses. They want to find housedoors.
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -297,11 +297,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTMyODU3NTIsLTExNTE0NTg1MTIsMT
-gxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1
-NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2Mz
-gzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIx
-NDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMj
-kyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwx
-OTM1ODUxODcxXX0=
+eyJoaXN0b3J5IjpbLTE2OTYxOTE1NSwtMTE1MTQ1ODUxMiwxOD
+E0Mzg3NTAsLTEwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3
+OTEzOSwtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzOD
+M1LDE0MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0
+MzY1MTcyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOT
+IxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5
+MzU4NTE4NzFdfQ==
 -->
