@@ -57,6 +57,8 @@ If they are in a flock or lonely, they should try to find food. Food is defined 
 
 If they hear things within a certain range, they want to check that out, and if they find players, the want to follow them, get close, and when in range, attack. Perhaps they could, if they are many enough, go into some kind of wild frenzy mode, that would be super cool.
 
+- selector - try each one until they succeed
+- 
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -300,7 +302,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NjQwNzY0MiwtMTE1MTQ1ODUxMiwxOD
+eyJoaXN0b3J5IjpbLTc0NTU4MDA2MCwtMTE1MTQ1ODUxMiwxOD
 E0Mzg3NTAsLTEwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3
 OTEzOSwtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzOD
 M1LDE0MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0
