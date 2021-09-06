@@ -59,7 +59,7 @@ If they hear things within a certain range, they want to check that out, and if 
 
 But how will they act when in a flock? What is the definition of a flock? It could be that they randomly choose to either look for food or other enemies, for instance.
 
-This is kinda hard, we just need to do it, man.
+This is kinda hard, we just need to do it, man. All actions need to be super small.
 
 1. Look for a flock, until found or until bored
 2. Look for food
@@ -307,11 +307,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMT
-Y5MzAxMDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2
-NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OS
-wtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3
-MjgxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1Mj
-I3NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2
-MDYyNTYwMjBdfQ==
+eyJoaXN0b3J5IjpbLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyOD
+M1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3
+NTAsLTEwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOS
+wtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0
+MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MT
+cyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0y
+MTMzNzA5NjU4XX0=
 -->
