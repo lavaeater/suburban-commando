@@ -47,7 +47,9 @@ So, the enemy has a *detector* that keeps track of players in the proximity. How
 
 Fudge the mechanics. 
 #### Behavior Tree
-We could surely use a nice syntax for writing behavior trees, my man. So, if we think in very, very general terms, and use groups, we can get a nice tree going. So what do the enemies WANT to do? What is 
+We could surely use a nice syntax for writing behavior trees, my man. So, if we think in very, very general terms, and use groups, we can get a nice tree going. So what do the enemies WANT to do?
+
+This is a really cool question, because I just realized I want them to do stuff 
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -291,11 +293,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMD
-U2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5
-MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1ND
-UyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTEx
-Njc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOT
-Y1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01
-OTk2NjYzOTJdfQ==
+eyJoaXN0b3J5IjpbLTE4Mzc5NzcyNzcsLTExNTE0NTg1MTIsMT
+gxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1
+NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2Mz
+gzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIx
+NDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMj
+kyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwx
+OTM1ODUxODcxXX0=
 -->
