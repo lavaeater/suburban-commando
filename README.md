@@ -57,7 +57,7 @@ If they are in a flock or lonely, they should try to find food. Food is defined 
 
 If they hear things within a certain range, they want to check that out, and if they find players, the want to follow them, get close, and when in range, attack. Perhaps they could, if they are many enough, go into some kind of wild frenzy mode, that would be super cool.
 
-- top selector - try each one until they succeed
+- top selector - try each one until they succeed with one, then jump out
 - 
 
 ### HUD
@@ -302,11 +302,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODE2NywtMTE1MTQ1ODUxMiwxODE0Mz
-g3NTAsLTEwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEz
-OSwtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LD
-E0MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1
-MTcyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC
-0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4
-NTE4NzFdfQ==
+eyJoaXN0b3J5IjpbNTI4MDc3OTc4LC0xMTUxNDU4NTEyLDE4MT
+QzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC0xMzQ2NTc5
+MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIwMDUwNjM4Mz
+UsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OTgyLC0yMTQz
+NjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4MDI4MjI5Mj
+EsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MTk2Mjk2MzksMTkz
+NTg1MTg3MV19
 -->
