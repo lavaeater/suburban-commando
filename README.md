@@ -52,15 +52,6 @@ Tower shooting thingie - the tower should have a raycast built in from the tower
 - [x] Tower should be able to target enemies
 - [x] Tower should be able to fire at enemies 
 
-### Enemy AI and Attacks
-We need a better AI. Or rather an AI that seems better. The AI should work by doing very small actions in sequence. So, we could have something like, if the player character is in the sphere of detection, the enemy should stop what it is doing and turn towards the player.
-
-Or, what is it that we want to do? We want the enemy AI to be a *threat*, a threat that searches for you. So if the player is in the sphere of detection and *moves* - that should indicate to the enemy that there is something to investigate. Like a sneak-thing. If the player shoots, everyone in some circle should be able to hear it and go to examine it. 
-
-#### Mechanics
-So, the enemy has a *detector* that keeps track of players in the proximity. However, a player being detected by the detector doesn't actually mean that the enemy has detected the player, just that it *could*. 
-
-
 ### Objectives
 Something on the map that the player needs to move to in order for the game to continue to the next level.
 #### Mechanics
@@ -288,11 +279,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOT
-kwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5
-NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LD
-EwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAy
-Njk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMj
-AsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOTI5
-OTMxODAyXX0=
+eyJoaXN0b3J5IjpbLTQ4NDM5OTQzNywxODE0Mzg3NTAsLTEwNT
+Y0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkw
+MDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NT
+IsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2
+NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5Nj
+U4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5
+OTY2NjM5Ml19
 -->
