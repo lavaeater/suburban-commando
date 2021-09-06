@@ -47,7 +47,7 @@ So, the enemy has a *detector* that keeps track of players in the proximity. How
 
 Fudge the mechanics. 
 #### Behavior Tree
-We could surely use a nice syntax for writing behavior trees, my man. So, if we think in very, very general terms, and use groups, we can get a nice tree going.
+We could surely use a nice syntax for writing behavior trees, my man. So, if we think in very, very general terms, and use groups, we can get a nice tree going. So what do the enemies WANT to do? What is 
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -291,11 +291,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NTY0ODI3MSwxODE0Mzg3NTAsLTEwNT
-Y0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkw
-MDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NT
-IsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2
-NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5Nj
-U4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5
-OTY2NjM5Ml19
+eyJoaXN0b3J5IjpbLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMD
+U2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5
+MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1ND
+UyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTEx
+Njc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOT
+Y1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01
+OTk2NjYzOTJdfQ==
 -->
