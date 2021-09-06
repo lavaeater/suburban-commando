@@ -4,6 +4,10 @@
 
 I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
 
+## Devlog Sunday 5th of september 2021
+
+So, I decided to experiment with a different implementation of behavior trees for godot. They guy that made this one seems more competent... :D
+
 ## Devlog Sunday 29th of August
 
 
@@ -284,11 +288,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMT
-M0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1
-MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4Mi
-wtMjE0MzY1MTcyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAy
-ODIyOTIxLC0yMTMzNzA5NjU4LDYwNjI1NjAyMCwtNjE5NjI5Nj
-M5LDE5MzU4NTE4NzEsLTU5OTY2NjM5Miw5Mjk5MzE4MDIsLTEy
-NzUwMTIzOTJdfQ==
+eyJoaXN0b3J5IjpbMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOT
+kwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5
+NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LD
+EwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAy
+Njk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMj
+AsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01OTk2NjYzOTIsOTI5
+OTMxODAyXX0=
 -->
