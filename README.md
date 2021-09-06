@@ -57,7 +57,7 @@ If they are in a flock or lonely, they should try to find food. Food is defined 
 
 If they hear things within a certain range, they want to check that out, and if they find players, the want to follow them, get close, and when in range, attack. Perhaps they could, if they are many enough, go into some kind of wild frenzy mode, that would be super cool.
 
-But how will they act when in a flock? What is the definition of a flock?
+But how will they act when in a flock? What is the definition of a flock? It could be that they randomly choose to either look for food or other enemies, for instance.
 
 - top selector - try each one until they succeed with one, then jump out
 - - 
@@ -304,11 +304,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNjY2NDAwLC0xMTUxNDU4NTEyLDE4MT
-QzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC0xMzQ2NTc5
-MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIwMDUwNjM4Mz
-UsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OTgyLC0yMTQz
-NjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4MDI4MjI5Mj
-EsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MTk2Mjk2MzksMTkz
-NTg1MTg3MV19
+eyJoaXN0b3J5IjpbLTIwMTY5MzAxMDAsLTExNTE0NTg1MTIsMT
+gxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1
+NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2Mz
+gzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIx
+NDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMj
+kyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwx
+OTM1ODUxODcxXX0=
 -->
