@@ -1,11 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/cameras/IsometricCamera/IsoMetric.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/map/house_with_yard/HouseWithYard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/map/things/path_tilesLong.tscn" type="PackedScene" id=4]
 [ext_resource path="res://level/Main.gd" type="Script" id=5]
-[ext_resource path="res://src/entities/enemy/Enemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/ground/Ground037_1K_AmbientOcclusion.png" type="Texture" id=7]
 [ext_resource path="res://textures/ground/Ground037_1K_Color.png" type="Texture" id=8]
 [ext_resource path="res://textures/ground/Ground037_1K_NormalGL.png" type="Texture" id=9]
@@ -61,9 +60,6 @@ shape = SubResource( 3 )
 
 [node name="CameraPivot" parent="." instance=ExtResource( 1 )]
 target = NodePath("../Player")
-
-[node name="Enemy" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 1, 0 )
 
 [node name="Block1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.75, 0, 34.5 )
