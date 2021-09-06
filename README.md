@@ -51,7 +51,9 @@ We could surely use a nice syntax for writing behavior trees, my man. So, if we 
 
 This is a really cool question, because I just realized I want them to do stuff when the players aren't around, as well. They should be looking for food, breaking shit, stuff like that. 
 
-I want them to naturally **flock**, so that if they are not doing anything top priority (like attacking a player), they will check their surroundings to see if there are any other enemies around. This obviously only goes for our zombie enemies. T
+I want them to naturally **flock**, so that if they are not doing anything top priority (like attacking a player), they will check their surroundings to see if there are any other enemies around. This obviously only goes for our zombie enemies.
+
+If they are in a flock or lonely, they should try to find food. Food is defined as, for now, the door to houses. T
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -295,11 +297,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQyNjM5NTUxLC0xMTUxNDU4NTEyLDE4MT
-QzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC0xMzQ2NTc5
-MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIwMDUwNjM4Mz
-UsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OTgyLC0yMTQz
-NjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4MDI4MjI5Mj
-EsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02MTk2Mjk2MzksMTkz
-NTg1MTg3MV19
+eyJoaXN0b3J5IjpbLTE5OTMyODU3NTIsLTExNTE0NTg1MTIsMT
+gxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1
+NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2Mz
+gzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIx
+NDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMj
+kyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwx
+OTM1ODUxODcxXX0=
 -->
