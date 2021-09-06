@@ -49,7 +49,9 @@ Fudge the mechanics.
 #### Behavior Tree
 We could surely use a nice syntax for writing behavior trees, my man. So, if we think in very, very general terms, and use groups, we can get a nice tree going. So what do the enemies WANT to do?
 
-This is a really cool question, because I just realized I want them to do stuff 
+This is a really cool question, because I just realized I want them to do stuff when the players aren't around, as well. They should be looking for food, breaking shit, stuff like that. 
+
+I want them to naturally **flock**, so that if they are not doing anything top priority (like attacking a player),
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -293,11 +295,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzc5NzcyNzcsLTExNTE0NTg1MTIsMT
-gxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1
-NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2Mz
-gzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIx
-NDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMj
-kyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwx
-OTM1ODUxODcxXX0=
+eyJoaXN0b3J5IjpbMjA2NjE1OTMsLTExNTE0NTg1MTIsMTgxND
+M4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1Nzkx
+MzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNS
+wxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2
+NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMjkyMS
+wtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwxOTM1
+ODUxODcxXX0=
 -->
