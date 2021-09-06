@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/entities/enemy-two/Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/things/blasterA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/base_entity/BaseEntity.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/behavior_tree/src/behavior_tree.gd" type="Script" id=4]
 
 [sub_resource type="SphereMesh" id=1]
 radius = 0.5
@@ -62,6 +63,9 @@ collision_mask = 64
 
 [node name="CollisionShape" type="CollisionShape" parent="LongRangeSensor"]
 shape = SubResource( 5 )
+
+[node name="BehaviorTree" type="Node" parent="."]
+script = ExtResource( 4 )
 
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
