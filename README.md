@@ -45,6 +45,10 @@ Or, what is it that we want to do? We want the enemy AI to be a *threat*, a thre
 #### Mechanics
 So, the enemy has a *detector* that keeps track of players in the proximity. However, a player being detected by the detector doesn't actually mean that the enemy has detected the player, just that it *could*. 
 
+Fudge the mechanics. 
+#### Behavior Tree
+We could surely use a nice syntax for writing behavior trees, my man. 
+
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
 
@@ -287,11 +291,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTg5NzkxNjQsMTgxNDM4NzUwLC0xMD
-U2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5
-MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1ND
-UyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTEx
-Njc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOT
-Y1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwxOTM1ODUxODcxLC01
-OTk2NjYzOTJdfQ==
+eyJoaXN0b3J5IjpbMTI5OTEzMTE4OCwxODE0Mzg3NTAsLTEwNT
+Y0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkw
+MDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NT
+IsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2
+NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0yMTMzNzA5Nj
+U4LDYwNjI1NjAyMCwtNjE5NjI5NjM5LDE5MzU4NTE4NzEsLTU5
+OTY2NjM5Ml19
 -->
