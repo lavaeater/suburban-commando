@@ -59,8 +59,7 @@ If they hear things within a certain range, they want to check that out, and if 
 
 But how will they act when in a flock? What is the definition of a flock? It could be that they randomly choose to either look for food or other enemies, for instance.
 
-- top selector - try each one until they succeed with one, then jump out
-- - 
+
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -304,11 +303,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTY5MzAxMDAsLTExNTE0NTg1MTIsMT
-gxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1
-NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2Mz
-gzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5ODIsLTIx
-NDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgwMjgyMj
-kyMSwtMjEzMzcwOTY1OCw2MDYyNTYwMjAsLTYxOTYyOTYzOSwx
-OTM1ODUxODcxXX0=
+eyJoaXN0b3J5IjpbLTc5MDEwNzA3LC0yMDE2OTMwMTAwLC0xMT
+UxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAy
+MjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0OD
+ksLTIwMDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcx
+Njc4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NT
+ExOCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgsNjA2MjU2MDIwLC02
+MTk2Mjk2MzldfQ==
 -->
