@@ -63,7 +63,7 @@ This is kinda hard, we just need to do it, man.
 
 1. Look for a flock, until found or until bored
 2. Look for food
-3. React to stuff
+3. React to stuff - 
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -307,7 +307,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzMzI2NjcyOSwyMjgzNTEyNzYsLTIwMT
+eyJoaXN0b3J5IjpbLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMT
 Y5MzAxMDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2
 NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OS
 wtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3
