@@ -61,6 +61,8 @@ But how will they act when in a flock? What is the definition of a flock? It cou
 
 This is kinda hard, we just need to do it, man.
 
+1. Look for a flock, until found or until bored
+2. 
 
 ### HUD
 Simply an overlay or something like that, displaying ammo, health, score, objectives and such.
@@ -304,11 +306,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NzU2MjU3OCwyMjgzNTEyNzYsLTIwMT
-Y5MzAxMDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2
-NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OS
-wtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3
-MjgxMjA4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1Mj
-I3NjAsMTAyNjk1MTE4LDgwMjgyMjkyMSwtMjEzMzcwOTY1OCw2
-MDYyNTYwMjBdfQ==
+eyJoaXN0b3J5IjpbLTIwOTE5MjQ4OTIsMjI4MzUxMjc2LC0yMD
+E2OTMwMTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQz
+NjUzNCwtMjk5MDAyMjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNj
+ksLTE2NjcxOTY0ODksLTIwMDUwNjM4MzUsMTQwOTI5NTQ1Miwz
+NzI4MTIwOCwxMDcxNjc4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NT
+IyNzYwLDEwMjY5NTExOCw4MDI4MjI5MjEsLTIxMzM3MDk2NTgs
+NjA2MjU2MDIwXX0=
 -->
