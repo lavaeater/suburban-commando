@@ -63,10 +63,7 @@ collision_mask = 64
 [node name="CollisionShape" type="CollisionShape" parent="LongRangeSensor"]
 shape = SubResource( 5 )
 
-[node name="ActionTimer" type="Timer" parent="."]
-
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]
 [connection signal="body_entered" from="LongRangeSensor" to="." method="_on_LongRangeSensor_body_entered"]
 [connection signal="body_exited" from="LongRangeSensor" to="." method="_on_LongRangeSensor_body_exited"]
-[connection signal="timeout" from="ActionTimer" to="." method="_on_ActionTimer_timeout"]

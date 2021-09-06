@@ -24,10 +24,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/behavior_tree/nodes/decorators/succeeder.gd"
 }, {
-"base": "Task",
+"base": "Node",
 "class": "BehaviorTree",
 "language": "GDScript",
-"path": "res://src/ai/BehaviorTree.gd"
+"path": "res://addons/behavior_tree/nodes/behavior_tree.gd"
 }, {
 "base": "BehaviorTree",
 "class": "BehaviorTreeNode",
@@ -101,10 +101,6 @@ _global_script_class_icons={
 config/name="suburban-commando"
 run/main_scene="res://level/Level-Two.tscn"
 config/icon="res://icon.png"
-
-[editor_plugins]
-
-enabled=PoolStringArray( "res://addons/behavior_tree/plugin.cfg" )
 
 [input]
 
