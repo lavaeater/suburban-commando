@@ -102,6 +102,10 @@ config/name="suburban-commando"
 run/main_scene="res://level/Level-Two.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/behavior_tree/plugin.cfg" )
+
 [input]
 
 cam_up={
