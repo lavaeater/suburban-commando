@@ -40,7 +40,7 @@ It ends with the family winning, of course.
 Why? Well, because when doing anything, you need a *direction*, you need a why. So now I am working on enemy AI - well, now I know what the enemy is - it is strange mutated people, sort of like Cronenbergs in Rick and Morty. That means they can behave in any number of strange ways and have very strange attack methods. Gives us options. Settling on the protagonists being a family also gives us options but limitations. Like, what weapons do they have access to? It also gives us a clear idea of what the environment will be, it will, for starters, be suburbian. All of these things will inform the backlog for this project, giving me things to work on for it.  
 
 ## Using this for the backlog
-I am weary for the backlog. I think that li
+I am weary for the backlog. I think that little questionnaire up there is quite enough to know what to do when it comes to the game, right? I still need to figure out what the enemies do, etc. I need
 
 ## Back 2 Basics
 
@@ -349,7 +349,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg5MjA1NTA2LC0xMDQ3Mzk1MTkwLDE3Nz
+eyJoaXN0b3J5IjpbNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3Nz
 E0NzczODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3
 NiwtMjAxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLT
 EwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1
