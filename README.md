@@ -17,7 +17,10 @@ They're fantastic and they are not the only way to approach a story, it's not th
 
 * An astrophysicist, female
 * To *know* why bodies in the Kuiper Belt aren't behaving as expected
-* They  
+* They are on earth, very far away
+* Here's where I no longer have answers...
+* But the story ends with the complete annihilation of humanity *on earth*
+*   
 
 ## Back 2 Basics
 
@@ -326,7 +329,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1Njk2OTI4OSwtODk3MzU2NTIwLC02Nz
+eyJoaXN0b3J5IjpbMTc3MTQ3NzM4MiwtODk3MzU2NTIwLC02Nz
 g3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4
 NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC
 0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIw
