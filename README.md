@@ -20,7 +20,10 @@ They're fantastic and they are not the only way to approach a story, it's not th
 * They are on earth, very far away
 * Here's where I no longer have answers...
 * But the story ends with the complete annihilation of humanity *on earth*
-*   
+
+After watching that video, I thought that the game I was working on needed something like that. A story, simply put. Why are the people in the game doing anything? Sort of like, you could try to answer that for games you like and you would find that there are answers to the questions for those games. 
+
+
 
 ## Back 2 Basics
 
@@ -329,11 +332,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MTQ3NzM4MiwtODk3MzU2NTIwLC02Nz
-g3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4
-NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC
-0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIw
-MDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OT
-gyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4
-MDI4MjI5MjFdfQ==
+eyJoaXN0b3J5IjpbLTE3MzgzNTAyNTgsMTc3MTQ3NzM4MiwtOD
+k3MzU2NTIwLC02Nzg3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMw
+MTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNC
+wtMjk5MDAyMjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2
+NjcxOTY0ODksLTIwMDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MT
+IwOCwxMDcxNjc4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYw
+LDEwMjY5NTExOF19
 -->
