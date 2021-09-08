@@ -29,7 +29,10 @@ It's like that movie about the family that fights against evil robots on Netflix
 Here's the fun thing, because at the beginning, I was thinking "they want to not die", but what if we could make their motivations more fun, more organic, more real? Perhaps this morning, they were going to Disney Land? Maybe that's the entire goal of the game, to actually get to to Funland (we won't use Disney for the name from now on) - and what they try to do is basically a psychotic fight through hordes of enemies to *get to a roller-coaster*. This makes it easy to ground their struggle and set up goals for it. First goal could be "make it to the car", then we can have some car-driving action for a while, to get to the Interstate, where the car breaks down or something and they have to find some other transport (a train?) and so on.
 ## Why can't they get that?
 Because mutating spores from space are turning people into Cronenberg monsters, which puts a real damper on things.
-
+## What do they do about it?
+They fight. They improvise weapons, pick up stuff, build barricades, drive vehicles, save neighbours, etc etc.
+## Why doesn't that work?
+Because 
 
 
 
@@ -340,11 +343,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMxNTA0OTQxLDE3NzE0NzczODIsLTg5Nz
-M1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEw
-MCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0MzY1MzQsLT
-I5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3
-MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMD
-gsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2MCwx
-MDI2OTUxMThdfQ==
+eyJoaXN0b3J5IjpbMTY2MTQ0MTQ2MiwxNzcxNDc3MzgyLC04OT
+czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
+MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
+0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
+NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMj
+A4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAs
+MTAyNjk1MTE4XX0=
 -->
