@@ -32,7 +32,11 @@ Because mutating spores from space are turning people into Cronenberg monsters, 
 ## What do they do about it?
 They fight. They improvise weapons, pick up stuff, build barricades, drive vehicles, save neighbours, etc etc.
 ## Why doesn't that work?
-Because 
+Because there is no such thing as a Funland Park anymore. This is a global extincition level event. They will have to fight their way across the US to get to the CDC to help scientists find a cure using the fact that this entire family is immune to the spore infection. 
+## How does it end?
+It ends with the family winning, of course.
+
+
 
 
 
@@ -343,11 +347,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MTQ0MTQ2MiwxNzcxNDc3MzgyLC04OT
-czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
-MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
-0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
-NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMj
-A4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAs
-MTAyNjk1MTE4XX0=
+eyJoaXN0b3J5IjpbNjI2OTM5NTA1LDE3NzE0NzczODIsLTg5Nz
+M1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEw
+MCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0MzY1MzQsLT
+I5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3
+MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMD
+gsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2MCwx
+MDI2OTUxMThdfQ==
 -->
