@@ -37,7 +37,7 @@ Because there is no such thing as a Funland Park anymore. This is a global extin
 It ends with the family winning, of course.
 
 ## This excercise was FUN
-Why? Well, because when doing anything, you need a *direction*, you need a why. So now I am working on enemy AI - well, now I know what the enemy is - it is strange mutated people, sort of like Cronenbergs in Rick and Morty. That means they can behave in any number of strange ways and have very strange attack methods 
+Why? Well, because when doing anything, you need a *direction*, you need a why. So now I am working on enemy AI - well, now I know what the enemy is - it is strange mutated people, sort of like Cronenbergs in Rick and Morty. That means they can behave in any number of strange ways and have very strange attack methods. Gives us options. Settling on the protagonists being a family also gives us options but limitations. Like, what weapons do they have access to? It also gives us a clear idea of what the environment will be, it will, for starters, be suburbian. All of these things will inform the  
 
 
 
@@ -348,7 +348,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NzkxMjM4MSwxNzcxNDc3MzgyLC04OT
+eyJoaXN0b3J5IjpbLTIyMjc4MTMxMywxNzcxNDc3MzgyLC04OT
 czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
 MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
 0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
