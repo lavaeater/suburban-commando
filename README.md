@@ -1,5 +1,8 @@
 # suburban-commando
 
+## The Story
+Like, when thinking about this game, I sometimes think back to thoughts I have had about several different games over the course of the last 4-5 years. My adult game development story began after seeing Star Wars The Force Awakens and then, during a drawing session 
+
 ## Back 2 Basics
 
 I have, predictably and finally, come to the conclusion that I need to go back to basics. What does that mean? It means that my knowledge of the Godot Engine and 3D game programming is to limited to work on importing advanced models into the game. That takes to much time and effort, time and effort that should and must be spent on learning "the ropes". The ropes in this case is concepts such as local transforms, rotating objects and not the camera, and so forth. The TODO-list will still be basically the same, we will just start "anew".
@@ -307,11 +310,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyOD
-M1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3
-NTAsLTEwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOS
-wtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0
-MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MT
-cyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgsODAyODIyOTIxLC0y
-MTMzNzA5NjU4XX0=
+eyJoaXN0b3J5IjpbLTMxMjA0MTMzMywtODk3MzU2NTIwLC02Nz
+g3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4
+NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC
+0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIw
+MDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OT
+gyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4
+MDI4MjI5MjFdfQ==
 -->
