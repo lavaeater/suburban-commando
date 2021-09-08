@@ -1,7 +1,7 @@
 # suburban-commando
 
 ## The Story
-Like, when thinking about this game, I sometimes think back to thoughts I have had about several different games over the course of the last 4-5 years. My adult game development story began after seeing Star Wars The Force Awakens and then, during a drawing session 
+Like, when thinking about this game, I sometimes think back to thoughts I have had about several different games over the course of the last 4-5 years. My adult game development story began after seeing Star Wars The Force Awakens and then, during a drawing session with the family, coming up with the concept of "Kids from the Wasteland", or rather "Robot Dad and 2 children". It was a small drawing in a comic format of two younger girls working on a robot. That led to the idea of developing that into some kind of game, drawing tons of inspiration from Nausciaa, Wasteland, Zelda and so on (I have never played a Zelda game). THen it
 
 ## Back 2 Basics
 
@@ -310,11 +310,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMjA0MTMzMywtODk3MzU2NTIwLC02Nz
-g3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4
-NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC
-0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIw
-MDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OT
-gyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4
-MDI4MjI5MjFdfQ==
+eyJoaXN0b3J5IjpbLTE0ODg0MDExNDcsLTg5NzM1NjUyMCwtNj
+c4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1
+ODUxMiwxODE0Mzg3NTAsLTEwNTY0MzY1MzQsLTI5OTAwMjI4MC
+wtMTM0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0y
+MDA1MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMDgsMTA3MTY3OD
+k4MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2MCwxMDI2OTUxMTgs
+ODAyODIyOTIxXX0=
 -->
