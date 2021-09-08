@@ -23,20 +23,21 @@ They're fantastic and they are not the only way to approach a story, it's not th
 
 After watching that video, I thought that the game I was working on needed something like that. A story, simply put. Why are the people in the game doing anything? Sort of like, you could try to answer that for games you like and you would find that there are answers to the questions for those games. If you try to make a game, a narrative something, you should probably be able to answer them for yourself as well. So, my game is called **Suburban Commando** which is an homage to some ridiculous film with Hulk Hogan - I haven't seen it, but I like the name. The idea is that the players are a family or group of friends that are protecting their suburb from an attack from some kind of invading horde. That's the jist.
 
-## Who is it about?
+### Who is it about?
 It's like that movie about the family that fights against evil robots on Netflix. This game is about either a family or a group of friends, living in a quiet, nice little suburb in Anytown, Anywhere, Freeworld. 
-## What do they want?
+### What do they want?
 Here's the fun thing, because at the beginning, I was thinking "they want to not die", but what if we could make their motivations more fun, more organic, more real? Perhaps this morning, they were going to Disney Land? Maybe that's the entire goal of the game, to actually get to to Funland (we won't use Disney for the name from now on) - and what they try to do is basically a psychotic fight through hordes of enemies to *get to a roller-coaster*. This makes it easy to ground their struggle and set up goals for it. First goal could be "make it to the car", then we can have some car-driving action for a while, to get to the Interstate, where the car breaks down or something and they have to find some other transport (a train?) and so on.
-## Why can't they get that?
+### Why can't they get that?
 Because mutating spores from space are turning people into Cronenberg monsters, which puts a real damper on things.
-## What do they do about it?
+### What do they do about it?
 They fight. They improvise weapons, pick up stuff, build barricades, drive vehicles, save neighbours, etc etc.
-## Why doesn't that work?
+### Why doesn't that work?
 Because there is no such thing as a Funland Park anymore. This is a global extincition level event. They will have to fight their way across the US to get to the CDC to help scientists find a cure using the fact that this entire family is immune to the spore infection. 
-## How does it end?
+### How does it end?
 It ends with the family winning, of course.
 
-
+## This excercise was FUN
+Why? Well, because when doing anything, you need a *direction*, you need a why. So now I am working on enemy AI - well, now I know what the enemy is - it is strange mutated people, sort of like Cronenbergs in Rick and Morty. That means they can behave in any number of strange ways and have very strange attack methods 
 
 
 
@@ -347,11 +348,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI2OTM5NTA1LDE3NzE0NzczODIsLTg5Nz
-M1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEw
-MCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0MzY1MzQsLT
-I5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3
-MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMD
-gsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwtMTE2NzUyMjc2MCwx
-MDI2OTUxMThdfQ==
+eyJoaXN0b3J5IjpbMjA2NzkxMjM4MSwxNzcxNDc3MzgyLC04OT
+czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
+MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
+0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
+NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMj
+A4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAs
+MTAyNjk1MTE4XX0=
 -->
