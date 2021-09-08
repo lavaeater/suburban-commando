@@ -13,7 +13,11 @@ I like fiddling with game development as a hobby. It is fucking fantastic. But t
 * Why doesn't that work?
 * How does it end?
 
-They're fantas  
+They're fantastic and they are not the only way to approach a story, it's not that simple, but they are simple and excellent for this. So, my story Anomaly would answer this like this:
+
+* An astrophysicist, female
+* To *know* why bodies in the Kuiper Belt aren't behaving as expected
+* They  
 
 ## Back 2 Basics
 
@@ -322,11 +326,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcwMTY3MjQ0LC04OTczNTY1MjAsLTY3OD
-czMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAxMDAsLTExNTE0NTg1
-MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLT
-EzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAw
-NTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5OD
-IsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgw
-MjgyMjkyMV19
+eyJoaXN0b3J5IjpbMTU1Njk2OTI4OSwtODk3MzU2NTIwLC02Nz
+g3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4
+NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC
+0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIw
+MDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OT
+gyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4
+MDI4MjI5MjFdfQ==
 -->
