@@ -25,6 +25,8 @@ After watching that video, I thought that the game I was working on needed somet
 
 ## Who is it about?
 It's like that movie about the family that fights against evil robots on Netflix. This game is about either a family or a group of friends, living in a quiet, nice little suburb in Anytown, Anywhere, Freeworld. 
+## What do they want?
+Here's the fun thing, because at the beginning, I was thinking "they want to not die", but what if we could make their motivations more fun, more organic, more real? Perhaps this morning, they were going to Disney Land? Maybe that's the entire goal of the game, to actu
 
 
 
@@ -335,11 +337,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTYyOTYyMzIsMTc3MTQ3NzM4MiwtOD
-k3MzU2NTIwLC02Nzg3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMw
-MTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNC
-wtMjk5MDAyMjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2
-NjcxOTY0ODksLTIwMDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MT
-IwOCwxMDcxNjc4OTgyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYw
-LDEwMjY5NTExOF19
+eyJoaXN0b3J5IjpbMTY1ODUzNjI2OCwxNzcxNDc3MzgyLC04OT
+czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
+MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
+0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
+NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMj
+A4LDEwNzE2Nzg5ODIsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAs
+MTAyNjk1MTE4XX0=
 -->
