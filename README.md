@@ -21,7 +21,7 @@ They're fantastic and they are not the only way to approach a story, it's not th
 * Here's where I no longer have answers...
 * But the story ends with the complete annihilation of humanity *on earth*
 
-After watching that video, I thought that the game I was working on needed something like that. A story, simply put. Why are the people in the game doing anything? Sort of like, you could try to answer that for games you like and you would find that there are answers to the questions for those games. 
+After watching that video, I thought that the game I was working on needed something like that. A story, simply put. Why are the people in the game doing anything? Sort of like, you could try to answer that for games you like and you would find that there are answers to the questions for those games. If you try to make a game, a narrative something, you should probably be able to answer them for yourself as well. So, my game is called **Suburban Commando** which is an homage to some ridiculous film with Hulk Hogan - I haven't seen it, but I like the name. The idea is that the players are a family or group of friends that are p
 
 
 
@@ -332,7 +332,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzgzNTAyNTgsMTc3MTQ3NzM4MiwtOD
+eyJoaXN0b3J5IjpbLTEwOTc4NTY1MzAsMTc3MTQ3NzM4MiwtOD
 k3MzU2NTIwLC02Nzg3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMw
 MTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNC
 wtMjk5MDAyMjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2
