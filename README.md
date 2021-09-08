@@ -26,7 +26,7 @@ After watching that video, I thought that the game I was working on needed somet
 ## Who is it about?
 It's like that movie about the family that fights against evil robots on Netflix. This game is about either a family or a group of friends, living in a quiet, nice little suburb in Anytown, Anywhere, Freeworld. 
 ## What do they want?
-Here's the fun thing, because at the beginning, I was thinking "they want to not die", but what if we could make their motivations more fun, more organic, more real? Perhaps this morning, they were going to Disney Land? Maybe that's the entire goal of the game, to actu
+Here's the fun thing, because at the beginning, I was thinking "they want to not die", but what if we could make their motivations more fun, more organic, more real? Perhaps this morning, they were going to Disney Land? Maybe that's the entire goal of the game, to actually get to to Funland (we won't use Disney for the name from now on) - and what they try to do is basically a psychotic fight through hordes of enemies to *get to a roller-coaster*. This makes it easy to ground their struggle and set up goals for it. First goal could be "make it to the car", then we can have some car-driving action for a while, to get to the 
 
 
 
@@ -337,7 +337,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1ODUzNjI2OCwxNzcxNDc3MzgyLC04OT
+eyJoaXN0b3J5IjpbLTMyMTM0NDIyMSwxNzcxNDc3MzgyLC04OT
 czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
 MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
 0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
