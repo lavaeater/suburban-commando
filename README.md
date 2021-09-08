@@ -4,7 +4,16 @@
 Like, when thinking about this game, I sometimes think back to thoughts I have had about several different games over the course of the last 4-5 years. My adult game development story began after seeing Star Wars The Force Awakens and then, during a drawing session with the family, coming up with the concept of "Kids from the Wasteland", or rather "Robot Dad and 2 children". It was a small drawing in a comic format of two younger girls working on a robot. That led to the idea of developing that into some kind of game, drawing tons of inspiration from Nausciaa, Wasteland, Zelda and so on (I have never played a Zelda game). Then, over the years, it has morphed. I had this idea for a sci-fi story wherein a female astrophysicist travels to the outer rim of the solar system to explore a gravitational anomaly, with insane discoveries being made. That would take inspiration from Anathem, a FANTASTIC book by Neal Stephenson wherein maths is very, very important. I wanted to make a dry, hard sci-fi novel - but I often get the feeling I don't have the qualifications to do the "hard" part of it all. I wanted it to be grounded in reality yet still fantastic. Anyways, I started working on that story as a game. Then I started making my own South Park: Tower Defense clone, and then, and then.
 Now I am learning Godot. The Game is still the South Park: Tower Defense clone, but why, really? I dream of making a game that me and my family can play together. I got to the stage where I had a playable, ugly, demo made in libGDX (I loved you, libGDX, but I need tooling to function...) where you could actually be five players. 
 Now I have a playable thing in Godot, where I currently am working on the AI for enemies, which is fun - I constantly have to remind myself of the fact that this game actually doesn't have to become anything - I do this because I actually *like* doing it. 
-I like fiddling with game development as a hobby. It is fucking fantastic. But then I saw this excellent video about screenwriting, and it applies to games as well. It actually connects to me watching the move "Shang Chi and the Ten Rings" as well, because that movie fails at a lot of what that video was talking about. Anyways, it is about the "Six Essential Questions for Screenwri
+I like fiddling with game development as a hobby. It is fucking fantastic. But then I saw this excellent video about screenwriting, and it applies to games as well. It actually connects to me watching the move "Shang Chi and the Ten Rings" as well, because that movie fails at a lot of what that video was talking about. Anyways, it is about the "Six Essential Questions for Screenwriting". Here they are:
+
+* Who is it about?
+* What do they want?
+* Why can't they get it?
+* What do they do about that?
+* Why doesn't that work?
+* How does it end?
+
+They're fantas  
 
 ## Back 2 Basics
 
@@ -313,11 +322,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NzM2NjAzMSwtODk3MzU2NTIwLC02Nz
-g3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4
-NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC
-0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIw
-MDUwNjM4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OT
-gyLC0yMTQzNjUxNzIyLC0xMTY3NTIyNzYwLDEwMjY5NTExOCw4
-MDI4MjI5MjFdfQ==
+eyJoaXN0b3J5IjpbNTcwMTY3MjQ0LC04OTczNTY1MjAsLTY3OD
+czMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAxMDAsLTExNTE0NTg1
+MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLT
+EzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAw
+NTA2MzgzNSwxNDA5Mjk1NDUyLDM3MjgxMjA4LDEwNzE2Nzg5OD
+IsLTIxNDM2NTE3MjIsLTExNjc1MjI3NjAsMTAyNjk1MTE4LDgw
+MjgyMjkyMV19
 -->
