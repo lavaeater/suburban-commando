@@ -103,7 +103,7 @@ But how will they act when in a flock? What is the definition of a flock? It cou
 
 This is kinda hard, we just need to do it, man. All actions need to be super small.
 
-1. Look for a flock, until found or until bored
+1. Look for a flock, until found or until bored4
 2. Look for food
 3. React to stuff - 
 
@@ -349,11 +349,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3Nz
-E0NzczODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3
-NiwtMjAxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLT
-EwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1
-ODkwMDY5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOT
-U0NTIsMzcyODEyMDgsMTA3MTY3ODk4MiwtMjE0MzY1MTcyMiwt
-MTE2NzUyMjc2MF19
+eyJoaXN0b3J5IjpbMjExODM2NTc1Myw1MzQyODQ3NjksLTEwND
+czOTUxOTAsMTc3MTQ3NzM4MiwtODk3MzU2NTIwLC02Nzg3MzM0
+OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4NTEyLD
+E4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC0xMzQ2
+NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIwMDUwNj
+M4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OTgyLC0y
+MTQzNjUxNzIyXX0=
 -->
