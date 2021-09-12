@@ -81,6 +81,9 @@ We need a better AI. Or rather an AI that seems better. The AI should work by do
 
 Or, what is it that we want to do? We want the enemy AI to be a *threat*, a threat that searches for you. So if the player is in the sphere of detection and *moves* - that should indicate to the enemy that there is something to investigate. Like a sneak-thing. If the player shoots, everyone in some circle should be able to hear it and go to examine it. 
 
+#### Basic Behavior
+The behavior should always start simple. So, we have 
+
 #### Mechanics
 So, the enemy has a *detector* that keeps track of players in the proximity. However, a player being detected by the detector doesn't actually mean that the enemy has detected the player, just that it *could*. 
 
@@ -346,11 +349,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwMjE0MzcxLDIxMTgzNjU3NTMsNTM0Mj
-g0NzY5LC0xMDQ3Mzk1MTkwLDE3NzE0NzczODIsLTg5NzM1NjUy
-MCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMT
-E1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0MzY1MzQsLTI5OTAw
-MjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3MTk2ND
-g5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMDgsMTA3
-MTY3ODk4Ml19
+eyJoaXN0b3J5IjpbLTE4ODI5NjgzMDgsNzkwMjE0MzcxLDIxMT
+gzNjU3NTMsNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3NzE0Nzcz
+ODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMj
+AxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0
+MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMD
+Y5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIs
+MzcyODEyMDhdfQ==
 -->
