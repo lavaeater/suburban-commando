@@ -84,6 +84,10 @@ Or, what is it that we want to do? We want the enemy AI to be a *threat*, a thre
 #### Basic Behavior
 The behavior should always start simple. So, we have perhaps just two behaviors, look for food, or look for player. And we need to reverse results to make selector work
 
+- SELECTOR
+	- Look for resources
+	- Look for player
+
 
 #### Mechanics
 So, the enemy has a *detector* that keeps track of players in the proximity. However, a player being detected by the detector doesn't actually mean that the enemy has detected the player, just that it *could*. 
@@ -350,11 +354,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMjUyMTk4NSw3OTAyMTQzNzEsMjExOD
-M2NTc1Myw1MzQyODQ3NjksLTEwNDczOTUxOTAsMTc3MTQ3NzM4
-MiwtODk3MzU2NTIwLC02Nzg3MzM0OTIsMjI4MzUxMjc2LC0yMD
-E2OTMwMTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQz
-NjUzNCwtMjk5MDAyMjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNj
-ksLTE2NjcxOTY0ODksLTIwMDUwNjM4MzUsMTQwOTI5NTQ1Miwz
-NzI4MTIwOF19
+eyJoaXN0b3J5IjpbLTIwODQxMDQwOTksNzkwMjE0MzcxLDIxMT
+gzNjU3NTMsNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3NzE0Nzcz
+ODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMj
+AxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0
+MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMD
+Y5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIs
+MzcyODEyMDhdfQ==
 -->
