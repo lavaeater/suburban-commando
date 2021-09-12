@@ -91,10 +91,10 @@ The behavior should always start simple. So, we have perhaps just two behaviors,
 	- Acquire resources - SEQUENCE
 		- Are we close to food?
 		- if yes, start acquiring resources - RUNNING until SUCCESS - reverse
-	- Look for player - SEQUE
+	- Look for player - SEQUENCE
 		- Is Player within some distance?
 		- If yes, go towards player - RUNNING then SUCCESS
-	- Attack player
+	- Attack player - SEQUENCE
 
 
 #### Mechanics
@@ -362,11 +362,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODk0ODczNjksNzkwMjE0MzcxLDIxMT
-gzNjU3NTMsNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3NzE0Nzcz
-ODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMj
-AxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0
-MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMD
-Y5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIs
-MzcyODEyMDhdfQ==
+eyJoaXN0b3J5IjpbMTU2ODIyNjY0NSw3OTAyMTQzNzEsMjExOD
+M2NTc1Myw1MzQyODQ3NjksLTEwNDczOTUxOTAsMTc3MTQ3NzM4
+MiwtODk3MzU2NTIwLC02Nzg3MzM0OTIsMjI4MzUxMjc2LC0yMD
+E2OTMwMTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQz
+NjUzNCwtMjk5MDAyMjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNj
+ksLTE2NjcxOTY0ODksLTIwMDUwNjM4MzUsMTQwOTI5NTQ1Miwz
+NzI4MTIwOF19
 -->
