@@ -50,9 +50,6 @@ I have, predictably and finally, come to the conclusion that I need to go back t
 
 So, I decided to experiment with a different implementation of behavior trees for godot. They guy that made this one seems more competent... :D
 
-## Devlog Sunday 29th of August
-
-
 ## Devlog Saturday 28th of August
 So, we are almost back where we started - or rather, where we left off, when we switched to Godot. Or rather, that's not actually true. We have a bunch of features that are not yet implemented, for this one.
 So, we should list these features and write a small note regarding what they mean.
@@ -349,11 +346,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExODM2NTc1Myw1MzQyODQ3NjksLTEwND
-czOTUxOTAsMTc3MTQ3NzM4MiwtODk3MzU2NTIwLC02Nzg3MzM0
-OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4NTEyLD
-E4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC0xMzQ2
-NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIwMDUwNj
-M4MzUsMTQwOTI5NTQ1MiwzNzI4MTIwOCwxMDcxNjc4OTgyLC0y
-MTQzNjUxNzIyXX0=
+eyJoaXN0b3J5IjpbNzkwMjE0MzcxLDIxMTgzNjU3NTMsNTM0Mj
+g0NzY5LC0xMDQ3Mzk1MTkwLDE3NzE0NzczODIsLTg5NzM1NjUy
+MCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMT
+E1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0MzY1MzQsLTI5OTAw
+MjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3MTk2ND
+g5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIsMzcyODEyMDgsMTA3
+MTY3ODk4Ml19
 -->
