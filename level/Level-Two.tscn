@@ -1,15 +1,19 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/cameras/IsometricCamera/IsoMetric.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/entities/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/map/house_with_yard/HouseWithYard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/map/things/path_tilesLong.tscn" type="PackedScene" id=4]
 [ext_resource path="res://level/Main.gd" type="Script" id=5]
+[ext_resource path="res://src/entities/resource/Resource.tscn" type="PackedScene" id=6]
 [ext_resource path="res://textures/ground/Ground037_1K_AmbientOcclusion.png" type="Texture" id=7]
 [ext_resource path="res://textures/ground/Ground037_1K_Color.png" type="Texture" id=8]
 [ext_resource path="res://textures/ground/Ground037_1K_NormalGL.png" type="Texture" id=9]
 [ext_resource path="res://textures/ground/Ground037_1K_Roughness.png" type="Texture" id=10]
 [ext_resource path="res://textures/ground/Ground037_1K_Displacement.png" type="Texture" id=11]
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( 100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, -100 )
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 200, 200 )
@@ -34,9 +38,6 @@ depth_flip_binormal = false
 depth_texture = ExtResource( 11 )
 uv1_scale = Vector3( 10, 10, 10 )
 
-[sub_resource type="ConvexPolygonShape" id=3]
-points = PoolVector3Array( 100, 0, 100, -100, 0, 100, 100, 0, -100, -100, 0, -100 )
-
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 5 )
 
@@ -52,10 +53,6 @@ light_specular = 0.38
 shadow_enabled = true
 
 [node name="Floor" type="StaticBody" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="Floor"]
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
 shape = SubResource( 3 )
@@ -2514,5 +2511,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -18.2 )
 
 [node name="path_tilesLong16" parent="Block2/Houses16/Paths" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, -20.2 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Resource" parent="Node" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25, 1.25, 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
 
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
