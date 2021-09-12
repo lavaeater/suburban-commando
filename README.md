@@ -86,6 +86,8 @@ The behavior should always start simple. So, we have perhaps just two behaviors,
 
 - SELECTOR
 	- Look for resources
+		- Are we within some distance of food?
+		- If yes, go to food
 	- Look for player
 
 
@@ -354,11 +356,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODQxMDQwOTksNzkwMjE0MzcxLDIxMT
-gzNjU3NTMsNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3NzE0Nzcz
-ODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3NiwtMj
-AxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLTEwNTY0
-MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1ODkwMD
-Y5LC0xNjY3MTk2NDg5LC0yMDA1MDYzODM1LDE0MDkyOTU0NTIs
-MzcyODEyMDhdfQ==
+eyJoaXN0b3J5IjpbMzY3NTQzMzcwLDc5MDIxNDM3MSwyMTE4Mz
+Y1NzUzLDUzNDI4NDc2OSwtMTA0NzM5NTE5MCwxNzcxNDc3Mzgy
+LC04OTczNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMT
+Y5MzAxMDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2
+NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OS
+wtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwxNDA5Mjk1NDUyLDM3
+MjgxMjA4XX0=
 -->
