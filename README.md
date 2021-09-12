@@ -82,7 +82,8 @@ We need a better AI. Or rather an AI that seems better. The AI should work by do
 Or, what is it that we want to do? We want the enemy AI to be a *threat*, a threat that searches for you. So if the player is in the sphere of detection and *moves* - that should indicate to the enemy that there is something to investigate. Like a sneak-thing. If the player shoots, everyone in some circle should be able to hear it and go to examine it. 
 
 #### Basic Behavior
-The behavior should always start simple. So, we have perhaps just two behaviors, look for food, or look for player.
+The behavior should always start simple. So, we have perhaps just two behaviors, look for food, or look for player. And we need to reverse results to make selector work
+
 
 #### Mechanics
 So, the enemy has a *detector* that keeps track of players in the proximity. However, a player being detected by the detector doesn't actually mean that the enemy has detected the player, just that it *could*. 
@@ -349,7 +350,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzcyNzY4OCw3OTAyMTQzNzEsMjExOD
+eyJoaXN0b3J5IjpbLTUwMjUyMTk4NSw3OTAyMTQzNzEsMjExOD
 M2NTc1Myw1MzQyODQ3NjksLTEwNDczOTUxOTAsMTc3MTQ3NzM4
 MiwtODk3MzU2NTIwLC02Nzg3MzM0OTIsMjI4MzUxMjc2LC0yMD
 E2OTMwMTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQz
