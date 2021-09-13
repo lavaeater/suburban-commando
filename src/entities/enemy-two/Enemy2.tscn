@@ -110,41 +110,41 @@ _agent = NodePath("..")
 [node name="BTSelector2" type="Node" parent="BehaviorTree"]
 script = ExtResource( 7 )
 
-[node name="CheckHealth" type="Node" parent="BehaviorTree/BTSelector2"]
+[node name="IfLowHealth" type="Node" parent="BehaviorTree/BTSelector2"]
 script = ExtResource( 9 )
 
-[node name="Revert" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth"]
+[node name="Revert" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth"]
 script = ExtResource( 12 )
 
-[node name="FindAndTakeEnergy" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert"]
+[node name="FindAndTakeEnergy" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert"]
 script = ExtResource( 7 )
 
-[node name="BTRevert" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy"]
+[node name="BTRevert" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy"]
 script = ExtResource( 12 )
 
-[node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy/BTRevert"]
+[node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy/BTRevert"]
 script = ExtResource( 10 )
 DetectionDistance = 5000.0
 
-[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy/BTRevert/FindClosestNodeInGroup"]
+[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy/BTRevert/FindClosestNodeInGroup"]
 script = ExtResource( 5 )
 until_what = 1
 
-[node name="MoveTowardsResource" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy/BTRevert/FindClosestNodeInGroup/BTRepeatUntil"]
+[node name="MoveTowardsResource" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy/BTRevert/FindClosestNodeInGroup/BTRepeatUntil"]
 script = SubResource( 6 )
 
-[node name="BTRevert2" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy"]
+[node name="BTRevert2" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy"]
 script = ExtResource( 12 )
 
-[node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy/BTRevert2"]
+[node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy/BTRevert2"]
 script = ExtResource( 10 )
 DetectionDistance = 5.0
 BlackBoardKey = "ReallyCloseResource"
 
-[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy/BTRevert2/FindClosestNodeInGroup"]
+[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy/BTRevert2/FindClosestNodeInGroup"]
 script = ExtResource( 5 )
 
-[node name="TakeEnergy" type="Node" parent="BehaviorTree/BTSelector2/CheckHealth/Revert/FindAndTakeEnergy/BTRevert2/FindClosestNodeInGroup/BTRepeatUntil"]
+[node name="TakeEnergy" type="Node" parent="BehaviorTree/BTSelector2/IfLowHealth/Revert/FindAndTakeEnergy/BTRevert2/FindClosestNodeInGroup/BTRepeatUntil"]
 script = ExtResource( 11 )
 
 [node name="BTRevert" type="Node" parent="BehaviorTree/BTSelector2"]
