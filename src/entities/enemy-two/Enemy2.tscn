@@ -1,12 +1,16 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/entities/enemy-two/Enemy2.gd" type="Script" id=1]
 [ext_resource path="res://src/entities/things/blasterA.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/base_entity/BaseEntity.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/behavior_tree/src/behavior_tree.gd" type="Script" id=4]
-[ext_resource path="res://addons/behavior_tree/src/btnodes/composites/bt_sequence.gd" type="Script" id=5]
+[ext_resource path="res://addons/behavior_tree/src/btnodes/decorators/bt_repeat_until.gd" type="Script" id=5]
 [ext_resource path="res://addons/behavior_tree/src/blackboard.gd" type="Script" id=6]
 [ext_resource path="res://addons/behavior_tree/src/btnodes/composites/bt_selector.gd" type="Script" id=7]
+[ext_resource path="res://src/entities/enemy-two/MoveTowardsResource.gd" type="Script" id=9]
+[ext_resource path="res://src/ai/LeafNodes/FindClosestNodeInGroup.gd" type="Script" id=10]
+[ext_resource path="res://src/entities/enemy-two/TakeEnergy.gd" type="Script" id=11]
+[ext_resource path="res://addons/behavior_tree/src/btnodes/decorators/bt_revert.gd" type="Script" id=12]
 
 [sub_resource type="SphereMesh" id=1]
 radius = 0.5
@@ -76,20 +80,42 @@ _agent = NodePath("..")
 [node name="BTSelector" type="Node" parent="BehaviorTree"]
 script = ExtResource( 7 )
 
-[node name="FindResources" type="Node" parent="BehaviorTree/BTSelector"]
+[node name="BTRevert" type="Node" parent="BehaviorTree/BTSelector"]
+script = ExtResource( 12 )
+
+[node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector/BTRevert"]
+script = ExtResource( 10 )
+
+[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector/BTRevert/FindClosestNodeInGroup"]
+script = ExtResource( 5 )
+until_what = 1
+
+[node name="MoveTowardsResource" type="Node" parent="BehaviorTree/BTSelector/BTRevert/FindClosestNodeInGroup/BTRepeatUntil"]
+script = ExtResource( 9 )
+
+[node name="BTRevert2" type="Node" parent="BehaviorTree/BTSelector"]
+script = ExtResource( 12 )
+
+[node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector/BTRevert2"]
+script = ExtResource( 10 )
+DetectionDistance = 5.0
+BlackBoardKey = "ReallyCloseResource"
+
+[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector/BTRevert2/FindClosestNodeInGroup"]
 script = ExtResource( 5 )
 
-[node name="AcquireResources" type="Node" parent="BehaviorTree/BTSelector"]
-script = ExtResource( 5 )
-
-[node name="FindPlayer" type="Node" parent="BehaviorTree/BTSelector"]
-script = ExtResource( 5 )
-
-[node name="AttackPlayer" type="Node" parent="BehaviorTree/BTSelector"]
-script = ExtResource( 5 )
+[node name="TakeEnergy" type="Node" parent="BehaviorTree/BTSelector/BTRevert2/FindClosestNodeInGroup/BTRepeatUntil"]
+script = ExtResource( 11 )
 
 [node name="Blackboard" type="Node" parent="."]
 script = ExtResource( 6 )
+data = {
+"ClosestResource": null,
+"Energy": 10,
+"ResourceDistance": 100.0,
+"ResourceGroup": "Resource",
+"Speed": 10.0
+}
 
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
 [connection signal="took_damange" from="BaseEntity" to="." method="_on_BaseEntity_took_damange"]

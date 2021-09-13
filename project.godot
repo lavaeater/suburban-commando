@@ -98,6 +98,16 @@ _global_script_classes=[ {
 "class": "Blackboard",
 "language": "GDScript",
 "path": "res://addons/behavior_tree/src/blackboard.gd"
+}, {
+"base": "BTConditional",
+"class": "FindClosestNodeInGroup",
+"language": "GDScript",
+"path": "res://src/ai/LeafNodes/FindClosestNodeInGroup.gd"
+}, {
+"base": "BTLeaf",
+"class": "MoveTowardsNode",
+"language": "GDScript",
+"path": "res://src/ai/LeafNodes/MoveTowardsNode.gd"
 } ]
 _global_script_class_icons={
 "BTAlways": "res://addons/behavior_tree/icons/btalways.svg",
@@ -117,13 +127,15 @@ _global_script_class_icons={
 "BTSequence": "res://addons/behavior_tree/icons/btsequence.svg",
 "BTWait": "res://addons/behavior_tree/icons/btwait.svg",
 "BehaviorTree": "res://addons/behavior_tree/icons/bt.svg",
-"Blackboard": "res://addons/behavior_tree/icons/blackboard.svg"
+"Blackboard": "res://addons/behavior_tree/icons/blackboard.svg",
+"FindClosestNodeInGroup": "res://addons/behavior_tree/icons/btleaf.svg",
+"MoveTowardsNode": "res://addons/behavior_tree/icons/btleaf.svg"
 }
 
 [application]
 
 config/name="suburban-commando"
-run/main_scene="res://bt_example/agent.tscn"
+run/main_scene="res://level/Level-Two.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]

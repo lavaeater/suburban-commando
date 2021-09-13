@@ -40,10 +40,6 @@ func _ready():
 func _physics_process(delta):
 	velocity += gravity * delta
 	
-#		global_transform.origin = global_transform.origin.move_toward(target_vector, speed * delta)
-	
-	#velocity = move_and_slide(velocity, Vector3.UP)
-	
 	if jump and is_on_floor():
 		velocity.y = jump_speed
 		

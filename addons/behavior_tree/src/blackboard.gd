@@ -12,6 +12,7 @@ extends Node
 # to avoid nasty bugs.
 
 export(Dictionary) var data: Dictionary
+var process_delta = 0.0
 
 
 
@@ -45,3 +46,9 @@ func get_data(key: String):
 
 func has_data(key: String) -> bool:
 	return data.has(key)
+
+func _process(delta):
+	process_delta = delta
+
+func _physics_process(delta):
+	process_delta = delta
