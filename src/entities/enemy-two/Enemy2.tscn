@@ -7,7 +7,6 @@
 [ext_resource path="res://addons/behavior_tree/src/btnodes/decorators/bt_repeat_until.gd" type="Script" id=5]
 [ext_resource path="res://addons/behavior_tree/src/blackboard.gd" type="Script" id=6]
 [ext_resource path="res://addons/behavior_tree/src/btnodes/composites/bt_selector.gd" type="Script" id=7]
-[ext_resource path="res://src/entities/enemy-two/MoveTowardsResource.gd" type="Script" id=9]
 [ext_resource path="res://src/ai/LeafNodes/FindClosestNodeInGroup.gd" type="Script" id=10]
 [ext_resource path="res://src/entities/enemy-two/TakeEnergy.gd" type="Script" id=11]
 [ext_resource path="res://addons/behavior_tree/src/btnodes/decorators/bt_revert.gd" type="Script" id=12]
@@ -31,6 +30,33 @@ size = Vector3( 0.1, 0.2, 0.2 )
 [sub_resource type="CylinderShape" id=5]
 radius = 25.0
 height = 0.1
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends BTLeaf
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+export (String) var ResourceName = \"ClosestResource\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+func _tick(agent: Node, blackboard: Blackboard) -> bool:
+	var closest_resource = blackboard.get_data(ResourceName)
+	var delta = blackboard.process_delta
+	if closest_resource != null:
+		var speed = blackboard.get_data(\"Speed\")
+		agent.global_transform.origin = agent.global_transform.origin.move_toward(closest_resource.global_transform.origin, speed * delta)
+		if agent.global_transform.origin.distance_squared_to(closest_resource.global_transform.origin) < 5:
+			return succeed()
+	
+	return fail()
+"
 
 [node name="Enemy2" type="KinematicBody"]
 collision_layer = 35
@@ -85,13 +111,14 @@ script = ExtResource( 12 )
 
 [node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector/BTRevert"]
 script = ExtResource( 10 )
+DetectionDistance = 1000.0
 
 [node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector/BTRevert/FindClosestNodeInGroup"]
 script = ExtResource( 5 )
 until_what = 1
 
 [node name="MoveTowardsResource" type="Node" parent="BehaviorTree/BTSelector/BTRevert/FindClosestNodeInGroup/BTRepeatUntil"]
-script = ExtResource( 9 )
+script = SubResource( 6 )
 
 [node name="BTRevert2" type="Node" parent="BehaviorTree/BTSelector"]
 script = ExtResource( 12 )
