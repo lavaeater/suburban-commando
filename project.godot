@@ -100,6 +100,11 @@ _global_script_classes=[ {
 "path": "res://addons/behavior_tree/src/blackboard.gd"
 }, {
 "base": "BTConditional",
+"class": "CheckBlackboardValue",
+"language": "GDScript",
+"path": "res://src/ai/LeafNodes/CheckBlackboardValue.gd"
+}, {
+"base": "BTConditional",
 "class": "FindClosestNodeInGroup",
 "language": "GDScript",
 "path": "res://src/ai/LeafNodes/FindClosestNodeInGroup.gd"
@@ -128,6 +133,7 @@ _global_script_class_icons={
 "BTWait": "res://addons/behavior_tree/icons/btwait.svg",
 "BehaviorTree": "res://addons/behavior_tree/icons/bt.svg",
 "Blackboard": "res://addons/behavior_tree/icons/blackboard.svg",
+"CheckBlackboardValue": "res://addons/behavior_tree/icons/btleaf.svg",
 "FindClosestNodeInGroup": "res://addons/behavior_tree/icons/btleaf.svg",
 "MoveTowardsNode": "res://addons/behavior_tree/icons/btleaf.svg"
 }
