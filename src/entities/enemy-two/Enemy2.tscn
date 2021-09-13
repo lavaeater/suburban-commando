@@ -83,6 +83,8 @@ transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, 0, 0, -
 transform = Transform( -1, 0, -0.000192078, 0, 1, 0, 0.000192078, 0, -1, -0.000107216, 0, -0.55819 )
 
 [node name="BaseEntity" parent="." instance=ExtResource( 3 )]
+Blackboard = NodePath("../Blackboard")
+HealthProperty = "Energy"
 
 [node name="Sensor" type="Area" parent="."]
 collision_layer = 16
