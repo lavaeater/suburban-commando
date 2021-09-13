@@ -111,7 +111,7 @@ script = ExtResource( 12 )
 
 [node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector/BTRevert"]
 script = ExtResource( 10 )
-DetectionDistance = 1000.0
+DetectionDistance = 5000.0
 
 [node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector/BTRevert/FindClosestNodeInGroup"]
 script = ExtResource( 5 )

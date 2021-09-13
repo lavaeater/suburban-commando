@@ -14,7 +14,7 @@ func _ready():
 func _pre_tick(agent: Node, blackboard: Blackboard) -> void:
 	var resources = get_tree().get_nodes_in_group(GroupName)
 	var closest_resource = null
-	var distance = 10000.0
+	var distance = 100000.0
 	for resource in resources:
 		var property_level = resource.get(PropertyToCheck)
 		var new_dist = agent.global_transform.origin.distance_squared_to(resource.global_transform.origin)
