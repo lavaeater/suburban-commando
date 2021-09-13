@@ -23,6 +23,11 @@ var impact_thingie = preload("res://src/fx/anime_explosion.tscn")
 var last_impact_point = Vector3()
 var last_explosion_position = Vector3()
 onready var place_point = $PlacePoint
+var randomizer = RandomNumberGenerator.new()
+
+func _ready():
+	randomizer.randomize()
+	
 
 func _physics_process(delta):
 	velocity += gravity
