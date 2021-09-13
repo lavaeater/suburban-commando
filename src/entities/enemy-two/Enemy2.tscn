@@ -165,7 +165,7 @@ data = {
 "Energy": 10,
 "ResourceDistance": 100.0,
 "ResourceGroup": "Resource",
-"Speed": 10.0
+"Speed": 5.0
 }
 
 [connection signal="death_occurred" from="BaseEntity" to="." method="_on_BaseEntity_death_occurred"]
