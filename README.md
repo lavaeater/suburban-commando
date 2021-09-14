@@ -62,7 +62,7 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
-- [x] *Enemy AI and attacks*
+- [x] Enemy AI and attacks
 - [ ] Objectives
 - [ ] Player Health and Death
 - [ ] Multiplayer
@@ -366,7 +366,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNzE4MzE4OCwtNTYxOTAzMjM2LDE1Nj
+eyJoaXN0b3J5IjpbMjE0MjI5MDM5MiwtNTYxOTAzMjM2LDE1Nj
 gyMjY2NDUsNzkwMjE0MzcxLDIxMTgzNjU3NTMsNTM0Mjg0NzY5
 LC0xMDQ3Mzk1MTkwLDE3NzE0NzczODIsLTg5NzM1NjUyMCwtNj
 c4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1
