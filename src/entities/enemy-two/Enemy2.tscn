@@ -60,7 +60,9 @@ func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	return fail()
 "
 
-[node name="Enemy2" type="KinematicBody"]
+[node name="Enemy2" type="KinematicBody" groups=[
+"Enemies",
+]]
 collision_layer = 35
 collision_mask = 3
 script = ExtResource( 1 )
