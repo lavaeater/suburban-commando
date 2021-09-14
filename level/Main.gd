@@ -3,26 +3,15 @@ extends Spatial
 
 onready var enemy = get_node("Enemy")
 
-onready var floor_width = $Floor.get_node("MeshInstance").mesh.size.x
-onready var floor_depth = $Floor.get_node("MeshInstance").mesh.size.y
-onready var floor_center = $Floor.global_transform.origin
+onready var floor_width = 200.0
+onready var floor_depth = 200.0
+onready var floor_center = Vector3(0,0,0)
 
 onready var node_ref = weakref(get_node("Enemy"))
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var overlay = load("res://src/ui/DebugOverlay.tscn").instance()
-#	overlay.add_stat_method("Player position", self, "get_player_position")
-#	overlay.add_stat_method("Player velocity", self, "get_player_velocity")
-#	overlay.add_stat_method("Player direction", self, "get_player_direction")
-#	overlay.add_stat_method("Current Enemy Action", self, "get_current_enemy_action")
-#	overlay.add_stat_method("Enemy position", self, "get_enemy_position")
-#	overlay.add_stat_method("Enemy Target Position", self, "get_target_vector")#	overlay.add_stat_method("Player position", self, "get_player_position")
-#	overlay.add_stat_method("Player velocity", self, "get_player_velocity")
-#	overlay.add_stat_method("Player direction", self, "get_player_direction")
-#	overlay.add_stat_method("Current Enemy Action", self, "get_current_enemy_action")
-#	overlay.add_stat_method("Enemy position", self, "get_enemy_position")
-#	overlay.add_stat_method("Enemy Target Position", self, "get_target_vector")
 	overlay.add_stat_var("Near", get_node("CameraPivot/Camera"), "near")
 	overlay.add_stat_var("Far", get_node("CameraPivot/Camera"), "far")
 	add_child(overlay)

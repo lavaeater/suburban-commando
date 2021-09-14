@@ -64,21 +64,16 @@ func _on_Area_body_exited(body):
 	if active:
 		proximal_enemies.erase(body)
 
-func turn_towards_closest_enemy():
-	# This needs to return RUNNING, my man
-	return Task.SUCCEEDED
-
 func is_enemy_close():
 	if proximal_enemies.size() > 0:
 		var close_one = get_closest_enemy(proximal_enemies)
 		var dot_product = (weapon_mount.transform.origin - close_one.transform.origin).dot(weapon_mount.transform.basis.z)
 		if dot_product > 0: #and dot_product < 0.5:
-			return Task.SUCCEEDED
+			return true
 		else:
-			return Task.FAILED	
-		
+			return false	
 	else:
-		return Task.FAILED
+		return false
 		
 func get_closest_enemy(enemy_list):
 	if enemy_list.size() > 0:
@@ -107,6 +102,6 @@ func shoot_closest_enemy():
 			if bentity != null:
 				# this is indeed an enemy
 				bentity.take_damage(randomizer.randi_range(10, 25))
-	return Task.SUCCEEDED 
+	return true
 		
 		
