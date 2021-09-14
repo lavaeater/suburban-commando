@@ -1,5 +1,9 @@
 # suburban-commando
 
+## Devlog 14th of September 2021
+
+So, I just discovered that the conditionals, or perhaps preticks in general, are only called once. This is baad, man.
+
 ## The Story
 Like, when thinking about this game, I sometimes think back to thoughts I have had about several different games over the course of the last 4-5 years. My adult game development story began after seeing Star Wars The Force Awakens and then, during a drawing session with the family, coming up with the concept of "Kids from the Wasteland", or rather "Robot Dad and 2 children". It was a small drawing in a comic format of two younger girls working on a robot. That led to the idea of developing that into some kind of game, drawing tons of inspiration from Nausciaa, Wasteland, Zelda and so on (I have never played a Zelda game). Then, over the years, it has morphed. I had this idea for a sci-fi story wherein a female astrophysicist travels to the outer rim of the solar system to explore a gravitational anomaly, with insane discoveries being made. That would take inspiration from Anathem, a FANTASTIC book by Neal Stephenson wherein maths is very, very important. I wanted to make a dry, hard sci-fi novel - but I often get the feeling I don't have the qualifications to do the "hard" part of it all. I wanted it to be grounded in reality yet still fantastic. Anyways, I started working on that story as a game. Then I started making my own South Park: Tower Defense clone, and then, and then.
 Now I am learning Godot. The Game is still the South Park: Tower Defense clone, but why, really? I dream of making a game that me and my family can play together. I got to the stage where I had a playable, ugly, demo made in libGDX (I loved you, libGDX, but I need tooling to function...) where you could actually be five players. 
@@ -362,11 +366,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2ODIyNjY0NSw3OTAyMTQzNzEsMjExOD
-M2NTc1Myw1MzQyODQ3NjksLTEwNDczOTUxOTAsMTc3MTQ3NzM4
-MiwtODk3MzU2NTIwLC02Nzg3MzM0OTIsMjI4MzUxMjc2LC0yMD
-E2OTMwMTAwLC0xMTUxNDU4NTEyLDE4MTQzODc1MCwtMTA1NjQz
-NjUzNCwtMjk5MDAyMjgwLC0xMzQ2NTc5MTM5LC02NDU4OTAwNj
-ksLTE2NjcxOTY0ODksLTIwMDUwNjM4MzUsMTQwOTI5NTQ1Miwz
-NzI4MTIwOF19
+eyJoaXN0b3J5IjpbLTU2MTkwMzIzNiwxNTY4MjI2NjQ1LDc5MD
+IxNDM3MSwyMTE4MzY1NzUzLDUzNDI4NDc2OSwtMTA0NzM5NTE5
+MCwxNzcxNDc3MzgyLC04OTczNTY1MjAsLTY3ODczMzQ5MiwyMj
+gzNTEyNzYsLTIwMTY5MzAxMDAsLTExNTE0NTg1MTIsMTgxNDM4
+NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMz
+ksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwx
+NDA5Mjk1NDUyXX0=
 -->
