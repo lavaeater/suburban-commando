@@ -12,11 +12,12 @@ func _ready():
 	pass # Replace with function body.
 
 func take_damage(damage):
-	var blackboard = get_node(Blackboard)
-	if blackboard != null:
-		health = blackboard.get_data(HealthProperty)
-		health -= damage
-		blackboard.set_data(HealthProperty, health)
+	if Blackboard != null:
+		var blackboard = get_node(Blackboard)
+		if blackboard != null:
+			health = blackboard.get_data(HealthProperty)
+			health -= damage
+			blackboard.set_data(HealthProperty, health)
 	else:
 		health -= damage
 

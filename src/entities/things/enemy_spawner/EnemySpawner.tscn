@@ -9,6 +9,7 @@ albedo_color = Color( 0, 0.996078, 0.0156863, 1 )
 
 [node name="EnemySpawner" type="Spatial"]
 script = ExtResource( 1 )
+MaximumSpawned = 20
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 1 )

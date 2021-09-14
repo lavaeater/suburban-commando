@@ -1,8 +1,8 @@
 extends Spatial
 
 export (String) var Group = "Enemies" 
-export (int) var MinimumSpawned = 10
-export (int) var MaximumSpawned = 100
+export (int) var MinimumSpawned = 1
+export (int) var MaximumSpawned = 1
 export (float) var CoolDown = 1.0
 export (String) var SceneToSpawn = "res://src/entities/enemy-two/Enemy2.tscn"
 
@@ -20,6 +20,7 @@ func _process(delta):
 	if ActualCoolDown < 0:
 		ActualCoolDown = CoolDown
 		var count = get_tree().get_nodes_in_group(Group).size()
+		
 		if count < MinimumSpawned or count < MaximumSpawned:		 
 			var newly_spawned = ToSpawn.instance()
 			newly_spawned.add_to_group(Group)
