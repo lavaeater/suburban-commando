@@ -80,7 +80,7 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
-### Objectives
+### *Objectives <- doing now*
 Something on the map that the player needs to move to in order for the game to continue to the next level.
 #### Mechanics
 Objectives can actually be expanded upon to be something more than simple *waypoints* for the player to visit, now that we use a more advanced game engine. These objectives can represent special pickups needed to progress through the game, like key-cards or whatnot. They can be triggers that interactively open some gate in some other part of the map and so forth.
@@ -366,7 +366,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NTc4NjkyNCwtNTYxOTAzMjM2LDE1Nj
+eyJoaXN0b3J5IjpbMTYxNjY2ODAwNCwtNTYxOTAzMjM2LDE1Nj
 gyMjY2NDUsNzkwMjE0MzcxLDIxMTgzNjU3NTMsNTM0Mjg0NzY5
 LC0xMDQ3Mzk1MTkwLDE3NzE0NzczODIsLTg5NzM1NjUyMCwtNj
 c4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1
