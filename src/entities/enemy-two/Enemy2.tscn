@@ -166,25 +166,25 @@ script = ExtResource( 5 )
 [node name="TakeEnergy" type="Node" parent="BehaviorTree/Selector/IfLowHealth/Invert/FindAndTakeEnergy/Invert2/FindClosestNodeInGroup/BTRepeatUntil"]
 script = ExtResource( 11 )
 
-[node name="IfNotLowHealth" type="Node" parent="BehaviorTree/Selector"]
-script = ExtResource( 9 )
-reverse = true
-PropertyValue = 60
-
-[node name="Invert" type="Node" parent="BehaviorTree/Selector/IfNotLowHealth"]
+[node name="Invert" type="Node" parent="BehaviorTree/Selector"]
 script = ExtResource( 12 )
 
-[node name="FindClosestPlayer" type="Node" parent="BehaviorTree/Selector/IfNotLowHealth/Invert"]
+[node name="FindClosestPlayer" type="Node" parent="BehaviorTree/Selector/Invert"]
 script = ExtResource( 10 )
 GroupName = "Player"
 DetectionDistance = 25000.0
 BlackBoardKey = "ClosestPlayer"
 CheckProperty = false
 
-[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/Selector/IfNotLowHealth/Invert/FindClosestPlayer"]
+[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/Selector/Invert/FindClosestPlayer"]
 script = ExtResource( 5 )
 
-[node name="MoveTowardsPlayer" type="Node" parent="BehaviorTree/Selector/IfNotLowHealth/Invert/FindClosestPlayer/BTRepeatUntil"]
+[node name="IfNotLowHealth" type="Node" parent="BehaviorTree/Selector/Invert/FindClosestPlayer/BTRepeatUntil"]
+script = ExtResource( 9 )
+reverse = true
+PropertyValue = 60
+
+[node name="MoveTowardsPlayer" type="Node" parent="BehaviorTree/Selector/Invert/FindClosestPlayer/BTRepeatUntil/IfNotLowHealth"]
 script = ExtResource( 8 )
 NodeKey = "ClosestPlayer"
 TargetDistance = 2.5
