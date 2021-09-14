@@ -80,6 +80,11 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
+### Objectives
+Something on the map that the player needs to move to in order for the game to continue to the next level.
+#### Mechanics
+Objectives can actually be expanded upon to be something more than simple *waypoints* for the player to visit, now that we use a more advanced game engine. These objectives can represent special pickups needed to progress through the game, like key-cards or whatnot. They can be triggers that interactively open some gate in some other part of the map and so forth.
+
 ### Enemy AI and Attacks
 We need a better AI. Or rather an AI that seems better. The AI should work by doing very small actions in sequence. So, we could have something like, if the player character is in the sphere of detection, the enemy should stop what it is doing and turn towards the player.
 
@@ -138,7 +143,6 @@ Tower shooting thingie - the tower should have a raycast built in from the tower
 - [x] Player should be able to place the tower on the map
 - [x] Tower should be able to target enemies
 - [x] Tower should be able to fire at enemies 
-
 
 ### Splash screen
 Player select, character select.
@@ -362,7 +366,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NDA0MDk3MCwtNTYxOTAzMjM2LDE1Nj
+eyJoaXN0b3J5IjpbLTQ5NTc4NjkyNCwtNTYxOTAzMjM2LDE1Nj
 gyMjY2NDUsNzkwMjE0MzcxLDIxMTgzNjU3NTMsNTM0Mjg0NzY5
 LC0xMDQ3Mzk1MTkwLDE3NzE0NzczODIsLTg5NzM1NjUyMCwtNj
 c4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1
