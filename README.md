@@ -62,7 +62,7 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
-- [ ] *Enemy AI and attacks*
+- [x] *Enemy AI and attacks*
 - [ ] Objectives
 - [ ] Player Health and Death
 - [ ] Multiplayer
@@ -366,11 +366,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MTkwMzIzNiwxNTY4MjI2NjQ1LDc5MD
-IxNDM3MSwyMTE4MzY1NzUzLDUzNDI4NDc2OSwtMTA0NzM5NTE5
-MCwxNzcxNDc3MzgyLC04OTczNTY1MjAsLTY3ODczMzQ5MiwyMj
-gzNTEyNzYsLTIwMTY5MzAxMDAsLTExNTE0NTg1MTIsMTgxNDM4
-NzUwLC0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMz
-ksLTY0NTg5MDA2OSwtMTY2NzE5NjQ4OSwtMjAwNTA2MzgzNSwx
-NDA5Mjk1NDUyXX0=
+eyJoaXN0b3J5IjpbMTMzNzE4MzE4OCwtNTYxOTAzMjM2LDE1Nj
+gyMjY2NDUsNzkwMjE0MzcxLDIxMTgzNjU3NTMsNTM0Mjg0NzY5
+LC0xMDQ3Mzk1MTkwLDE3NzE0NzczODIsLTg5NzM1NjUyMCwtNj
+c4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1
+ODUxMiwxODE0Mzg3NTAsLTEwNTY0MzY1MzQsLTI5OTAwMjI4MC
+wtMTM0NjU3OTEzOSwtNjQ1ODkwMDY5LC0xNjY3MTk2NDg5LC0y
+MDA1MDYzODM1XX0=
 -->
