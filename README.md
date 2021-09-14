@@ -62,7 +62,7 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
-- [ ] Objectives
+- [ ] *Objectives*
 - [ ] Player Health and Death
 - [ ] Multiplayer
 - [ ] Controller Support
@@ -366,7 +366,7 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNjY2ODAwNCwtNTYxOTAzMjM2LDE1Nj
+eyJoaXN0b3J5IjpbMTA1OTAyOTUyOCwtNTYxOTAzMjM2LDE1Nj
 gyMjY2NDUsNzkwMjE0MzcxLDIxMTgzNjU3NTMsNTM0Mjg0NzY5
 LC0xMDQ3Mzk1MTkwLDE3NzE0NzczODIsLTg5NzM1NjUyMCwtNj
 c4NzMzNDkyLDIyODM1MTI3NiwtMjAxNjkzMDEwMCwtMTE1MTQ1
