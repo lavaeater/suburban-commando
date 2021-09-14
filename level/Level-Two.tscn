@@ -2543,5 +2543,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0 )
 
 [node name="EnemySpawner" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 1, 0 )
+MaximumSpawned = 20
+CoolDown = 5.0
 
 [connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]

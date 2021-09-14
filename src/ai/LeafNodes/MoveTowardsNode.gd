@@ -13,9 +13,10 @@ func _tick(agent: Node, blackboard: Blackboard) -> bool:
 	var target_node = blackboard.get_data(NodeKey)
 	var delta = blackboard.process_delta
 	if target_node != null:
+		if agent.global_transform.origin.distance_squared_to(target_node.global_transform.origin) < TargetDistance:
+			return fail()
 		var speed = blackboard.get_data(SpeedKey)
 		agent.global_transform.origin = agent.global_transform.origin.move_toward(target_node.global_transform.origin, speed * delta)
-		if agent.global_transform.origin.distance_squared_to(target_node.global_transform.origin) < TargetDistance:
-			return succeed()
+		return succeed()
 	
 	return fail()

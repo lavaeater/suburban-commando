@@ -152,19 +152,20 @@ script = ExtResource( 11 )
 [node name="BTRevert" type="Node" parent="BehaviorTree/BTSelector2"]
 script = ExtResource( 12 )
 
-[node name="FindClosestNodeInGroup" type="Node" parent="BehaviorTree/BTSelector2/BTRevert"]
+[node name="FindClosestPlayer" type="Node" parent="BehaviorTree/BTSelector2/BTRevert"]
 script = ExtResource( 10 )
 GroupName = "Player"
 DetectionDistance = 25000.0
 BlackBoardKey = "ClosestPlayer"
 CheckProperty = false
 
-[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector2/BTRevert/FindClosestNodeInGroup"]
+[node name="BTRepeatUntil" type="Node" parent="BehaviorTree/BTSelector2/BTRevert/FindClosestPlayer"]
 script = ExtResource( 5 )
 
-[node name="MoveTowardsNode" type="Node" parent="BehaviorTree/BTSelector2/BTRevert/FindClosestNodeInGroup/BTRepeatUntil"]
+[node name="MoveTowardsPlayer" type="Node" parent="BehaviorTree/BTSelector2/BTRevert/FindClosestPlayer/BTRepeatUntil"]
 script = ExtResource( 8 )
 NodeKey = "ClosestPlayer"
+TargetDistance = 10.0
 
 [node name="Blackboard" type="Node" parent="."]
 script = ExtResource( 6 )
