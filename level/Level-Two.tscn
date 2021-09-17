@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/cameras/IsometricCamera/IsoMetric.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/entities/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/entities/aj/aj.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/entities/map/house_with_yard/HouseWithYard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/map/things/path_tilesLong.tscn" type="PackedScene" id=4]
 [ext_resource path="res://level/Main.gd" type="Script" id=5]
@@ -43,11 +43,6 @@ uv1_scale = Vector3( 10, 10, 10 )
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 5 )
 
-[node name="Player" parent="." groups=[
-"Player",
-] instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.25, 1.5, -6.5 )
-
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.00784069, -0.720665, 0.693239, -0.144847, 0.686767, 0.712299, -0.989423, -0.0948289, -0.109771, -62.1896, 27.8325, -180.998 )
 light_energy = 0.85
@@ -60,7 +55,7 @@ shadow_enabled = true
 shape = SubResource( 1 )
 
 [node name="CameraPivot" parent="." instance=ExtResource( 1 )]
-target = NodePath("../Player")
+target = NodePath("../aj-root")
 
 [node name="Block1" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.75, 0, 34.5 )
@@ -2545,4 +2540,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 1, 0 )
 MaximumSpawned = 1
 
-[connection signal="look_at_target" from="CameraPivot" to="Player" method="_on_CameraPivot_look_at_target"]
+[node name="aj-root" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.75, 0, -21.25 )
+
+[connection signal="look_at_target" from="CameraPivot" to="aj-root" method="_on_CameraPivot_look_at_target"]

@@ -27,6 +27,9 @@ var randomizer = RandomNumberGenerator.new()
 
 func _ready():
 	randomizer.randomize()
+	var anim_player = get_node("RootNode/AnimationPlayer")
+	if anim_player != null:
+		anim_player.play("walking")
 	
 
 func _physics_process(delta):
@@ -137,7 +140,7 @@ func handle_jumping():
 		jump = true
 
 func _on_CameraPivot_look_at_target(position):
-	look_at_target = position
+	look_at_target = Vector3(position.x, $blasterA.global_transform.origin.y, position.z)
 
 func _on_BaseEntity_took_damange():
 	pass # Player took damage
