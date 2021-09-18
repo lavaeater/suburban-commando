@@ -1,5 +1,9 @@
 # suburban-commando
 
+## Devlog 18th of September 2021
+
+So, I had this thought about attaching guns to a characters hand - well, that can be done, even found a nice little video made by mizizzziz where he explains how to do it. Very nice.
+
 ## Devlog 14th of September 2021
 
 So, I just discovered that the conditionals, or perhaps preticks in general, are only called once. This is baad, man.
@@ -367,11 +371,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMTI5MDQ0LC01NjE5MDMyMzYsMTU2OD
-IyNjY0NSw3OTAyMTQzNzEsMjExODM2NTc1Myw1MzQyODQ3Njks
-LTEwNDczOTUxOTAsMTc3MTQ3NzM4MiwtODk3MzU2NTIwLC02Nz
-g3MzM0OTIsMjI4MzUxMjc2LC0yMDE2OTMwMTAwLC0xMTUxNDU4
-NTEyLDE4MTQzODc1MCwtMTA1NjQzNjUzNCwtMjk5MDAyMjgwLC
-0xMzQ2NTc5MTM5LC02NDU4OTAwNjksLTE2NjcxOTY0ODksLTIw
-MDUwNjM4MzVdfQ==
+eyJoaXN0b3J5IjpbLTg4MTk3ODE5NiwtNzMxMjkwNDQsLTU2MT
+kwMzIzNiwxNTY4MjI2NjQ1LDc5MDIxNDM3MSwyMTE4MzY1NzUz
+LDUzNDI4NDc2OSwtMTA0NzM5NTE5MCwxNzcxNDc3MzgyLC04OT
+czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
+MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
+0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
+NzE5NjQ4OV19
 -->
