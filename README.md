@@ -66,7 +66,8 @@ So, we should list these features and write a small note regarding what they mea
 
 The thing in cursive is what I am working on right now.
 
-- [ ] *Objectives*
+- [ ] *Throw Mechanics*
+- [ ] *Objectives
 - [ ] Player Health and Death
 - [ ] An actual level
 - [ ] Multiplayer
@@ -371,11 +372,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MTk3ODE5NiwtNzMxMjkwNDQsLTU2MT
-kwMzIzNiwxNTY4MjI2NjQ1LDc5MDIxNDM3MSwyMTE4MzY1NzUz
-LDUzNDI4NDc2OSwtMTA0NzM5NTE5MCwxNzcxNDc3MzgyLC04OT
-czNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEyNzYsLTIwMTY5MzAx
-MDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC0xMDU2NDM2NTM0LC
-0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0NTg5MDA2OSwtMTY2
-NzE5NjQ4OV19
+eyJoaXN0b3J5IjpbMTE1MzQ5MTU1MCwtODgxOTc4MTk2LC03Mz
+EyOTA0NCwtNTYxOTAzMjM2LDE1NjgyMjY2NDUsNzkwMjE0Mzcx
+LDIxMTgzNjU3NTMsNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3Nz
+E0NzczODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3
+NiwtMjAxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLT
+EwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1
+ODkwMDY5XX0=
 -->
