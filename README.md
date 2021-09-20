@@ -86,7 +86,9 @@ The thing in cursive is what I am working on right now.
 - [x] *Player 0*
 - [x] Player Entity 1
 
+### Throw mechanics
 
+I want to have a max throw radius, but other than that, just a parable or throw trajectory that goes from where the player is to where the mouse is "hitting" right now.
 
 ### Objectives <- doing now
 Something on the map that the player needs to move to in order for the game to continue to the next level.
@@ -374,11 +376,11 @@ which makes the player collide with the level.
 
 ![Screenshot](screenshots/isometric.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzczNjAyNjIsLTg4MTk3ODE5NiwtNz
-MxMjkwNDQsLTU2MTkwMzIzNiwxNTY4MjI2NjQ1LDc5MDIxNDM3
-MSwyMTE4MzY1NzUzLDUzNDI4NDc2OSwtMTA0NzM5NTE5MCwxNz
-cxNDc3MzgyLC04OTczNTY1MjAsLTY3ODczMzQ5MiwyMjgzNTEy
-NzYsLTIwMTY5MzAxMDAsLTExNTE0NTg1MTIsMTgxNDM4NzUwLC
-0xMDU2NDM2NTM0LC0yOTkwMDIyODAsLTEzNDY1NzkxMzksLTY0
-NTg5MDA2OV19
+eyJoaXN0b3J5IjpbMTgwMTkwOTMwMSwtODgxOTc4MTk2LC03Mz
+EyOTA0NCwtNTYxOTAzMjM2LDE1NjgyMjY2NDUsNzkwMjE0Mzcx
+LDIxMTgzNjU3NTMsNTM0Mjg0NzY5LC0xMDQ3Mzk1MTkwLDE3Nz
+E0NzczODIsLTg5NzM1NjUyMCwtNjc4NzMzNDkyLDIyODM1MTI3
+NiwtMjAxNjkzMDEwMCwtMTE1MTQ1ODUxMiwxODE0Mzg3NTAsLT
+EwNTY0MzY1MzQsLTI5OTAwMjI4MCwtMTM0NjU3OTEzOSwtNjQ1
+ODkwMDY5XX0=
 -->
