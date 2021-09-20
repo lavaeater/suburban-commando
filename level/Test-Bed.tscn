@@ -78,6 +78,6 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
 
 [node name="aj-root" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.75, 0, -21.25 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 
 [connection signal="look_at_target" from="CameraPivot" to="aj-root" method="_on_CameraPivot_look_at_target"]
