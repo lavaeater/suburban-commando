@@ -54,19 +54,20 @@ func _physics_process(delta):
 func handle_shots(delta):
 	if fire and can_fire:
 		has_fired = true
-		muzzle_flash.visible = true
-		if rayBlaster.is_colliding():
-			var collider = rayBlaster.get_collider()
-			var entity = collider.get_node("BaseEntity")
-			if entity != null:
-				entity.take_damage(30)
-				
-			last_impact_point = rayBlaster.get_collision_point()
-			var anime_explosion = impact_thingie.instance()
-			get_parent().add_child(anime_explosion)
-			anime_explosion.start(last_impact_point)
-			anime_explosion.global_transform.origin = last_impact_point
-			last_explosion_position = anime_explosion.global_transform.origin
+		
+		#muzzle_flash.visible = true
+#		if rayBlaster.is_colliding():
+#			var collider = rayBlaster.get_collider()
+#			var entity = collider.get_node("BaseEntity")
+#			if entity != null:
+#				entity.take_damage(30)
+#
+#			last_impact_point = rayBlaster.get_collision_point()
+#			var anime_explosion = impact_thingie.instance()
+#			get_parent().add_child(anime_explosion)
+#			anime_explosion.start(last_impact_point)
+#			anime_explosion.global_transform.origin = last_impact_point
+#			last_explosion_position = anime_explosion.global_transform.origin
 		
 
 	if has_fired:
