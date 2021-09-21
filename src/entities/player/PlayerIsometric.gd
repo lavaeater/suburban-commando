@@ -20,6 +20,7 @@ var cool_down = rof_cool_down
 var flash_cool_down = rof_cool_down / 3.0
 var muzzle_cool = flash_cool_down
 var impact_thingie = preload("res://src/fx/anime_explosion.tscn")
+var ball = preload("res://src/entities/projectile/projectile.tscn")
 var last_impact_point = Vector3()
 var last_explosion_position = Vector3()
 onready var place_point = $PlacePoint
@@ -54,6 +55,12 @@ func _physics_process(delta):
 func handle_shots(delta):
 	if fire and can_fire:
 		has_fired = true
+		var thrown_ball = ball.instance()
+		thrown_ball.global_transform.origin = get_node("RootNode/Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightForeArm/RightHand").global_transform.origin
+		var parent = get_parent()
+		remove_child(thrown_ball)
+		parent.add_child(thrown_ball)
+		
 		
 		#muzzle_flash.visible = true
 #		if rayBlaster.is_colliding():
