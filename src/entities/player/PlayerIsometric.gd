@@ -8,8 +8,6 @@ var direction = Vector3()
 var spin = .1
 var jump = false
 var look_at_target = Vector3()
-onready var muzzle_flash = $blasterA.get_node("MuzzleFlash")
-onready var rayBlaster = $blasterA.get_node("RayCast")
 var fire = false
 var can_fire = true
 var has_fired = false
@@ -86,8 +84,7 @@ func handle_shots(delta):
 
 	if muzzle_cool <= 0:
 		muzzle_cool = flash_cool_down
-		muzzle_flash.visible = false
-
+		
 	
 	if cool_down <= 0:
 		cool_down = rof_cool_down
@@ -148,7 +145,7 @@ func handle_jumping():
 		jump = true
 
 func _on_CameraPivot_look_at_target(position):
-	look_at_target = Vector3(position.x, $blasterA.global_transform.origin.y, position.z)
+	look_at_target = Vector3(position.x, 0.5, position.z)
 
 func _on_BaseEntity_took_damange():
 	pass # Player took damage
