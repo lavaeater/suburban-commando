@@ -1,7 +1,7 @@
 extends KinematicBody
 
 var gravity = Vector3.DOWN * 12
-var speed = 60
+var speed = 20
 var jump_speed = 6
 var velocity = Vector3()
 var direction = Vector3()
@@ -53,11 +53,14 @@ func _physics_process(delta):
 func handle_shots(delta):
 	if fire and can_fire:
 		has_fired = true
+		get_node("RootNode/AnimationPlayer").play("throw", -1, 5.0)
 		var thrown_ball = ball.instance()
-		thrown_ball.global_transform.origin = get_node("RootNode/Hips/Spine/Spine1/Spine2/RightShoulder/RightArm/RightForeArm/RightHand").global_transform.origin
+		thrown_ball.global_transform.origin = get_node("ThrowPoint").global_transform.origin
 		var parent = get_parent()
 		remove_child(thrown_ball)
 		parent.add_child(thrown_ball)
+		thrown_ball.apply_impulse(thrown_ball.global_transform.origin, transform.basis * Vector3(0, 0, -15))
+
 		
 		
 		#muzzle_flash.visible = true
@@ -145,7 +148,7 @@ func handle_jumping():
 		jump = true
 
 func _on_CameraPivot_look_at_target(position):
-	look_at_target = Vector3(position.x, 0.5, position.z)
+	look_at_target = Vector3(position.x, 0.75, position.z)
 
 func _on_BaseEntity_took_damange():
 	pass # Player took damage

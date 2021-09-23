@@ -13,3 +13,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Projectile_body_entered(body):
+	# Check if it is an enemy. Regardless, this one is being removed now
+	queue_free()

@@ -1598,3 +1598,6 @@ anims/throw = ExtResource( 10 )
 anims/walking = ExtResource( 1 )
 
 [node name="BaseEntity" parent="." instance=ExtResource( 8 )]
+
+[node name="ThrowPoint" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43978, 1.6674, -0.569701 )

@@ -12,8 +12,9 @@ onready var node_ref = weakref(get_node("Enemy"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var overlay = load("res://src/ui/DebugOverlay.tscn").instance()
-	overlay.add_stat_var("Near", get_node("CameraPivot/Camera"), "near")
-	overlay.add_stat_var("Far", get_node("CameraPivot/Camera"), "far")
+	overlay.add_stat_var("Camera.Near Z/X", get_node("CameraPivot/Camera"), "near")
+	overlay.add_stat_var("Camera.Far c/V", get_node("CameraPivot/Camera"), "far")
+	overlay.add_stat_var("Camera.Size O/P", get_node("CameraPivot/Camera"), "size")
 	add_child(overlay)
 
 func get_enemy():
