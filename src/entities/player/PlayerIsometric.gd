@@ -148,7 +148,7 @@ func handle_jumping():
 		jump = true
 
 func _on_CameraPivot_look_at_target(position):
-	look_at_target = Vector3(position.x, 0.75, position.z)
+	look_at_target = position
 
 func _on_BaseEntity_took_damange():
 	pass # Player took damage
